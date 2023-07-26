@@ -11,6 +11,35 @@
     display: flow-root;
     margin: 2em 0;
   }
+
+  .unit {
+    justify-content: left;
+    display: grid;
+    grid-gap: 1rem;
+    margin: 0.5rem 0;
+    padding-bottom: 0.4rem;
+  }
+
+  .unit ul {
+    display: contents!important;
+  }
+
+  .unit ul hr {
+    height: 10px;
+  }
+
+  .unit > ul > li {
+    list-style: none;
+    text-align: left;
+    padding: 0.8rem;
+    border: 0.05rem solid var(--md-default-fg-color--lightest);
+    border-radius: 0.1rem;
+    display: block;
+    transition: border .25s,box-shadow .25s;
+    height: 100%;
+    position: relative;
+    margin-left: 0!important;
+  }
   
 /* Classes to create grids and cards embeded in the markdown (extension md_in_html needed) */
 .cards {
