@@ -55,12 +55,12 @@ nav:
       - 1.3 Practice with Python and GitHub II: 'program/unit-1/14-practice-with-python-and-gitHub-II.md'
       - 1.5 Dialogue with a Professional: 'program/unit-1/15-dialogue-with-a-professional.md'
     - Unit 2:
-      - 2.1 Current Context and Application of Mathematical Models in AI: 'program\unit-2\21-current-context-and-application-of-mathematical-models-in-ai.md'
-      - 2.2 Introduction to Visualization and Descriptive Statistics: 'program\unit-2\22-introduction-to-visualization-and-descriptive-statistics.md'
-      - 2.3 Introduction to Exploratory Data Analysis (EDA): 'program\unit-2\23-introduction-to-exploratory-data-analysis-(eda).md'
-      - 2.4 Data Cleaning and Processing: 'program\unit-2\24-data-cleaning-and-processing.md'
+      - 2.1 Current Context and Application of Mathematical Models in AI: 'program/unit-2/21-current-context-and-application-of-mathematical-models-in-ai.md'
+      - 2.2 Introduction to Visualization and Descriptive Statistics: 'program/unit-2/22-introduction-to-visualization-and-descriptive-statistics.md'
+      - 2.3 Introduction to Exploratory Data Analysis (EDA): 'program/unit-2/23-introduction-to-exploratory-data-analysis-eda.md'
+      - 2.4 Data Cleaning and Processing: 'program/unit-2/24-data-cleaning-and-processing.md'
       - 1.5 Dialogue with a Professional: 'program/unit-2/25-dialogue-with-a-professional.md'
-    - Contact: 'getting-started.md' # getting started
+    - Contact: 'program/contact.md'
 
 
 # Extensions

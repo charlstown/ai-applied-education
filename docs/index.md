@@ -6,7 +6,7 @@ hide:
     - nav
 ---
 
-## Program
+## :material-rocket-launch-outline: The AI Applied Course
 
 </br>
 
@@ -58,7 +58,7 @@ hide:
 
 ---
 
-## Recommended links
+## :octicons-link-16: Recommended links
 
 <div class="grid row-2" markdown>
 
