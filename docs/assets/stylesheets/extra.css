@@ -12,6 +12,37 @@
     margin: 2em 0;
   }
 
+  .steps ul {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+}
+
+.steps li::before {
+  content: counter(item);
+  background-color: var(--md-default-fg-color--lightest);
+  border: 0px solid black;
+  border-radius: 100%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: black;
+  font-size: .7rem;
+}
+
+  .steps li {
+    counter-increment: item;
+    margin-bottom: 2rem!important;
+    position: relative;
+    padding-left: 30px;
+}
+
   .unit {
     justify-content: left;
     display: grid;
