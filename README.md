@@ -4,7 +4,7 @@
 [![template](https://img.shields.io/badge/template-material-dd2e57)](https://squidfunk.github.io/mkdocs-material/)
 [![license](https://img.shields.io/badge/license-MIT-green.svg?logo=cachet&style=flat&logoColor=green)](LICENSE)
 
-A program to help students learn practical skills in programming and data science. It prepares you to handle challenges in the tech and job world, no matter what career you choose.
+💻🧪 A program to help students learn practical skills in programming and data science. It prepares you to handle challenges in the tech and job world, no matter what career you choose.
 
 </br>
 
