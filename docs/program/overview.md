@@ -1,11 +1,23 @@
 ## The Data Science ecosystem
 
-Explain Data Science
+Data Science is the art of using data to understand, predict, and solve real-world problems, making it an invaluable tool across all fields for informed decision-making and innovative solutions.
 
+- **Domain and Fundamental knowledge:** Understanding and expertise in specific subject areas (domains) along with foundational knowledge necessary to comprehend and engage with various disciplines and concepts.
+- **Computer Science:** The study of algorithms, data structures, and computational systems for solving problems and processing information using computers.
+- **Math & statistics:** The discipline that deals with the analysis, interpretation, and manipulation of numerical data, patterns, and relationships, relying on mathematical principles and methodologies.
 
-## The data jobs ecosystem
+<img src="/assets/images/data-science-ecosystem.jpg" alt="data-science-ecosystem" width="450" style="display: block;margin-left: auto; margin-right: auto; width: 50%;"/>
 
-The data jobs ecosystem
+## The data jobs/roles ecosystem
+
+![data-roles-ecosystem](/assets/images/data-roles-ecosystem.jpg)
+
+- **Business Analyst:** Utilizes data to determine project requirements and provides recommendations and reports to stakeholders, focusing on tactical aspects rather than strategic ones.
+- **Data Architects and Data Engineers:** Data architects visualize framework requirements, while data engineers build the digital framework to create a solution.
+- **Data Analyst:** Analyzes collected data to ensure usefulness and comprehensiveness, interpreting data with strong visualization skills for businesses.
+- **Data Scientist:** Combines technical problem-solving skills with natural curiosity to develop ML models and detect patterns and relationships in copious amounts of data.
+- **Machine Learning Engineer:** Integrates software engineering with machine modeling abilities, determining the appropriate model and data for ML applications.
+- **Business Intelligence Engineer:** Creates unique data visualizations, defining metrics and charts beneficial for business decisions, playing a crucial role in specialized data science models.
 
 
 ## The Software ecosystem
