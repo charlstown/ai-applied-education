@@ -6,11 +6,11 @@ Data Science is the art of using data to understand, predict, and solve real-wor
 - **Computer Science:** The study of algorithms, data structures, and computational systems for solving problems and processing information using computers.
 - **Math & statistics:** The discipline that deals with the analysis, interpretation, and manipulation of numerical data, patterns, and relationships, relying on mathematical principles and methodologies.
 
-<img src="/assets/images/data-science-ecosystem.jpg" alt="data-science-ecosystem" width="450" style="display: block;margin-left: auto; margin-right: auto; width: 50%;"/>
+<img src="assets/images/data-science-ecosystem.jpg" alt="data-science-ecosystem" width="450" style="display: block;margin-left: auto; margin-right: auto; width: 50%;"/>
 
 ## The data jobs/roles ecosystem
 
-![data-roles-ecosystem](/assets/images/data-roles-ecosystem.jpg)
+![data-roles-ecosystem](assets/images/data-roles-ecosystem.jpg)
 
 - **Business Analyst:** Utilizes data to determine project requirements and provides recommendations and reports to stakeholders, focusing on tactical aspects rather than strategic ones.
 - **Data Architects and Data Engineers:** Data architects visualize framework requirements, while data engineers build the digital framework to create a solution.
@@ -55,3 +55,17 @@ graph TD
 ## The ML ecosystem
 
 Explain the ML ecosystem
+
+``` mermaid
+graph TD
+    ML[ML models] -->|Labeled data| SML["✅ Supervised models"];
+    ML -->|Unlabeled data| UML["✅ Unsupervised models"];
+    ML -->|Time data| TS["Time series"];
+    ML -->|Reward| RL["Reinforcement learning"];
+    SML -->|Continuous var| MLR[Regression];
+    SML -->|Categorical var| MLC[Classification];
+    UML --> UMLC[Clustering];
+    UML --> UMLDR[Dimensionality reduction];
+    UML --> UMLA[Anomaly detection];
+    UML --> UMLG[Generatives];
+```
