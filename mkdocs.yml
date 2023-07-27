@@ -21,7 +21,6 @@ theme:
     - navigation.sections
     - navigation.footer
     - navigation.top
-    - toc.integrate
     - search.suggest
     - search.highlight 
   language: en
@@ -48,6 +47,7 @@ theme:
 # Sorting menu pages
 nav:
     - Home: 'index.md'
+    - Overview: 'program/overview.md'
     - Unit 1:
       - 1.1 Introduction to Python: 'program/unit-1/11-introduction-to-python.md'
       - 1.2 Introduction to GitHub: 'program/unit-1/12-Introduction-to-gitHub.md'
@@ -65,9 +65,15 @@ nav:
 
 # Extensions
 markdown_extensions:
+  - toc:
+        permalink: true
   - admonition            # Block elements
   - pymdownx.details      # Collapsible call-outs
-  - pymdownx.superfences  # Nested elements
+  - pymdownx.superfences:  # Nested elements
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.mark         # Hihlighting text
   - attr_list             # To add buttons
   - md_in_html            # To add html in markdown (centred images)
