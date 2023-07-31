@@ -16,7 +16,7 @@ hide:
 
     --- 
 
-    - [1.1 Introduction to Python](#)
+    - [1.1 Introduction to Python](program/unit-1/11-introduction-to-python)
     - [1.2 Introduction to GitHub](#)
     - [1.3 Practice with Python and GitHub: Exercises and Projects I](#)
     - [1.4 Practice with Python and GitHub: Exercises and Projects II](#)

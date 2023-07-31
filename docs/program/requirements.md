@@ -11,11 +11,9 @@
     - Use admin priviledges
     - Add python.exe to the PATH
 
+## Another content
+<div class="steps" markdown>
+- step 1: asdfasdfasdfasdf
+- Step 2: asdfadsfasfdasdf
 
-
-## Install Pycharm
-
-1. Download Pycharm
-[Download Pycharm for windows](https://www.jetbrains.com/es-es/pycharm/download/?section=windows)
-
-2. Install Pycharm
+</div>
