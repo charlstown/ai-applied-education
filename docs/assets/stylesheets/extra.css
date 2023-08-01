@@ -71,6 +71,31 @@
     position: relative;
     margin-left: 0!important;
   }
+
+.output {
+  width: 200px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 15px;
+  display: block;
+  margin: 0;
+  padding: .7em .7em;
+  width: auto;
+  color: grey;
+  font-style: italic;
+  font-family: var(--md-code-font-family);
+  font-size: .85em;
+}
+
+.md-nav__item .md-nav__list .md-nav__item .md-nav .md-nav__list {
+  display: none;
+}
+
+div.output::before {
+  content: "Output:";
+  display: block;
+  margin-bottom: 10px;
+  font-size: small;
+}
   
 /* Classes to create grids and cards embeded in the markdown (extension md_in_html needed) */
 .cards {
