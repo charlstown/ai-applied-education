@@ -812,27 +812,93 @@ This is a string (First "s" is in position: 3)
 
 | Operator | Statement |
 | --- | --- |
-| Element at index | - |
-| Get last element | - |
-| Modify item | - |
-| Add item at the end | - |
-| Slicing a list | - |
-| Order a list | - |
-| List length | - |
-| List from range | - |
-| Reverse a list | - |
-| Remove item | - |
-| Count item | - |
-| Entwine lists | - |
-| Enumerate list | - |
+| [Element at index](#element-at-index) | lst[2] |
+| [Get last element](#get-last-element) | lst[-1] |
+| [Modify item](#modify-item) | lst[1] = 'x' |
+| [Add item at the end](#add-item-at-the-end) | lst.append('a') |
+| [Slicing a list](#slicing-a-list) | lst[1:3] |
+| [Order a list](#order-a-list) | sorted(lst) |
+| [List length](#list-length) | len(lst) |
+| [List from range](#list-from-range) | list(range(1, 5)) |
+| [Reverse a list](#reverse-a-list) | lst.reverse() |
+| [Remove item](#remove-item) | lst.remove(5) |
+| [Count item](#count-item) | lst.count('#') |
+| [Entwine lists](#entwine-lists) | zip(lst_a, lst_b) |
+| [Enumerate list](#enumerate-list) | enumerate(lst) |
 
 #### Element at index
 
+!!! warning "Indexing in python"
+    Remember that indexing in Python starts from 0, so **the first element is at index 0**, the second at index 1, and so on.
+
+```py
+my_list = [10, 20, 30, 40, 50]
+
+# Extracting value at index 2 (which is the third element in the list)
+value = my_list[2]
+
+print(value)
+```
+<div class="output" markdown>
+30
+</div>
+
 #### Get last element
+
+To get the last element from a list in Python, you can use negative indexing. Negative indices count elements from the end of the list, where -1 represents the last element, -2 represents the second-to-last element, and so on.
+
+```py
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+
+# Getting the last element using the negative index
+last_planet = planets[-1]
+penultimate_planet = planets[-2]
+
+print(last_planet)
+print(penultimate_planet)
+```
+<div class="output" markdown>
+Neptune
+Uranus
+</div>
 
 #### Modify item
 
+Suppose we want to modify the name of a planet, let's say "Mars" to "Red Planet." We can do this by using the index to access the element and then assigning the new name to it.
+
+```py
+# Original list of planets
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+
+# Modifying the name of a planet
+index_of_mars = 3  # Index of "Mars" is 3
+new_name = "Red Planet"
+planets[index_of_mars] = new_name
+
+# Updated list of planets
+print(planets)
+```
+<div class="output" markdown>
+["Mercury", "Venus", "Earth", "Red Planet", "Jupiter", "Saturn", "Uranus", "Neptune"]
+</div>
+
 #### Add item at the end
+
+If we want to add the planet "Pluto" at the end of the list, we can use the append() method.
+
+```py
+# Original list of planets
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+
+# Adding "Pluto" at the end of the list using append()
+planets.append("Pluto")
+
+# Updated list of planets
+print(planets)
+```
+<div class="output" markdown>
+["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"]
+</div>
 
 #### Slicing a list
 
@@ -854,14 +920,231 @@ This is a string (First "s" is in position: 3)
 
 ### 2.4 Dictionary operators
 
-Content
+| Operator | Statement |
+| --- | --- |
+| Add key | --- |
+| Add multiple keys | --- |
+| Overwrite value | --- |
+| Extract value | --- |
+| Delete key and value | --- |
+| Keys & values list | --- |
+| Check key | --- |
+| Pair lists to dict | --- |
+
+#### Add key
+
+#### Add multiple keys
+
+#### Overwrite value
+
+#### Extract value
+
+#### Delete key and value
+
+#### Keys & values list
+
+#### Check key
+
+#### Pair lists to dict
 
 
 ## 3. If, elif, else statements
 
-Content
+The if statement in Python is used to make decisions in code by checking whether a condition is true or false, and executing specific blocks of code based on the evaluation of the condition.
+
+??? tip "Indentation tip"
+    **Indentation in an if statement is crucial in Python** because it defines the block of code that should be executed **if the condition is true**. 
+
+| Operator | Condition |
+| --- | --- |
+| True | always runs |
+| False | never runs |
+| a > b | a greater than b |
+| a >= b | a greater or equal to b |
+| a < b | a smaller than b |
+| a <= b | a smaller or equal to b |
+| a == b | a equal to b |
+| a != b | a not equal to b |
+| a in b | string in b |
+| not(a in b) | string not in b |
+
+
+### 3.1 if else
+
+```py
+score = 75
+
+if score >= 60:
+    print("Congratulations! You have passed the exam.")
+else:
+    print("Unfortunately, you did not pass the exam. Better luck next time.")
+
+```
+<div class="output" markdown>
+Congratulations! You have passed the exam.
+</div>
+
+### 3.2 if, elif, else
+```py
+number = 0
+
+# Check the number and provide a corresponding message
+if number > 0:
+    print("The number is positive.")
+elif number < 0:
+    print("The number is negative.")
+else:
+    print("The number is zero.")
+```
+<div class="output" markdown>
+The number is zero.
+</div>
+
+### 3.3 Nested if, else
+
+Let's consider a scenario where we have a user registration process, and we want to check the age of the user and whether they have provided all the required information.
+
+1. Check if the user's age is 18 or above using the outer if statement
+2. check if the user has provided both their name and email
+
+```py
+age = 25
+has_name = True
+has_email = False
+
+if age >= 18:
+    if has_name and has_email:
+        print("User registration successful!")
+    else:
+        print("Please provide both your name and email to complete the registration.")
+else:
+    print("Sorry, you must be at least 18 years old to register.")
+```
+<div class="output" markdown>
+Please provide both your name and email to complete the registration.
+</div>
 
 
 ## 4. Loops
 
-Content
+### 4.1 For loop
+
+#### Iterating a list
+
+```py
+# List of planet names
+planet_names = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+
+# Iterating over the list and printing each planet name in capital letters
+print("NASA's Planets:")
+for planet in planet_names:
+    planet_capital = planet.upper()
+    print(planet, planet_capital)
+```
+<div class="output" markdown>
+NASA's Planets:  
+Mercury MERCURY  
+Venus VENUS  
+Earth EARTH  
+Mars MARS  
+Jupiter JUPITER  
+Saturn SATURN  
+Uranus URANUS  
+Neptune NEPTUNE  
+</div>
+
+#### Iterating a string
+
+```py
+# Tweet text
+tweet = "Having a great time at the beach with friends. #summerfun #beachlife"
+
+# Iterate over each letter an count the number of hashtags
+n_hashtags = 0
+for letter in tweet:
+    if "#" == letter:
+        n_hashtags += 1
+
+print(f"Number of Hashtags found: {n_hashtags}")
+```
+<div class="output" markdown>
+Number of Hashtags found: 2 
+</div>
+
+#### Iterating a range
+
+```py
+# DNA sequence as a list of nucleotides
+dna_sequence = ['A', 'T', 'G', 'C', 'A']
+
+# Iterate over each position in the DNA sequence using range(10)
+for i in range(len(dna_sequence)):
+    nucleotide = dna_sequence[i]
+    position = i + 1
+    print(f"Position {position}: {nucleotide}")
+```
+<div class="output" markdown>
+Position 1: A  
+Position 2: T  
+Position 3: G  
+Position 4: C  
+Position 5: A  
+</div>
+
+#### Enumerating list
+
+This example is the same from the previous one but using enumerate. Enumerate helps you iterate over a sequence (like a list, tuple, or string) while also keeping track of the index of each element in the sequence.
+
+??? info "Enumerate Vs. range"
+    The advantage of using enumerate instead of range in the previous code is that enumerate provides a more concise and expressive way to access both the elements and their corresponding indices in a sequence. It simplifies the code and makes it more readable.
+
+```py
+# DNA sequence as a list of nucleotides
+dna_sequence = ['A', 'T', 'G', 'C', 'A']
+
+# Iterate over each position in the DNA sequence using range(10)
+for i, nucleotide in enumerate(dna_sequence):
+    position = i + 1
+    print(f"Position {position}: {nucleotide}")
+```
+<div class="output" markdown>
+Position 1: A  
+Position 2: T  
+Position 3: G  
+Position 4: C  
+Position 5: A  
+</div>
+
+
+### 4.2 While loop
+
+??? info "While Vs. for loops"
+    A while loop should be used in Python when the number of iterations is not known beforehand, and the loop needs to continue as long as a certain condition remains true. It is ideal for scenarios where the loop's termination depends on real-time or user input conditions.
+
+```py
+clothes = ["T-shirts", "Jeans", "Dresses", "Jackets", "Shoes", "Hats"]
+
+# Using a while loop to print the available clothes
+choice = "yes"
+counter = 0
+
+# Welcome print message
+print("Welcome to the Fashion Clothes Store!")
+
+while choice == "yes" and counter < len(clothes):
+    print(clothes[index])
+    counter += 1
+    choice = input("Do you want to see more clothes? (yes/no): ")
+    choice = choice.lower()
+
+print("Thank you for visiting our Fashion Clothes Store!")
+```
+<div class="output" markdown>
+Welcome to the Fashion Clothes Store!
+T-shirts
+Do you want to see more clothes? (yes/no): Yes
+T-shirts
+Do you want to see more clothes? (yes/no): No
+Thank you for visiting our Fashion Clothes Store! 
+</div>
+
