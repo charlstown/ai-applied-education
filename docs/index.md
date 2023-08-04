@@ -16,11 +16,11 @@ hide:
 
     --- 
 
-    - [1.1 Introduction to Python](program/unit-1/11-introduction-to-python)
-    - [1.2 Introduction to GitHub](#)
-    - [1.3 Practice with Python and GitHub: Exercises and Projects I](#)
-    - [1.4 Practice with Python and GitHub: Exercises and Projects II](#)
-    - [1.5 Dialogue with a Professional: Programming in a Job](#)
+    - [1.1 Introduction to GitHub](program/unit-1/11-introduction-to-github-and-notebooks)
+    - [1.2 Introduction to Python](program/unit-1/12-introduction-to-python)
+    - [1.3 Introduction to Pandas](program/unit-1/13-introduction-to-pandas)
+    - [1.4 Practice with Python and GitHub](14-practice-with-python-and-pandas)
+    - [1.5 Dialogue with a Professional: Programming in a Job](15-dialogue-with-a-professional)
     
     
 

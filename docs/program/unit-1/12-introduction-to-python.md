@@ -447,14 +447,14 @@ print(output)
 
 | Operator | Statement |
 | --- | --- |
-| [Math operations](#basic-math-operations) | 1+3 , 5-2 , 10/5, 2*4 |
-| [Exponent](#exponent-operations) | 2**3 |
-| [String -> integer/float](#string-to-integerfloat) | int("24") |
-| [Reminder](#reminder) | 10%3 |
-| [Max, min & sum](#max-min--sum-value) | max(lst), min(lst), sum(lst) |
-| [Absolute](#absolute-value) | abs(-3) |
-| [Round](#round-value) | round(3.2153, 1) |
-| [Floor Division](#floor-division) | 12//6 |
+| [Math operations](#basic-math-operations) | `1+3` , `5-2` , `10/5`, `2*4` |
+| [Exponent](#exponent-operations) | `2**3` |
+| [String -> integer/float](#string-to-integerfloat) | `int("24")` |
+| [Reminder](#reminder) | `10%3` |
+| [Max, min & sum](#max-min--sum-value) | `max(lst)`, `min(lst)`, `sum(lst)` |
+| [Absolute](#absolute-value) | `abs(-3)` |
+| [Round](#round-value) | `round(3.2153, 1)` |
+| [Floor Division](#floor-division) | `12//6` |
 
 
 #### Basic math operations
@@ -583,21 +583,21 @@ print(f"12/8 -> {two} ({12/8})")
 
 | Operator | Statement |
 | --- | --- |
-| [Integer/float to string](#integerfloat-to-string) | str(31.2) |
-| [Length of a string](#length-of-a-string) | len("Number of characters") |
-| [Concatenate strings](#concatenate-strings) | "This" + " is" + " concatenation." |
-| [Escape characters](#escape-characters) | "\"Hello,\" she said." |
-| [Upper, Lower, Title cases](#upper-lower-title-cases) | "My NaMe iS aLiCIa".lower() |
-| [String to list](#string-to-list) | "Welcome to the dark side".split() |
-| [Split string by](#list-to-string) | "This;is;a;string".split(";") |
-| [List to string](#list-to-string) | " ".join(["Hello", "World"]) |
-| [New line and tabulator](#new-line-and-tabulator) | "First line\n Second line" |
-| [Check substring](#check-substring) | "a" in "This is a test" |
-| [Check only letters](#check-only-letters) | "abcdefghijklmn".isalpha() |
-| [Multiply strings](#multiply-strings) | "Three"*3 |
-| [Replace string](#replace-string) | "Thiz iz a ztring".replace("z", "s") |
-| [Strip text](#strip-text) | "   Hi   ".strip() |
-| [Find index](#find-index) | "This is a string".find("s") |
+| [Integer/float to string](#integerfloat-to-string) | `str(31.2)` |
+| [Length of a string](#length-of-a-string) | `len("Number of characters")` |
+| [Concatenate strings](#concatenate-strings) | `"This" + " is" + " concatenation."` |
+| [Escape characters](#escape-characters) | `"\"Hello,\" she said."` |
+| [Upper, Lower, Title cases](#upper-lower-title-cases) | `"My NaMe iS aLiCIa".lower()` |
+| [String to list](#string-to-list) | `"Welcome to the dark side".split()` |
+| [Split string by](#list-to-string) | `"This;is;a;string".split(";")` |
+| [List to string](#list-to-string) | `" ".join(["Hello", "World"])` |
+| [New line and tabulator](#new-line-and-tabulator) | `"First line\n Second line"` |
+| [Check substring](#check-substring) | `"a" in "This is a test"` |
+| [Check only letters](#check-only-letters) | `"abcdefghijklmn".isalpha()` |
+| [Multiply strings](#multiply-strings) | `"Three"*3` |
+| [Replace string](#replace-string) | `"Thiz iz a ztring".replace("z", "s")` |
+| [Strip text](#strip-text) | `"   Hi   ".strip()` |
+| [Find index](#find-index) | `"This is a string".find("s")` |
 
 
 #### Integer/float to string
@@ -812,19 +812,19 @@ This is a string (First "s" is in position: 3)
 
 | Operator | Statement |
 | --- | --- |
-| [Element at index](#element-at-index) | lst[2] |
-| [Get last element](#get-last-element) | lst[-1] |
-| [Modify item](#modify-item) | lst[1] = 'x' |
-| [Add item at the end](#add-item-at-the-end) | lst.append('a') |
-| [Slicing a list](#slicing-a-list) | lst[1:3] |
-| [Order a list](#order-a-list) | sorted(lst) |
-| [List length](#list-length) | len(lst) |
-| [List from range](#list-from-range) | list(range(1, 5)) |
-| [Reverse a list](#reverse-a-list) | lst.reverse() |
-| [Remove item](#remove-item) | lst.remove(5) |
-| [Count item](#count-item) | lst.count('#') |
-| [Entwine lists](#entwine-lists) | zip(lst_a, lst_b) |
-| [Enumerate list](#enumerate-list) | enumerate(lst) |
+| [Element at index](#element-at-index) | `lst[2]` |
+| [Get last element](#get-last-element) | `lst[-1]` |
+| [Modify item](#modify-item) | `lst[1] = 'x'` |
+| [Add item at the end](#add-item-at-the-end) | `lst.append('a')` |
+| [Slicing a list](#slicing-a-list) | `lst[1:3]` |
+| [Order a list](#order-a-list) | `sorted(lst)` |
+| [List length](#list-length) | `len(lst)` |
+| [List from range](#list-from-range) | `list(range(1, 5))` |
+| [Reverse a list](#reverse-a-list) | `lst.reverse()` |
+| [Remove item](#remove-item) | `lst.remove(5)` |
+| [Count item](#count-item) | `lst.count('#')` |
+| [Entwine lists](#entwine-lists) | `zip(lst_a, lst_b)` |
+| [Enumerate list](#enumerate-list) | `enumerate(lst)` |
 
 #### Element at index
 
@@ -832,15 +832,16 @@ This is a string (First "s" is in position: 3)
     Remember that indexing in Python starts from 0, so **the first element is at index 0**, the second at index 1, and so on.
 
 ```py
-my_list = [10, 20, 30, 40, 50]
+# List of planets
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 
 # Extracting value at index 2 (which is the third element in the list)
-value = my_list[2]
+value = planets[2]
 
 print(value)
 ```
 <div class="output" markdown>
-30
+Earth
 </div>
 
 #### Get last element
@@ -902,50 +903,367 @@ print(planets)
 
 #### Slicing a list
 
+Imagine we want to create a new list containing the planets before "Earth," including "Earth," by using slicing.
+
+??? info "More about slicing lists"
+    When using slicing in Python lists, the slice includes all elements up to, but not including, the index specified as the end of the slice.
+
+```py
+# Original list of planets
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+
+# Slicing to include planets before and including "Earth"
+sliced_planets = planets[:2 + 1]
+
+# Sliced list of planets
+print(sliced_planets)
+```
+<div class="output" markdown>
+["Mercury", "Venus", "Earth"]
+</div>
+
+??? tip "Advanced code"
+    If we don't want to insert the index of the planet Earth manually we can use the index method.
+    ```py
+    sliced_planets = planets[:planets.index("Earth") + 1]
+    ```
+
 #### Order a list
+
+In this example, the `sorted()` function is used to sort the list of planets alphabetically, and the sorted result is stored in the sorted_planets variable.
+
+```py
+# List of planets
+planets = ["Mercury", "Venus", "Mars", "Earth", "Jupiter", "Saturn", "Uranus", "Neptune"]
+
+# Sort the planets alphabetically
+sorted_planets = sorted(planets)
+
+# Print the sorted list of planets
+print(sorted_planets)
+```
+<div class="output" markdown>
+['Earth', 'Jupiter', 'Mars', 'Mercury', 'Neptune', 'Saturn', 'Uranus', 'Venus']
+</div>
 
 #### List length
 
+In this example, the `len()` function is used to count the number of items in a list.
+
+```py
+# List of planets
+planets = ["Mercury", "Venus", "Mars", "Earth", "Jupiter", "Saturn", "Uranus", "Neptune"]
+
+# Sort the planets alphabetically
+n_planets = len(planets)
+
+# Print the sorted list of planets
+print(f"There are {n_planets} planets in the solar system.")
+```
+<div class="output" markdown>
+There are 9 planets in the solar system.
+</div>
+
 #### List from range
+
+```py
+# Using range(2, 3) to create a list with a single element
+list1 = list(range(2, 4))
+
+# Using range(6) to create a list with numbers from 0 to 5
+list2 = list(range(6))
+
+# Print the lists
+print(list1)
+print(list2)
+```
+<div class="output" markdown>
+[2, 3]  
+[0, 1, 2, 3, 4, 5]
+</div>
 
 #### Reverse a list
 
+There are two methods to reverse a list, using the `lst.reverse()` function and slicing `lst[::-1]`.
+
+!!! warning "`Reverse()` Vs. `[::-1]`"
+    The reverse() method modifies the original list in place, while slicing [::-1] creates a new reversed list without modifying the original one.
+
+
+```py
+# List of planets in the solar system
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+
+# Method 1: Using reverse()
+reversed_planets_1 = planets.copy()
+reversed_planets_1.reverse()
+
+# Method 2: Using slicing [::-1]
+reversed_planets_2 = planets[::-1]
+
+# Print the reversed lists
+print("Reversed using reverse():", reversed_planets_1)
+print("Reversed using slicing [::-1]:", reversed_planets_2)
+```
+<div class="output" markdown>
+Reversed using reverse(): ['Neptune', 'Uranus', 'Saturn', 'Jupiter', 'Mars', 'Earth', 'Venus', 'Mercury']  
+Reversed using slicing [::-1]: ['Neptune', 'Uranus', 'Saturn', 'Jupiter', 'Mars', 'Earth', 'Venus', 'Mercury']
+</div>
+
 #### Remove item
+
+The `remove()` method is used to remove the specified element ("Pluto" in this case) from the list planets. After calling `remove("Pluto")`, "Pluto" is no longer present in the list.
+
+```py
+# List of planets in the solar system
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"]
+
+# Remove "Pluto" from the list
+planets.remove("Pluto")
+
+# Print the updated list of planets
+print(planets)
+```
+<div class="output" markdown>
+['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+</div>
 
 #### Count item
 
+In this example, the `count()` function is used to count the occurrences of the element "Earth" in the planets list. The count is then stored in the variable earth_count and printed to the console. As you can see, "Earth" appears twice in the list, so the count is 2.
+
+```py
+# List of planets in the solar system
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto", "Earth"]
+
+# Count the number of occurrences of "Earth" in the list
+earth_count = planets.count("Earth")
+
+# Print the count
+print("The number of times 'Earth' appears in the list:", earth_count)
+```
+<div class="output" markdown>
+The number of times 'Earth' appears in the list: 2
+</div>
+
 #### Entwine lists
 
+In this example, the `zip()` function is used to combine the planets list and the distances list into a new list called planet_distances. Each tuple in the planet_distances list contains a planet name and its corresponding distance from the Sun. The list() function is used to convert the zip object into a list for easy printing.
+
+```py
+# Lists of planets and their distances from the Sun (in millions of kilometers)
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"]
+distances = [57.9, 108.2, 149.6, 227.9, 778.3]
+
+# Use zip to combine the two lists into a list of tuples
+planet_distances = list(zip(planets, distances))
+
+# Print the combined list
+print(planet_distances)
+```
+<div class="output" markdown>
+[('Mercury', 57.9), ('Venus', 108.2), ('Earth', 149.6), ('Mars', 227.9), ('Jupiter', 778.3)]
+</div>
+
 #### Enumerate list
+
+In this example, `enumerate(planets)` returns an iterator that produces tuples containing the index and planet from the planets list. 
+
+```py
+# List of planets
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"]
+
+# Get an iterator for the planets list along with their indices using enumerate()
+enum_planets = enumerate(planets)
+print(list(enum_planets))
+```
+<div class="output" markdown>
+[(0, 'Mercury'), (1, 'Venus'), (2, 'Earth'), (3, 'Mars'), (4, 'Jupiter')]
+</div>
 
 ### 2.4 Dictionary operators
 
 | Operator | Statement |
 | --- | --- |
-| Add key | --- |
-| Add multiple keys | --- |
-| Overwrite value | --- |
-| Extract value | --- |
-| Delete key and value | --- |
-| Keys & values list | --- |
-| Check key | --- |
-| Pair lists to dict | --- |
+| Add key | `dct['new_key'] = True` |
+| Add multiple keys | `dct.update({'key1' = 1, 'key2' = False})` |
+| Overwrite value | `dct['key'] = False` |
+| Extract value | `dct['new_key']` |
+| Delete key and value | `del dct['key_to_delete']` |
+| Keys & values list | `dct.keys()`, `dct.values()`, `dct.items()` |
+| Check key | `"key" in market_value` |
+| Pair lists to dict | `dict(zip(dct_1, dct_2))` |
 
 #### Add key
 
+```py
+# Dictionary representing market value of stock tech companies
+market_value = {
+    "Apple": 2345.67,
+    "Microsoft": 1765.89,
+    "Amazon": 3012.45,
+    "Google": 2789.34,
+    "Facebook": 1890.56
+}
+
+# Add key: Add a new company and its market value
+market_value["Tesla"] = 1899.32
+print(market_value)
+```
+<div class="output" markdown>
+{'Apple': 2345.67, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34, 'Facebook': 1890.56, 'Tesla': 1899.32}
+</div>
+
 #### Add multiple keys
+
+```py
+# Dictionary representing market value of stock tech companies
+market_value = {
+    "Apple": 2345.67,
+    "Microsoft": 1765.89,
+    "Amazon": 3012.45,
+    "Google": 2789.34,
+    "Facebook": 1890.56
+}
+
+# Add multiple keys: Add multiple new companies and their market values
+market_value.update({"Netflix": 2156.78, "Adobe": 1654.32})
+print(market_value)
+```
+<div class="output" markdown>
+{'Apple': 2345.67, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34, 'Facebook': 1890.56, 'Netflix': 2156.78, 'Adobe': 1654.32}
+</div>
 
 #### Overwrite value
 
+```py
+# Dictionary representing market value of stock tech companies
+market_value = {
+    "Apple": 2345.67,
+    "Microsoft": 1765.89,
+    "Amazon": 3012.45,
+    "Google": 2789.34,
+    "Facebook": 1890.56
+}
+print(f"Before: {market_value}")
+
+# Overwrite value: Update the market value of a company
+market_value["Apple"] = 2367.98
+print(f"After: {market_value}")
+```
+<div class="output" markdown>
+Before: {'Apple': 2345.67, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34, 'Facebook': 1890.56}
+After: {'Apple': 2367.98, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34, 'Facebook': 1890.56}
+</div>
+
 #### Extract value
+
+```py
+market_value = {
+    "Apple": 2345.67,
+    "Microsoft": 1765.89,
+    "Amazon": 3012.45,
+    "Google": 2789.34,
+    "Facebook": 1890.56
+}
+
+# Extract value: Get the market value of a specific company
+google_value = market_value["Google"]
+print("Market value of Google:", google_value)
+```
+<div class="output" markdown>
+Market value of Google: 2789.34
+</div>
 
 #### Delete key and value
 
-#### Keys & values list
+```py
+market_value = {
+    "Apple": 2345.67,
+    "Microsoft": 1765.89,
+    "Amazon": 3012.45,
+    "Google": 2789.34,
+    "Facebook": 1890.56
+}
+
+# Delete key and value: Remove a company and its market value from the dictionary
+del market_value["Facebook"]
+```
+<div class="output" markdown>
+{'Apple': 2345.67, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34}
+</div>
+
+#### Extract keys & values
+
+```py
+# Dictionary representing market value of stock tech companies
+market_value = {
+    "Apple": 2345.67,
+    "Microsoft": 1765.89,
+    "Amazon": 3012.45,
+    "Google": 2789.34,
+    "Tesla": 1899.32,
+    "Netflix": 2156.78,
+    "Adobe": 1654.32
+}
+
+# Using .keys() to get a view of keys
+keys_view = market_value.keys()
+
+# Using .values() to get a view of values
+values_view = market_value.values()
+
+# Using .items() to get a view of (key, value) pairs
+items_view = market_value.items()
+
+# Print the views
+print("Keys view:", keys_view)
+print("Values view:", values_view)
+print("Items view:", items_view)
+```
+<div class="output" markdown>
+Keys view: dict_keys(['Apple', 'Microsoft', 'Amazon', 'Google', 'Tesla', 'Netflix', 'Adobe'])  
+Values view: dict_values([2345.67, 1765.89, 3012.45, 2789.34, 1899.32, 2156.78, 1654.32])  
+Items view: dict_items([('Apple', 2345.67), ('Microsoft', 1765.89), ('Amazon', 3012.45), ('Google', 2789.34), ('Tesla', 1899.32), ('Netflix', 2156.78), ('Adobe', 1654.32)])
+</div>
 
 #### Check key
 
+```py
+market_value = {
+    "Apple": 2345.67,
+    "Microsoft": 1765.89,
+    "Amazon": 3012.45,
+    "Google": 2789.34,
+    "Facebook": 1890.56
+}
+
+# Check key: Check if a company is in the dictionary
+if "Microsoft" in market_value:
+    print("Microsoft is in the dictionary.")
+else:
+    print("Microsoft is not in the dictionary.")
+```
+<div class="output" markdown>
+Microsoft is in the dictionary.
+</div>
+
 #### Pair lists to dict
+
+```py
+# Lists of tech companies and their market values
+tech_companies = ["Apple", "Microsoft", "Amazon", "Google", "Tesla"]
+market_values = [2345.67, 1765.89, 3012.45, 2789.34, 1899.32]
+
+# Create a dictionary by pairing tech_companies with market_values
+market_value_dict = dict(zip(tech_companies, market_values))
+
+# Print the resulting dictionary
+print(market_value_dict)
+```
+<div class="output" markdown>
+{'Apple': 2345.67, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34, 'Tesla': 1899.32}
+</div>
 
 
 ## 3. If, elif, else statements
@@ -1028,6 +1346,8 @@ Please provide both your name and email to complete the registration.
 ## 4. Loops
 
 ### 4.1 For loop
+
+A for loop in Python is a way to repeat a set of instructions for each item in a collection (like a list or a string), allowing you to perform the same task on multiple elements one by one.
 
 #### Iterating a list
 
@@ -1115,8 +1435,31 @@ Position 4: C
 Position 5: A  
 </div>
 
+??? tip "Advanced for loop"
+    **List comprehension** is a concise way to create a new list in Python by performing some operation on each item of an existing list or iterable. It allows you to **combine a for loop and an expression in a single line** to generate a new list efficiently.
+    ```py
+    planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+
+    # Example 1: Create a new list with the lengths of each planet name
+    planet_name_lengths = [len(planet) for planet in planets]
+
+    # Example 2: Create a new list with uppercase planet names
+    uppercase_planets = [planet.upper() for planet in planets]
+
+    print(planet_name_lengths)
+    print(uppercase_planets)
+    ```
+    <div class="output" markdown>
+    [7, 5, 5, 4, 7, 6, 6, 7]  
+    ['MERCURY', 'VENUS', 'EARTH', 'MARS', 'JUPITER', 'SATURN', 'URANUS', 'NEPTUNE']
+
+    </div>
+
+
 
 ### 4.2 While loop
+
+A while loop in Python is a way to repeatedly execute a block of code as long as a certain condition is true. It keeps running the instructions until the condition becomes false, allowing you to perform tasks until a specific condition is met. 
 
 ??? info "While Vs. for loops"
     A while loop should be used in Python when the number of iterations is not known beforehand, and the loop needs to continue as long as a certain condition remains true. It is ideal for scenarios where the loop's termination depends on real-time or user input conditions.
