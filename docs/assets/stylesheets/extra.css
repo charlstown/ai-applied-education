@@ -38,7 +38,7 @@
 
   .steps li {
     counter-increment: item;
-    margin-bottom: 2rem!important;
+    margin-bottom: 1rem!important;
     position: relative;
     padding-left: 30px;
 }
