@@ -15,7 +15,7 @@ GitHub is a platform that **helps you colaborate and work on projects**, especia
 
 To create a github account go to [Github.com](www.github.com), and press `Sign up`.
 
-![github-sign-up](ai-applied-education\docs\assets\images\requirements-github-sign-up.jpg)
+![github-sign-up](assets\images\requirements-github-sign-up.jpg)
 
 ### 1.2 Create a profile README repository
 
@@ -89,7 +89,7 @@ Google Colab (short for Colaboratory) is an online platform provided by Google t
 - **Create a New Notebook:** Click [here](https://colab.research.google.com/?hl=es#create=true) to create a new notebook and start coding.
 
 - **Connect the Notebook:** A new notebook will be created with an empty code cell. Make sure you connect the notebook to a running environment. You can start running the code once you have a machine assigned.  
-    ![colab-connect](ai-applied-education\docs\assets\images\requirements-colab-connect.jpg)
+    ![colab-connect](assets\images\requirements-colab-connect.jpg)
 
 - **Adding Code:** You can add code cells by clicking the "+ Code" button above the notebook or pressing the "+ Code" option in the "Insert" menu.
 
@@ -112,7 +112,7 @@ Google Colab (short for Colaboratory) is an online platform provided by Google t
 
 - **Choose GitHub Tab:** Click on the "GitHub" tab on the "Welcome to Colaboratory" screen.
 
-    ![colab-connect](ai-applied-education\docs\assets\images\requirements-colab-connect.jpg)
+    ![colab-connect](assets\images\requirements-colab-connect.jpg)
 
 - **Enter Repository URL:**
 In the "Enter a GitHub URL or search by organization or user" field, paste the URL of the GitHub repository that contains the notebook you want to open.
