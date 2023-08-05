@@ -22,10 +22,10 @@ Variable types in Python represent simple, fundamental data types directly suppo
 
 | Variable | Declaration | Example |
 | --- | --- | --- |
-| Integer | *int* | 128; 1 |
-| Float | *float* | 1.5; 14. |
-| String | *str* | "This is a string."; "126"; ",.$" |
-| Boolean | *bool* | True; False |
+| Integer | *int* | `128`; `1` |
+| Float | *float* | `1.5`; `14.` |
+| String | *str* | `"This is a string."`; `"126"`; `",.$"` |
+| Boolean | *bool* | `True`; `False` |
 
 #### Integer
 
@@ -125,10 +125,10 @@ Python data structures are essentially containers for different kinds of data.
 
 | Variable | Declaration | Example |
 | --- | --- | --- |
-| List | *list* | [1, "Hi", "23", True] |
-| Dictionary | *dict* | {"element_a": 3, "other": False} |
-| Tuple | *tuple* | (1, "hi", True) |
-| Set | *set* | {"a", 4, True, 9} |
+| List | *list* | `[1, "Hi", "23", True]` |
+| Dictionary | *dict* | `{"element_a": 3, "other": False}` |
+| Tuple | *tuple* | `(1, "hi", True)` |
+| Set | *set* | `{"a", 4, True, 9}` |
 
 ??? example "Example of a combined data structure in real life"
     ```py

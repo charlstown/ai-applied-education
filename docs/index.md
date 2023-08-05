@@ -6,7 +6,7 @@ hide:
     - nav
 ---
 
-## :material-rocket-launch-outline: The AI Applied Course
+## :material-rocket-launch-outline: The AI Applied Program
 
 </br>
 
