@@ -1,15 +1,26 @@
 # Requirements
 
-In order to fully engage with the course material and complete the exercises, it is essential to have the necessary software installed on your system. Follow these step-by-step tutorials, to ensure you have the foundation to succeed in the course. The covered tools encompass a GitHub account, Google Colab, Anaconda distribution, and optionally, Visual Studio Code.
+In order to fully engage with the course material and complete the exercises, it is essential to have the necessary software installed on your system. Follow these step-by-step tutorials, to ensure you have the foundation to succeed in the course.
 
-:simple-github: :simple-google: :simple-anaconda: :simple-visualstudiocode:
+The required tools encompass:
+
+:simple-github: **GitHub account**  
+:simple-google: **Google Colab**  
+:simple-anaconda: **Anaconda distribution **  
+:simple-visualstudiocode: **Visual Studio Code (optionally)**
+
+!!! danger ":octicons-markdown-16: **Markdown knowledge is required**"
+
+    Markdown knowledge is essential for the program. While not covered in the course, it's vital for creating clear documentation. Please refer to the [Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/) to learn the basics.
 
 
 ## :simple-github: Github 
 
-GitHub is a platform that **helps you colaborate and work on projects**, especially in the field of software development. It's like a digital space where people can store, share, and manage their code and project files.
+<div class="highlighted" markdown>
+**GitHub is a platform that helps you colaborate and work on projects. It's like a digital space where people can store, share, and manage their code and project files.**
+</div>
 
-**GitHub allows you to create repositories (folders)** to store your projects. **Each repository contains all the files, code, and resources** related to a specific project. It's a great place to keep track of your work and colaborate with others.
+GitHub allows you to create repositories (folders) to store your projects. Each repository contains all the files, code, and resources related to a specific project. It's a great place to keep track of your work and colaborate with others.
 
 ### 1.1 Create an account
 
@@ -79,7 +90,11 @@ Congratulations! You've successfully created your profile README.
 
 ## :simple-google: Google colab
 
-Google Colab (short for Colaboratory) is an online platform provided by Google that allows you to write and execute Python code in a colaborative and interactive environment. It's especially useful for data analysis, machine learning, and research projects. You can create and share notebooks that contain code, text, images, and more.
+<div class="highlighted" markdown>
+Google Colab is an online platform that allows you to write and execute Python code in a colaborative and interactive environment.
+</div>
+
+It's especially useful for data analysis, machine learning, and research projects. You can create and share notebooks that contain code, text, images, and more.
 
 !!! info "Gmail account"
     To use Google Colab, **you need a Google account** (such as a Gmail account). You can access Colab through a web browser without any installation. It provides a virtual machine with necessary libraries pre-installed, eliminating the need for local setup.
@@ -134,6 +149,10 @@ In the "Enter a GitHub URL or search by organization or user" field, paste the U
 
 ## :simple-anaconda: Anaconda distribution
 
+<div class="highlighted" markdown>
+Anaconda is a platform that simplifies Python programming by providing tools and libraries for data science, analysis, and coding tasks.
+</div>
+
 *You can follow the official instructions at [Anaconda documentation](https://docs.anaconda.com/free/anaconda/install/windows/).*
 
 <div class="steps" markdown>
@@ -154,6 +173,10 @@ Congratulations! You've successfully installed Anaconda on your Windows computer
 
 
 ## :simple-visualstudiocode: VS Code (Optional)
+
+<div class="highlighted" markdown>
+Visual Studio Code is a free code editor developed by Microsoft. It's widely used for coding and programming tasks.
+</div>
 
 <div class="steps" markdown>
 - **Download VS Code:** go to the [Visual Studio Code website](https://code.visualstudio.com/download). Click on the "Download for Windows" button.

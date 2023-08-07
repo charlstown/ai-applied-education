@@ -12,6 +12,11 @@
     margin: 2em 0;
   }
 
+  .highlighted {
+    color: var(--md-accent-fg-color);
+    font-weight: bold;
+  }
+
   .steps ul {
     list-style-type: none;
     counter-reset: item;
