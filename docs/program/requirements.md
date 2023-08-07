@@ -4,15 +4,21 @@ In order to fully engage with the course material and complete the exercises, it
 
 The required tools encompass:
 
+:octicons-markdown-16: **Markdown**  
 :simple-github: **GitHub account**  
 :simple-google: **Google Colab**  
-:simple-anaconda: **Anaconda distribution **  
+:simple-anaconda: **Anaconda distribution**  
 :simple-visualstudiocode: **Visual Studio Code (optionally)**
 
-!!! danger ":octicons-markdown-16: **Markdown knowledge is required**"
+---
 
-    Markdown knowledge is essential for the program. While not covered in the course, it's vital for creating clear documentation. Please refer to the [Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/) to learn the basics.
+## :octicons-markdown-16: Markdown lightweight language
 
+<div class="highlighted" markdown>
+Markdown is a simple way to format documentation, readme files, and notes. Markdown simplifies text styling and organization.
+</div>
+
+**Markdown knowledge is required for the program. While not covered in the course, it's vital for creating clear documentation. Please refer to the [Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/) to learn the basics.**
 
 ## :simple-github: Github 
 
