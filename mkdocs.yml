@@ -48,7 +48,9 @@ theme:
 # Sorting menu pages
 nav:
     - Home: 'index.md'
-    - Overview: 'program/overview.md'
+    - Overview:
+      - Overview: 'program/overview.md'
+      - Requirements: 'program/requirements.md'
     - Unit 1:
       - 1.1 Introduction to Github & Notebooks: 'program/unit-1/11-introduction-to-github-and-notebooks.md'
       - 1.2 Introduction to Python: 'program/unit-1/12-introduction-to-python.md'
