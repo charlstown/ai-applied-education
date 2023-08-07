@@ -75,6 +75,8 @@ Happy coding! :vulcan_salute:
 -- @username
 ```
 
+Congratulations! You've successfully created your profile README. 
+
 ## :simple-google: Google colab
 
 Google Colab (short for Colaboratory) is an online platform provided by Google that allows you to write and execute Python code in a colaborative and interactive environment. It's especially useful for data analysis, machine learning, and research projects. You can create and share notebooks that contain code, text, images, and more.
@@ -132,9 +134,38 @@ In the "Enter a GitHub URL or search by organization or user" field, paste the U
 
 ## :simple-anaconda: Anaconda distribution
 
-Content in progress.
+*You can follow the official instructions at [Anaconda documentation](https://docs.anaconda.com/free/anaconda/install/windows/).*
+
+<div class="steps" markdown>
+- **Download Anaconda:** go to the [Anaconda website](https://www.anaconda.com/). Click on the "Download" for windows button.
+
+- **Run Installer:** locate the downloaded installer file (usually named something like "Anaconda3-2023.07-1-Windows-x86_64.exe") and double-click on it to run the installer.
+
+- **Setup Wizard:** follow the prompts in the setup wizard. You can leave most of the default settings as they are. However, make sure to **check the box that says "Add Anaconda to my PATH environment variable."** This will allow you to use Anaconda from the command line.
+
+- **Install Anaconda:** click the "Install" button to start the installation process. The installer will copy files to your computer.
+
+- **Start Anaconda Navigator:** after the installation, you can start Anaconda Navigator by clicking the "Next" button on the completion screen. This will open the Anaconda Navigator app, which provides a graphical interface for managing environments and packages.
+
+- **Start Using Anaconda:** you're now ready to start using Anaconda. You can open Anaconda Navigator to manage environments, launch Jupyter notebooks, and install packages.
+</div>
+
+Congratulations! You've successfully installed Anaconda on your Windows computer. 
 
 
 ## :simple-visualstudiocode: VS Code (Optional)
 
-Content in progress.
+<div class="steps" markdown>
+- **Download VS Code:** go to the [Visual Studio Code website](https://code.visualstudio.com/download). Click on the "Download for Windows" button.
+
+- **Run Installer:** locate the downloaded installer file (usually named something like "VSCodeSetup.exe") and double-click on it to run the installer.
+
+- **Choose Additional Tasks:** during the installation, you'll be prompted to choose additional tasks. You can choose to associate file types with VS Code, create a desktop icon, and more.
+
+- **Start VS Code:** after the installation, you can start Visual Studio Code by clicking the "Start" button on your Windows taskbar and searching for "Visual Studio Code" in the search bar. Click on the application to launch it.
+
+- **Start Coding:** you're now ready to start coding with Visual Studio Code. You can open files, create new projects, and install extensions to enhance your coding experience.
+
+</div>
+
+Congratulations! You've successfully installed Visual Studio Code on your Windows computer.
