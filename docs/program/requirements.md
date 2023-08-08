@@ -4,11 +4,11 @@ In order to fully engage with the course material and complete the exercises, it
 
 The required tools encompass:
 
-:octicons-markdown-16: **Markdown**  
-:simple-github: **GitHub account**  
-:simple-google: **Google Colab**  
-:simple-anaconda: **Anaconda distribution**  
-:simple-visualstudiocode: **Visual Studio Code (optionally)**
+[:octicons-markdown-16: **Markdown**](#markdown-lightweight-language)  
+[:simple-github: **GitHub account**](#github)  
+[:simple-google: **Google Colab**](#google-colab)  
+[:simple-anaconda: **Anaconda distribution**](#anaconda-distribution)  
+[:simple-visualstudiocode: **Visual Studio Code (optionally)**](#vs-code-optional)
 
 ---
 
