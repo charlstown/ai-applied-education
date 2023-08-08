@@ -15,6 +15,20 @@
 
 ## 2. Github
 
+| Command | Example | Action |
+| git clone REPO-NAME | git clone https://github.com/user/repo.git | Clone a repository in the local computer |
+| git pull | git pull | Description |
+| git - | git - | Description |
+| git - | git - | Description |
+| git - | git - | Description |
+| git - | git - | Description |
+| git - | git - | Description |
+| git - | git - | Description |
+| git - | git - | Description |
+| git - | git - | Description |
+| git - | git - | Description |
+| git - | git - | Description |
+
 ### 2.1 Create a profile README repository
 
 A repository in GitHub is like a digital folder where you can store and manage your projects, including code, files, and resources. It's a space to colaborate, keep track of changes, and showcase your work. To create a repository you can follow [the official documentation](https://docs.github.com/es/get-started/quickstart/create-a-repo).
