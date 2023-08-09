@@ -237,7 +237,7 @@ Content
 
 ## 4. Test your skills
 
-### 4.1 Create a profile README repository
+### 4.1 Create a profile repository
 
 The profile README is a repository where you can share information about yourself with the community on GitHub.com by creating a profile README. GitHub shows your profile README at the top of your profile page. Check the oficial documentation of [Github profile README](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
 
