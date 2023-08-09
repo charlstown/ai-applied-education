@@ -1,7 +1,7 @@
 # Git, Github and Notebooks
 
 
-## 1. Console
+## 1. Consoles
 
 <div class="highlighted">
 A console is similar to a file explorer, but instead of a visual interface, it's a text-based interface on a computer. It allows you to enter commands for tasks like navigating, copying, and moving files.
@@ -46,8 +46,8 @@ A repository in GitHub is like a digital folder where you can store and manage y
 ``` mermaid
 graph TD
     G[Github] --> PP["📷\nDeveloper\nprofile"];
-    G --> RP["⌸ Your\nrepositories"];
-    G --> PR["⌸ Public\nrepositories"];
+    G --> RP[("⌸ Your\nrepositories")];
+    G --> PR[("⌸ Public\nrepositories")];
 ```
 
 ### 2.3 What is a repository
@@ -61,25 +61,77 @@ A repository can be either **local, stored on your computer**, or **remote, stor
 ``` mermaid
 graph TD
     G["🅶\nGithub"] --> UR["👩‍💻User profile"];
-    UR --> RR["⧠ Remote\nrepository"];
+    UR --> RR[("⧠ Remote\nrepository")];
     RR -->|pull| LG1["⧠\nLocal GIT"];
     LG1 -->|push| RR;
     LG1 -->|pull| WS1["👩‍💻\nLocal computer 1"];
     WS1 -->|commit| LG1;
-    WS1 --> LR1{"🖿\nLocal\nrepository"}
+    WS1 --> LR1[("🖿\nLocal\nrepository")];
     RR -->|pull| LG2["⧠\nLocal GIT"];
     LG2 -->|push| RR;
     LG2 -->|pull| WS2["👨‍💻\nLocal computer 2"];
     WS2 -->|commit| LG2;
-    WS2 --> LR2{"🖿\nLocal\nrepository"}
+    WS2 --> LR2[("🖿\nLocal\nrepository")];
     RR -->|pull| LG3["⧠\nLocal GIT"];
     LG3 -->|push| RR;
     LG3 -->|pull| WS3["👩‍💻\nLocal computer 3"];
     WS3 -->|commit| LG3;
-    WS3 --> LR3{"🖿\nLocal\nrepository"}
+    WS3 --> LR3[("🖿\nLocal\nrepository")]
 ```
 
-### 2.4 Whay is a branch
+### 2.4 What is a branch
+
+<div class="highlighted">
+A branch is like a separate copy of your repository where you can make changes without affecting the main version. It's like having a playground to experiment and work on new features before adding them to the main project.
+</div>
+
+``` mermaid
+graph LR
+    subgraph "Branch main"
+    direction LR
+    A(("#A")) -->|commit| B(("#B"));
+    B -->|commit| C(("#C"));
+    C -->|commit| D(("#D"));
+    D -->|commit| E(("#E"));
+    E -->|commit| F(("#F"));
+    end
+    C -->|"checkout -b"| B2C;
+    B2E -->|Pull request| E;
+    subgraph "Branch dev-jorge"
+    B1B(("#B")) -->|commit| B1C(("#C'"));
+    end
+    subgraph "Branch dev-marta"
+    B2C(("#C")) -->|commit| B2D(("#D'"));
+    B2D -->|commit| B2E(("#E'"));
+    end
+    B -->|"checkout -b"| B1B;
+    B1C -->|Pull request| D;
+```
+
+#### Example
+
+<div class="steps" markdown>
+- **Clone repository.** 
+    ```sh
+    git clone https://github.com/charlstown/ai-applied-education.git
+    ```
+- **Check branch.** By default it shows local branches, you can add the flag `-r` to show only remote branches or `-a` to show all.
+    ```sh
+    git branch -a
+    ```
+    ```output
+    remotes/origin/dev-marta
+    remotes/origin/dev-juan
+    * main
+    ```
+- **check dev-marta branch.**
+    ```
+    git checkout dev-marta
+    git pull
+    ```
+</div>
+
+
 
 ### 2.5 Git commands
 
