@@ -124,10 +124,27 @@ graph LR
     remotes/origin/dev-juan
     * main
     ```
-- **check dev-marta branch.**
-    ```
+- **Check dev-marta branch.**
+    ```sh
     git checkout dev-marta
     git pull
+    ```
+    ```output
+    Switched to branch 'dev-marta'
+    Your branch is behind 'origin/main' by 23 commits, and can be fast-forwarded.
+    (use "git pull" to update your local branch)
+
+    Already up to date.
+    ```
+- **New branch from main.** Change to main branch, then create a new branch with the files from main.
+    ```sh
+    git checkout main
+    git pull
+    git checkout -b dev-new-branch
+    ```
+- **Push new branch.**
+    ```
+    git push –set-upstream origin dev-new-branch
     ```
 </div>
 
