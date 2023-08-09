@@ -39,7 +39,7 @@ Imagine Git as a time-traveling tool for your computer files. It keeps a record 
 GitHub is like a library for your computer code. It lets you store your code online, so you can access it from anywhere. You can also invite friends to help you work on your code and keep track of all the changes you make.
 </div>
 
-GitHub is a platform where people store and collaborate on code for software projects. It's like a digital space where programmers can work together on coding projects.
+GitHub is a platform where people store and colaborate on code for software projects. It's like a digital space where programmers can work together on coding projects.
 
 A repository in GitHub is like a digital folder where you can store and manage your projects, including code, files, and resources. It's a space to colaborate, keep track of changes, and showcase your work. To create a repository you can follow [the official documentation](https://docs.github.com/es/get-started/quickstart/create-a-repo).
 
@@ -53,10 +53,10 @@ graph TD
 ### 2.3 What is a repository
 
 <div class="highlighted">
-A repository is like a folder where you store files for a project. It holds your work, tracks changes, and allows others to collaborate on the project. It's like a digital toolbox.
+A repository is like a folder where you store files for a project. It holds your work, tracks changes, and allows others to colaborate on the project. It's like a digital toolbox.
 </div>
 
-A repository can be either **local, stored on your computer**, or **remote, stored on a server** like Github. They are linked by using version control systems like Git. Local repositories store your work offline, while remote repositories, often hosted on platforms like GitHub, enable collaboration and backup by syncing changes between local and remote versions.
+A repository can be either **local, stored on your computer**, or **remote, stored on a server** like Github. They are linked by using version control systems like Git. Local repositories store your work offline, while remote repositories, often hosted on platforms like GitHub, enable colaboration and backup by syncing changes between local and remote versions.
 
 ``` mermaid
 graph TD
@@ -95,7 +95,7 @@ graph LR
     D -->|commit| E(("#E"));
     E -->|commit| F(("#F"));
     end
-    C -->|"checkout -b"| B2C;
+    C -->|"switch -c"| B2C;
     B2E -->|Pull request| E;
     subgraph "Branch dev-jorge"
     B1B(("#B")) -->|commit| B1C(("#C'"));
@@ -104,11 +104,13 @@ graph LR
     B2C(("#C")) -->|commit| B2D(("#D'"));
     B2D -->|commit| B2E(("#E'"));
     end
-    B -->|"checkout -b"| B1B;
+    B -->|"switch -c"| B1B;
     B1C -->|Pull request| D;
 ```
 
 #### Example
+
+This example shows a common workflow to create a new branch `dev-new-branch` from the original files of `main` branch.
 
 <div class="steps" markdown>
 - **Clone repository.** 
@@ -126,10 +128,10 @@ graph LR
     ```
 - **Check dev-marta branch.**
     ```sh
-    git checkout dev-marta
+    git switch dev-marta
     git pull
     ```
-    ```output
+    ```output title="output"
     Switched to branch 'dev-marta'
     Your branch is behind 'origin/main' by 23 commits, and can be fast-forwarded.
     (use "git pull" to update your local branch)
@@ -138,15 +140,17 @@ graph LR
     ```
 - **New branch from main.** Change to main branch, then create a new branch with the files from main.
     ```sh
-    git checkout main
+    git switch main
     git pull
-    git checkout -b dev-new-branch
+    git switch -c dev-new-branch
     ```
-- **Push new branch.**
+- **Push new branch.** Push the new branch from local repository to remote repository.
     ```
     git push –set-upstream origin dev-new-branch
     ```
 </div>
+
+Now you can start working on your branch without iterfering the `main` branch.
 
 
 
@@ -167,8 +171,8 @@ graph LR
 ??? tip "Git branching commands"
     | Command | Example | Action |
     | --- | --- | --- |
-    | git checkout BRANCH | `git checkout dev-carlos` | Switch to the selected branch | 
-    | git checkout -b BRANCH | `git checkout -b dev-carlos` | Create new branch and switch to that branch | 
+    | git switch BRANCH | `git switch dev-carlos` | Switch to the selected branch | 
+    | git switch -c BRANCH | `git switch -c dev-carlos` | Create new branch and switch to that branch | 
     | git branch | `git branch` (-a- ; -r) | Shows local and remote branches | 
     | git remote prune origin | `git remote prune origin` | Update remote branchs in local memory | 
 
@@ -176,16 +180,43 @@ graph LR
 
 ## 3. Notebooks
 
-Work in progress.
+<div class="highlighted" makrdown>
+A code notebook is like a digital Notepad or Word where you can write and run code. It's a place to mix text, code, and outputs, making it easier to learn and share. 
+</div>
 
-### 3.1 Google Collab
+In this course, you'll use tools like Google Colab and Jupyter Notebooks to create these interactive notebooks for coding and learning.
 
-Work in progress.
+#### Notebook Shortcuts
+
+| Shortcut | Action |
+| --- | --- |
+| - | - |
+
+### 3.1 Google colab
+
+<div class="highlighted" makrdown>
+Google Colab is an online platform that allows you to write and execute Python code in a colaborative and interactive environment.
+</div>
+
+
+#### Environments in collab
+
+#### Installing new libraries
+
+#### Open from Github
+
+#### Save in Github
 
 
 ### 3.2 Jupyter notebooks
 
-Work in progress.
+<div class="highlighted" makrdown>
+Google Colab is an online platform that allows you to write and execute Python code in a colaborative and interactive environment.
+</div>
+
+#### Environments in Jupyter
+
+Content
 
 
 ## 4. Test your skills
