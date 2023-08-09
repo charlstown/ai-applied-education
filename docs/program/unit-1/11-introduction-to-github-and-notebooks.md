@@ -14,12 +14,28 @@ A file explorer offers a graphical interface for navigating files and folders us
 | Command | Example | Action |
 | --- | --- | --- |
 | ls | `ls`  {`-a`, `-l`} | List the current directory files |
-| cd "DIR" | `cd "My documents"` | Change directory |
+| cd DIR | `cd "My documents"` | Change directory |
 | cd .. | `cd ..` | Back to the upper directory one level |
+| clear | `clear` | Clean console |
+| history | `history` | Shows latest commands |
 | tab | - | Show available options, autocomplete |
 | Up Arrow | - | Extract last command |
+| ctrl + l | - | Scroll to active line |
 | ctrl + r | - | Search in the command history |
+| ctrl + c | - | Stop & kill running command |
 
+??? tip "Advanced commands"
+    | Command | Example | Action |
+    | --- | --- | --- |
+    | pwd | `pwd` | Print working directory path |
+    | cat FILE | `cat README.md` | Shows the contents of the file |
+    | touch FILE | `touch README.md` | Creates an empty file |
+    | mkdir FOLDER | `mkdir "My documents"` | Create a new folder on actual directory |
+    | mv FILE DIR | `mv notebook.ipynb "My documents"` | Move file to a new directory |
+    | cp FILE DIR | `cp notebook.ipynb "My documents"` | Move file to a new directory |
+    | rm FILE | `rm notebook.ipynb` | Remove selected file |
+    | rm -r FOLDER | `rm -r "My documents"` | Remove a folder and all the files inside |
+    | find --name FILE | `find --name README.md"` | Search for a file in the directory and sublevels |
 
 ## 2. Git & Github
 
