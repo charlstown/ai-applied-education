@@ -63,7 +63,9 @@ nav:
       - 2.3 Introduction to Exploratory Data Analysis (EDA): 'program/unit-2/23-introduction-to-exploratory-data-analysis-eda.md'
       - 2.4 Data Cleaning and Processing: 'program/unit-2/24-data-cleaning-and-processing.md'
       - 2.5 Dialogue with a Professional: 'program/unit-2/25-dialogue-with-a-professional.md'
-    - Contact: 'program/contact.md'
+    - Directory:
+      - Contact: 'program/contact.md'
+      - Students: 'program/students.md'
 
 
 # Extensions

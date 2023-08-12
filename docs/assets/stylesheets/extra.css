@@ -163,7 +163,7 @@ div.output::before {
   list-style: none;
 }
 
-.grid ul li a {
+/* .grid ul li a {
   list-style: none;
   text-align: left;
   padding: 0.8rem;
@@ -176,4 +176,4 @@ div.output::before {
 .grid ul li a:hover {
   border-color: var(--md-accent-fg-color);
   color: var(--md-accent-fg-color);
-}
+} */
