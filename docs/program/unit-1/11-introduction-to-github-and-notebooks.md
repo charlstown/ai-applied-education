@@ -364,9 +364,21 @@ To request the application for this program you need to know how to fork (copy) 
     ```bash
     git push
     ```
+- Make sure you pushed your files successfully by visiting your forked github repository in the browser
 </div>
 
 
 #### Pull request to the official repository
 
-Work in progress.
+- Go to commits ahead message and click the link.
+    ![github-pr-commits](/ai-applied-education/assets/images/11-github-pr-commits.jpg)
+- Click the `Create pull request` button to make the pull request to the original repository.
+    ![github-pr-request](/ai-applied-education/assets/images/11-github-pr-request.jpg)
+- Add a descriptive comment explaining your provided feature somthing like
+    ```markdown
+    Application of the student "María Jimeno" to the `students.md` file.
+    ```
+- Send the pull request by clicking the `Merge pull request` button.
+    ![github-pr-request](/ai-applied-education/assets/images/11-github-pr-merge.jpg)
+
+Congratulations you have applied to the program. You will see your name and email at the [Students site](https://charlstown.github.io/ai-applied-education/program/students/) when the owner of the repository to accept your pull request.
