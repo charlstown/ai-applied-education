@@ -296,21 +296,77 @@ Happy coding! :vulcan_salute:
 Congratulations! You've successfully created your profile README. 
 
 
-### 4.2 Clone a repository
+### 4.2 Apply to the program
 
-Work in progress.
+To request the application for this program you need to know how to fork (copy) the official course repository, modify the files by adding your name and email, and making a pull request to the original repository to add your student data.
+
+#### Fork the course repository
+
+<div class="steps" markdown>
+- Go to the [ai-applied-repository](https://github.com/charlstown/ai-applied-education), that contains the files of this course.
+- Fork the repository by pressing the fork button on the top right corner.
+    ![github-fork-button](/ai-applied-education/assets/images/11-github-fork-button.jpg)
+- Add you user as owner of the new copy of the repository, and make sure you only copy the main branch.
+    ![github-fork-repo](/ai-applied-education/assets/images/11-github-fork-repository.jpg)
+</div>
+
+#### Clone the repository in your local computer
+
+<div class="steps" markdown>
+- Open your prefered console, git bash or anaconda and go to the directory where you want to clone the project.
+    ```bash
+    cd "E:\My PC\00_WIP"
+    ```
+- Make sure you are in the correct directory by running the `pwd` command and check if the folder is empty `ls`.
+    ```bash
+    pwd
+    ls
+    ```
+- Copy the link of the repository by clicking the code button and the :octicons-copy-16:copy icon
+    ![github-clone-repo](/ai-applied-education/assets/images/11-github-fork-repository.jpg)
+- Now clone the repository locally by running the following.
+    ```bash
+    git clone THE-COPIED-REPOSITORY-LINK
+    ```
+</div>
+
+#### Add yourself to the students list
+
+<div class="steps" markdown>
+- Locate the file `ai-applied-education/docs/program/students.md`, and add your name to the markdown table **under the example**. (Make sure you copy the same structure)
+    ```markdown
+    | Name | Email | Github |
+    | --- | --- | --- |
+    | name | email | github-link |
+    | María Jimeno | mjimeno@email.com | https://github.com/mjimeno |
+    ```
+- Save and close the file.
+</div>
 
 
-### 4.3 Commit & Push
+#### Commit & Push to remote repository
 
-Work in progress.
+<div class="steps" markdown>
+- Open the git bash console again and navigate to the root path of the repository.
+    ```bash
+    cd "E:\My PC\00_WIP\AiAppliedEducation"
+    ```
+
+- Add the changes by `git add` command.
+    ```bash
+    git add .
+    ```
+- Commit the changes to local git by `git commit` command. Make sure you add your name to the command.
+    ```
+    git commit -m "update: María student added"
+    ```
+- Push changes to remote repository.
+    ```bash
+    git push
+    ```
+</div>
 
 
-### 4.4 Fork a repository
-
-Work in progress.
-
-
-### 4.5 Pull request
+#### Pull request to the official repository
 
 Work in progress.
