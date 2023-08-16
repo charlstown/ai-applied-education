@@ -30,7 +30,7 @@ GitHub allows you to create repositories (folders) to store your projects. Each 
 
 ### 1.1 Create an account
 
-To create a github account go to [Github.com](www.github.com), and press `Sign up`.
+To create a github account go to [Github.com](https://www.github.com), and press `Sign up`.
 
 ![github-sign-up](/ai-applied-education\assets\images\requirements-github-sign-up.jpg)
 
