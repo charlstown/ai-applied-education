@@ -215,24 +215,16 @@ Google Colab is an online platform that allows you to write and execute Python c
 </div>
 
 
-#### Environments in collab
-
-#### Installing new libraries
-
-#### Open from Github
-
-#### Save in Github
+#### Open a Colab notebook
 
 
-### 3.2 Jupyter notebooks
+### 3.2 Jupyter lab
 
 <div class="highlighted" makrdown>
-Google Colab is an online platform that allows you to write and execute Python code in a colaborative and interactive environment.
+Content
 </div>
 
-#### Environments in Jupyter
-
-Content
+#### Open Jupyter lab
 
 
 ## 4. Test your skills
@@ -296,7 +288,7 @@ Happy coding! :vulcan_salute:
 Congratulations! You've successfully created your profile README. 
 
 
-### 4.2 Apply to the program
+### 4.2 Apply to the program as new student
 
 To request the application for this program you need to know how to fork (copy) the official course repository, modify the files by adding your name and email, and making a pull request to the original repository to add your student data.
 
@@ -322,8 +314,8 @@ To request the application for this program you need to know how to fork (copy) 
     pwd
     ls
     ```
-- Copy the link of the repository by clicking the code button and the :octicons-copy-16:copy icon
-    ![github-clone-repo](/ai-applied-education/assets/images/11-github-fork-repository.jpg)
+- Copy the link of the repository by clicking the code button and the :octicons-copy-16: `copy` icon
+    ![github-clone-repo](/ai-applied-education/assets/images/11-github-clone-repo.jpg)
 - Now clone the repository locally by running the following.
     ```bash
     git clone THE-COPIED-REPOSITORY-LINK
