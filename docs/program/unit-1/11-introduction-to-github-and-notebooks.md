@@ -169,7 +169,6 @@ This example shows a common workflow to create a new branch `dev-new-branch` fro
 Now you can start working on your branch without iterfering the `main` branch.
 
 
-
 ### 2.5 Git commands
 
 | Command | Example | Action |
@@ -191,7 +190,6 @@ Now you can start working on your branch without iterfering the `main` branch.
     | git switch -c BRANCH | `git switch -c dev-carlos` | Create new branch and switch to that branch | 
     | git branch | `git branch` (-a- ; -r) | Shows local and remote branches | 
     | git remote prune origin | `git remote prune origin` | Update remote branchs in local memory | 
-
 
 
 ## 3. Notebooks
