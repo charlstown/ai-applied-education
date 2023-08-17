@@ -15,7 +15,7 @@ Data Science is the art of using data to understand, predict, and solve real-wor
 
 Data jobs are becoming increasingly influential in every domain of knowledge due to the widespread adoption of data-driven decision-making. As data-driven approaches offer valuable insights and predictions, professionals with data skills can extract valuable information from data
 
-![data-roles-ecosystem](/ai-applied-education/assets/images/data-roles-ecosystem.jpg)
+![data-roles-ecosystem](assets/images/data-roles-ecosystem.jpg)
 
 - **Business Analyst:** Utilizes data to determine project requirements and provides recommendations and reports to stakeholders, focusing on tactical aspects rather than strategic ones.
 - **Data Architects and Data Engineers:** Data architects visualize framework requirements, while data engineers build the digital framework to create a solution.
