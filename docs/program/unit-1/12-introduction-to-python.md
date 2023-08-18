@@ -119,6 +119,7 @@ True
 False   
 </div>
 
+
 ### 1.2 Data structures
 
 Python data structures are essentially containers for different kinds of data.
@@ -1491,3 +1492,13 @@ Do you want to see more clothes? (yes/no): No
 Thank you for visiting our Fashion Clothes Store! 
 </div>
 
+
+## :material-file-code: Start coding
+
+You can do the exercises in Google Colab or in Jupyter Lab
+
+##### Google Colab
+
+Open the [12_variable_type]() notebook to start doing the exercises. 
+
+##### Jupyter Lab

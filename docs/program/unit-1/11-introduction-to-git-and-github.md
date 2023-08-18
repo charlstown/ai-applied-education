@@ -1,5 +1,6 @@
-# Git, Github and Notebooks
+# Git & Github
 
+Visit [the software ecosystem](../../overview/#the-software-ecosystem) to have an overview of the software you are going to use in this course.
 
 ## 1. Consoles
 
@@ -41,7 +42,30 @@ A file explorer offers a graphical interface for navigating files and folders us
 
 Think of **Git** like a notebook that **tracks all the changes you make to your writing**, letting you go back and see every draft. **GitHub** is like **a library where you can keep your notebooks**, and others can borrow them, read your writing, make suggestions, and even work on their own versions of the same story.
 
-### 2.1 What is Git
+### 2.1 Git commands
+
+| Command | Example | Action |
+| --- | --- | --- |
+| **git clone REPO-NAME** | `git clone https://github.com/user/repo.git` | Clone a repository in the local computer |
+| **git pull** | `git pull` | Description |
+| git status | `git status` | Description |
+| git fetch | `git fetch` | Description |
+| **git add** | `git add .` ; `git add *` | Description |
+| **git commit -m "MESSAGE"** | `git commit -m "update: new section readme"` | Description |
+| **git push** | `git push`; `git push origin main` | Description |
+| git reset --soft | `git reset --soft` | Keep files but destroy the commits staged |
+| git reset --hard | `git reset --hard` | Destroy changes and go to the remote state |
+
+??? tip "Git branching commands"
+    | Command | Example | Action |
+    | --- | --- | --- |
+    | git switch BRANCH | `git switch dev-carlos` | Switch to the selected branch | 
+    | git switch -c BRANCH | `git switch -c dev-carlos` | Create new branch and switch to that branch | 
+    | git branch | `git branch` (-a- ; -r) | Shows local and remote branches | 
+    | git remote prune origin | `git remote prune origin` | Update remote branchs in local memory | 
+
+
+### 2.2 What is Git
 
 <div class="highlighted">
 Imagine Git as a time-traveling tool for your computer files. It keeps a record of every change you make, so if you accidentally mess something up, you can go back in time to fix it. It's like having an "undo" button for all your coding adventures.
@@ -49,7 +73,42 @@ Imagine Git as a time-traveling tool for your computer files. It keeps a record 
 
 ![git](https://www.nobledesktop.com/image/blog/git-branches-merge.png)
 
-### 2.2 What is Github
+??? example "Example: Clonning, committing, and pushing changes"
+
+    In this example, you'll learn how to clone a repository, create a README.md file, commit changes, and push them to GitHub.
+
+    1. Clone the Repository:
+    2. Open your console (Git Bash, Command Prompt, etc.), and navigate to the directory where you want to clone the repository.
+    3. Run the following command to clone the repository:
+        ```bash
+        git clone <repository_url>
+        ```
+    4. Change into the cloned repository's directory:
+        ```bash
+        cd <repository_name>
+        ```
+
+    5. Create a README.md File by running this command.
+        ```bash
+        touch README.md
+        ```
+    6. Commit the Changes by adding the `README.md` file to the staging area:
+        ```bash
+        git add README.md
+        ```
+    7. Commit the changes with a meaningful commit message:
+        ```bash
+        git commit -m "Add README.md"
+        ```
+    8. Push Changes to Remote Repository:
+        ```bash
+        git push origin main
+        ```
+
+    That's it! You have successfully cloned a repository, created a `README.md` file, committed your changes, and pushed them to the remote repository.
+
+
+### 2.3 What is Github
 
 <div class="highlighted">
 GitHub is like a library for your computer code. It lets you store your code online, so you can access it from anywhere. You can also invite friends to help you work on your code and keep track of all the changes you make.
@@ -66,7 +125,7 @@ graph TD
     G --> PR[("⌸ Public\nrepositories")];
 ```
 
-### 2.3 What is a repository
+### 2.4 What is a repository
 
 <div class="highlighted">
 A repository is like a folder where you store files for a project. It holds your work, tracks changes, and allows others to colaborate on the project. It's like a digital toolbox.
@@ -95,7 +154,31 @@ graph TD
     WS3 --> LR3[("🖿\nLocal\nrepository")]
 ```
 
-### 2.4 What is a branch
+??? example "Example: creating a new repository in Github"
+
+    This example shows how to create a new repository on GitHub.
+
+    1. In the upper-right corner of any page, use the :material-plus-box: drop-down menu, and select New repository.
+
+        ![github-repo-create](https://docs.github.com/assets/cb-31554/mw-1440/images/help/repository/repo-create.webp)
+
+    2. Choose a name for your repository. This name will be part of the repository's URL and should be descriptive.
+
+        ![github-new-repo](../../assets/images/11-github-new-repo.jpg)
+
+    3. Add an optional description to provide more information about the repository. You can always add it later. Example:
+
+        > A repository exploring Reinforcement Learning methods in Python.
+
+    4. Select the repository's visibility: Public or private.
+    5. Choose whether to initialize the repository with a README file. This is recommended, as it provides a place to describe your project.
+    6. If needed, you can choose to add a .gitignore file (specifies files/folders that should not be tracked by Git) and a license to your repository.
+    7. Click Create repository.
+
+    Congratulations you have created your new repository.
+
+
+### 2.5 What is a branch
 
 <div class="highlighted">
 A branch is like a separate copy of your repository where you can make changes without affecting the main version. It's like having a playground to experiment and work on new features before adding them to the main project.
@@ -124,110 +207,52 @@ graph LR
     B1C -->|Pull request| D;
 ```
 
-#### Example
+??? example "Example: creating and switching branches"
 
-This example shows a common workflow to create a new branch `dev-new-branch` from the original files of `main` branch.
+    This example shows a common workflow to create a new branch `dev-new-branch` from the original files of `main` branch.
 
-<div class="steps" markdown>
-- **Clone repository.** 
-    ```sh
-    git clone https://github.com/charlstown/ai-applied-education.git
-    ```
-- **Check branch.** By default it shows local branches, you can add the flag `-r` to show only remote branches or `-a` to show all.
-    ```sh
-    git branch -a
-    ```
-    ```output
-    remotes/origin/dev-marta
-    remotes/origin/dev-juan
-    * main
-    ```
-- **Check dev-marta branch.**
-    ```sh
-    git switch dev-marta
-    git pull
-    ```
-    ```output title="output"
-    Switched to branch 'dev-marta'
-    Your branch is behind 'origin/main' by 23 commits, and can be fast-forwarded.
-    (use "git pull" to update your local branch)
+    1. **Clone repository.** 
+        ```sh
+        git clone https://github.com/charlstown/ai-applied-education.git
+        ```
+    2. **Check branch.** By default it shows local branches, you can add the flag `-r` to show only remote branches or `-a` to show all.
+        ```sh
+        git branch -a
+        ```
+        ```output
+        remotes/origin/dev-marta
+        remotes/origin/dev-juan
+        * main
+        ```
+    3. **Check dev-marta branch.**
+        ```sh
+        git switch dev-marta
+        git pull
+        ```
+        ```output title="output"
+        Switched to branch 'dev-marta'
+        Your branch is behind 'origin/main' by 23 commits, and can be fast-forwarded.
+        (use "git pull" to update your local branch)
 
-    Already up to date.
-    ```
-- **New branch from main.** Change to main branch, then create a new branch with the files from main.
-    ```sh
-    git switch main
-    git pull
-    git switch -c dev-new-branch
-    ```
-- **Push new branch.** Push the new branch from local repository to remote repository.
-    ```
-    git push –set-upstream origin dev-new-branch
-    ```
-</div>
+        Already up to date.
+        ```
+    4. **New branch from main.** Change to main branch, then create a new branch with the files from main.
+        ```sh
+        git switch main
+        git pull
+        git switch -c dev-new-branch
+        ```
+    5. **Push new branch.** Push the new branch from local repository to remote repository.
+        ```
+        git push –set-upstream origin dev-new-branch
+        ```
 
-Now you can start working on your branch without iterfering the `main` branch.
+    Now you can start working on your branch without iterfering the `main` branch.
 
 
-### 2.5 Git commands
+## 3. Test your skills
 
-| Command | Example | Action |
-| --- | --- | --- |
-| **git clone REPO-NAME** | `git clone https://github.com/user/repo.git` | Clone a repository in the local computer |
-| **git pull** | `git pull` | Description |
-| git status | `git status` | Description |
-| git fetch | `git fetch` | Description |
-| **git add** | `git add .` ; `git add *` | Description |
-| **git commit -m "MESSAGE"** | `git commit -m "update: new section readme"` | Description |
-| **git push** | `git push`; `git push origin main` | Description |
-| git reset --soft | `git reset --soft` | Keep files but destroy the commits staged |
-| git reset --hard | `git reset --hard` | Destroy changes and go to the remote state |
-
-??? tip "Git branching commands"
-    | Command | Example | Action |
-    | --- | --- | --- |
-    | git switch BRANCH | `git switch dev-carlos` | Switch to the selected branch | 
-    | git switch -c BRANCH | `git switch -c dev-carlos` | Create new branch and switch to that branch | 
-    | git branch | `git branch` (-a- ; -r) | Shows local and remote branches | 
-    | git remote prune origin | `git remote prune origin` | Update remote branchs in local memory | 
-
-
-## 3. Notebooks
-
-<div class="highlighted" makrdown>
-A code notebook is like a digital Notepad or Word where you can write and run code. It's a place to mix text, code, and outputs, making it easier to learn and share. 
-</div>
-
-In this course, you'll use tools like Google Colab and Jupyter Notebooks to create these interactive notebooks for coding and learning.
-
-#### Notebook Shortcuts
-
-| Shortcut | Action |
-| --- | --- |
-| - | - |
-
-### 3.1 Google colab
-
-<div class="highlighted" makrdown>
-Google Colab is an online platform that allows you to write and execute Python code in a colaborative and interactive environment.
-</div>
-
-
-#### Open a Colab notebook
-
-
-### 3.2 Jupyter lab
-
-<div class="highlighted" makrdown>
-Content
-</div>
-
-#### Open Jupyter lab
-
-
-## 4. Test your skills
-
-### 4.1 Create a profile repository
+### 3.1 Create a profile repository
 
 The profile README is a repository where you can share information about yourself with the community on GitHub.com by creating a profile README. GitHub shows your profile README at the top of your profile page. Check the oficial documentation of [Github profile README](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
 
@@ -286,7 +311,7 @@ Happy coding! :vulcan_salute:
 Congratulations! You've successfully created your profile README. 
 
 
-### 4.2 Apply to the program as new student
+### 3.2 Apply to the program as new student
 
 To request the application for this program you need to know how to fork (copy) the official course repository, modify the files by adding your name and email, and making a pull request to the original repository to add your student data.
 
@@ -322,8 +347,20 @@ To request the application for this program you need to know how to fork (copy) 
 
 #### Add yourself to the students list
 
+To add your yourself to the student list you need to locate the file `ai-applied-education/docs/program/students.md`, and add your name to the markdown table.
+
 <div class="steps" markdown>
-- Locate the file `ai-applied-education/docs/program/students.md`, and add your name to the markdown table **under the example**. (Make sure you copy the same structure)
+
+- Open Anacoda Promt console, and Navigate to the file `students.md`, you can do this by running the following command.
+    ```bash
+    cd <route-to-your-repository>
+    ```
+- Start Jupyter Lab in this path.
+    ```
+    jupyter lab
+    ```
+- Navigate on the left File Browser to the path `ai-applied-education/docs/program` and open the file `students.md`.
+- Add your name to the markdown table **under the example**. (Make sure you copy the same structure)
     ```markdown
     | Name | Email | Github |
     | --- | --- | --- |
