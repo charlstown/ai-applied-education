@@ -6,6 +6,7 @@ The required tools encompass:
 
 [:octicons-markdown-16: **Markdown**](#markdown-lightweight-language)  
 [:simple-github: **GitHub account**](#github)  
+[:simple-git: **Git**](#git)  
 [:simple-google: **Google Colab**](#google-colab)  
 [:simple-anaconda: **Anaconda distribution**](#anaconda-distribution)  
 [:simple-visualstudiocode: **Visual Studio Code (optionally)**](#vs-code-optional)
@@ -28,11 +29,47 @@ Markdown is a simple way to format documentation, readme files, and notes. Markd
 
 GitHub allows you to create repositories (folders) to store your projects. Each repository contains all the files, code, and resources related to a specific project. It's a great place to keep track of your work and colaborate with others.
 
-### 1.1 Create an account
+### 1. Create an account
 
 To create a github account go to [Github.com](https://www.github.com), and press `Sign up`.
 
 ![github-sign-up](/ai-applied-education\assets\images\requirements-github-sign-up.jpg)
+
+Then follow the instructions on the site and finish creating your account.
+
+
+## :simple-git: Git
+
+<div class="highlighted">
+Imagine Git as a time-traveling tool for your computer files. It keeps a record of every change you make, so if you accidentally mess something up, you can go back in time to fix it. It's like having an "undo" button for all your coding adventures.
+</div>
+
+### 1. Installing Git
+
+<div class="steps" markdown>
+- Go to the git [official website](https://git-scm.com/download/win).
+- Select the 64 bit standalone installer, and download the file. The file should be named like `Git-x.xx.x.x-64-bit.exe`.
+- Select next in all the steps and finish the installation.
+- Once is installed launch Git Bash an run the following command. You should see an output like this.
+    ```bash
+    git --version
+    ```
+    ```output
+    Git-2.41.0.3-64-bit.exe
+    ```
+</div>
+Congratulations you have successfully installed Git in your computer.
+
+### 2. Linking Git to your Github profile
+
+<div class="steps" markdown>
+- Launch Git Bash console.
+- Add your user name and your email by running these commands
+    ```bash
+    git config --global user.username "your-user-name"
+    git config --global user.email "your_email@example.com"
+    ```
+</div>
 
 ## :simple-google: Google colab
 
@@ -110,9 +147,12 @@ Anaconda is a platform that simplifies Python programming by providing tools and
 
 - **Install Anaconda:** click the "Install" button to start the installation process. The installer will copy files to your computer.
 
-- **Start Anaconda Navigator:** after the installation, you can start Anaconda Navigator by clicking the "Next" button on the completion screen. This will open the Anaconda Navigator app, which provides a graphical interface for managing environments and packages.
+- **Start Anaconda Navigator:** after the installation, you can start Anaconda Navigator by clicking the "Next" button on the completion screen.
 
-- **Start Using Anaconda:** you're now ready to start using Anaconda. You can open Anaconda Navigator to manage environments, launch Jupyter notebooks, and install packages.
+- **Launch Jupyter Lab:** Open Anaconda Navigator, and launch Jupyter lab.
+
+    ![requirements-anaconda-jupyter](../assets/images/requirements-anaconda-jupyter.jpg)
+
 </div>
 
 Congratulations! You've successfully installed Anaconda on your Windows computer. 

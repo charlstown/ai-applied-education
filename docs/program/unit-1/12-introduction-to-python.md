@@ -119,6 +119,7 @@ True
 False   
 </div>
 
+
 ### 1.2 Data structures
 
 Python data structures are essentially containers for different kinds of data.
@@ -812,19 +813,20 @@ This is a string (First "s" is in position: 3)
 
 | Operator | Statement |
 | --- | --- |
-| [Element at index](#element-at-index) | `lst[2]` |
-| [Get last element](#get-last-element) | `lst[-1]` |
-| [Modify item](#modify-item) | `lst[1] = 'x'` |
-| [Add item at the end](#add-item-at-the-end) | `lst.append('a')` |
-| [Slicing a list](#slicing-a-list) | `lst[1:3]` |
-| [Order a list](#order-a-list) | `sorted(lst)` |
-| [List length](#list-length) | `len(lst)` |
-| [List from range](#list-from-range) | `list(range(1, 5))` |
-| [Reverse a list](#reverse-a-list) | `lst.reverse()` |
-| [Remove item](#remove-item) | `lst.remove(5)` |
-| [Count item](#count-item) | `lst.count('#')` |
-| [Entwine lists](#entwine-lists) | `zip(lst_a, lst_b)` |
-| [Enumerate list](#enumerate-list) | `enumerate(lst)` |
+| Element at index | `lst[2]` |
+| Get last element | `lst[-1]` |
+| Modify item | `lst[1] = 'x'` |
+| Add item at the end | `lst.append('a')` |
+| Slicing a list | `lst[1:3]` |
+| Order a list | `sorted(lst)` |
+| List length | `len(lst)` |
+| List from range | `list(range(1, 5))` |
+| Reverse a list | `lst.reverse()` |
+| Remove item | `lst.remove(5)` |
+| Count item | `lst.count('#')` |
+| Entwine lists | `zip(lst_a, lst_b)` |
+| Enumerate list | `enumerate(lst)` |
+
 
 #### Element at index
 
@@ -1491,3 +1493,13 @@ Do you want to see more clothes? (yes/no): No
 Thank you for visiting our Fashion Clothes Store! 
 </div>
 
+
+## :material-file-code: Start coding
+
+You can do the exercises in Google Colab or in Jupyter Lab
+
+##### Google Colab
+
+Open the [12_variable_type]() notebook to start doing the exercises. 
+
+##### Jupyter Lab
