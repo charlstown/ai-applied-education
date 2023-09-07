@@ -240,22 +240,108 @@ print(element_count)
 
 ### 6.4 Math operators
 
+| Operator | Statement |
+| --- | --- |
+| Mean | df["column"].mean() |
+| Median | df["column"].median() |
+| Standar deviation | df["column"].std() |
+| Max value | df["column"].max() |
+| Min value | df["column"].min() |
 
-## 7. Grooping Operations
+```python
+element_count = df_attacks['duration_minutes'].mean()
+print(element_count)
+```
 
-*Reset index*
+```output title="output"
+51.0
+```
+
+## 7. Groping Operations
+
+Grouping operations in pandas involve splitting a DataFrame into groups based on one or more columns, applying a function to each group, and then combining the results into a new DataFrame.
+
+!!! tip ".reset_index()"
+    Using reset_index() after grouping operations is important to reset the index labels and make the resulting DataFrame more structured and easier to work with.
 
 ### 7.1 Group rows counting
 
+```python
+# Grouping by 'type_of_attack' and counting elements in each group
+df_types_of_attack = df_attacks.groupby('type_of_attack').count()
+
+print(df_types_of_attack)
+```
+
+```output title="output"
+type_of_attack
+DDoS             1
+Malware          1
+Phishing         2
+SQL Injection    1
+Name: ip_source, dtype: int64
+```
+
 ### 7.2 Group rows operating
 
-### 7.3 Multiple grooping
+```python
+mean_by_severity = df_attacks.groupby('severity')['duration_minutes'].mean()
+
+print(mean_by_severity)
+```
+
+```output title="output"
+severity
+High      67.5
+Low       60.0
+Medium    30.0
+Name: duration_minutes, dtype: float64
+```
 
 
 ## 8. Other operations
 
 ### 8.1 Ordering rows of a dataframe
 
+```python
+# Sorting the DataFrame by 'Location'
+df_sorted = df_attacks.sort_values(by='location')
+
+print(df_sorted[['ip_source', 'location']])
+```
+
+```output title="output"
+       ip_source     location
+2   104.23.45.67       London
+4   203.54.32.17  Los Angeles
+1   203.54.32.17       Madrid
+0  192.168.1.100     New York
+3    45.76.12.34    Singapore
+```
+
 ### 8.2 Joining two dataframes
 
+```python
+data_attacks_update = {'datetime': ['2023-04-10 08:15:00', '2023-04-10 12:45:00', '2023-04-11 14:30:00'],
+        'ip_source': ['192.168.1.100', '203.54.32.17', '104.23.45.67'],
+        'location': ['New York', 'Madrid', 'London'],
+        'type_of_attack': ['DDoS', 'Phishing', 'SQL Injection'],
+        'severity': ['High', 'Medium', 'Low'],
+        'duration_minutes': [45, 30, 60]}
 
+df_update = pd.DataFrame(data_attacks_update)
+df_total_atacks = pd.concat([df_attacks, df_update])
+print(df_total_atacks)
+```
+
+```output title="output"
+	datetime	        ip_source	    location	type_of_attack  severity	duration_minutes
+0	2023-04-10 08:15:00	192.168.1.100	New York	DDoS	        High	45
+1	2023-04-10 12:45:00	203.54.32.17	Madrid	    Phishing	    Medium	30
+2	2023-04-11 14:30:00	104.23.45.67	London	    SQL Injection	Low	60
+3	2023-04-12 20:10:00	45.76.12.34	    Singapore	Malware	        High	90
+4	2023-04-10 16:03:00	203.54.32.17	Los Angeles	Phishing	    Medium	30
+0	2023-04-10 08:15:00	192.168.1.100	New York	DDoS	        High	45
+1	2023-04-10 12:45:00	203.54.32.17	Madrid	    Phishing	    Medium	30
+2	2023-04-11 14:30:00	104.23.45.67	London	    SQL Injection	Low	60
+```
