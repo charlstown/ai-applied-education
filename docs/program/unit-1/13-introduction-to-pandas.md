@@ -37,7 +37,7 @@ data = {
 # Dataframe generation
 df_planes = df = pd.Dataframe()
 
-print(df_planes)
+display(df_planes)
 ```
 
 ```output title="output"
@@ -61,16 +61,88 @@ file_path = 'airports.csv'
 airports_df = pd.read_csv(file_path)
 
 # Display the DataFrame
-print(airports_df)
+display(airports_df)
 ```
 
 ## 3. Exploring operations
 
+In pandas, you can use operations like head, tail, info, describe, shape, or size to explore and understand your DataFrame quickly.
+
 ### 3.1 Display the head and tail
 
-### 3.2 Get the size and total
+- `head`: displays the first few rows of a DataFrame.
+- `tail`: shows the last few rows, providing a quick overview of the data.
+
+```python
+display(df_planes.head(3))
+print("-----")
+display(df_planes.tail(2))
+```
+```output title="output"
+         Model Manufacturer  Passenger Capacity  Max Speed (mph)
+0   Boeing 747       Boeing                 660              570
+1  Airbus A320       Airbus                 220              511
+2   Cessna 172       Cessna                   4              131
+-----
+          Model Manufacturer  Passenger Capacity  Max Speed (mph)
+2    Cessna 172       Cessna                   4              131
+3  Embraer E190      Embraer                 114              541
+```
+
+### 3.2 Get the size and shape
+
+- `shape`: returns the dimensions (rows, columns) of a DataFrame as a tuple.
+- `size`: returns the total number of elements (cells) in a DataFrame.
+
+```python
+size = df_planes.size
+shape = df_planes.shape
+
+print(f"Size: {size}")
+print(f"Shape: {shape}")
+```
+```output title="output"
+Size: 16
+Shape: (4, 4)
+```
 
 ### 3.3 Data info & describe
+
+- `info()`: provides summary information about a DataFrame, including the data types, non-null counts, and memory usage of each column.
+- `describe()`: generates descriptive statistics, like count, mean, min, max, and quartiles, for numeric columns in a DataFrame.
+
+```python
+info = df_planes.info()
+describe = df_planes.describe()
+
+print(f"Info: {info}")
+print("----------")
+print(f"Describe: {describe}")
+```
+```output title="output"
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4 entries, 0 to 3
+Data columns (total 4 columns):
+ #   Column              Non-Null Count  Dtype 
+---  ------              --------------  ----- 
+ 0   Model               4 non-null      object
+ 1   Manufacturer        4 non-null      object
+ 2   Passenger Capacity  4 non-null      int64 
+ 3   Max Speed (mph)     4 non-null      int64 
+dtypes: int64(2), object(2)
+memory usage: 256.0+ bytes
+Info: None
+----------
+Describe:        Passenger Capacity  Max Speed (mph)
+count            4.000000         4.000000
+mean           249.500000       438.250000
+std            287.524492       206.244798
+min              4.000000       131.000000
+25%             86.500000       416.000000
+50%            167.000000       526.000000
+75%            330.000000       548.250000
+max            660.000000       570.000000
+```
 
 
 ## 4. Extracting operations
@@ -345,3 +417,19 @@ print(df_total_atacks)
 1	2023-04-10 12:45:00	203.54.32.17	Madrid	    Phishing	    Medium	30
 2	2023-04-11 14:30:00	104.23.45.67	London	    SQL Injection	Low	60
 ```
+
+
+## :material-file-code: **-> Start coding**
+
+You can do the exercises in Google Colab or in Jupyter Lab
+
+**Google Colab**
+
+Open the [12_introduction_to_pandas.ipynb](#) notebook to start doing the exercises.
+
+!!! tip "reminder"
+    Remember to [fork the exercise repository](https://github.com/charlstown/ai-applied-practice/fork) and save your solved notebooks in your forked repo.
+
+**Jupyter Lab**
+
+WIP

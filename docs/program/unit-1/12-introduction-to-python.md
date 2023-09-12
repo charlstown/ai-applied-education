@@ -1494,12 +1494,17 @@ Thank you for visiting our Fashion Clothes Store!
 </div>
 
 
-## :material-file-code: Start coding
+## :material-file-code: **-> Start coding**
 
 You can do the exercises in Google Colab or in Jupyter Lab
 
-##### Google Colab
+**Google Colab**
 
-Open the [12_variable_type]() notebook to start doing the exercises. 
+Open the [11_introduction_to_python.ipynb](https://colab.research.google.com/github/charlstown/ai-applied-practice/blob/main/unit-1/11_introduction_to_python.ipynb) notebook to start doing the exercises.
 
-##### Jupyter Lab
+!!! tip "reminder"
+    Remember to [fork the exercise repository](https://github.com/charlstown/ai-applied-practice/fork) and save your solved notebooks in your forked repo.
+
+**Jupyter Lab**
+
+WIP
