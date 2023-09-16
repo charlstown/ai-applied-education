@@ -1288,6 +1288,16 @@ The if statement in Python is used to make decisions in code by checking whether
 | a in b | string in b |
 | not(a in b) | string not in b |
 
+!!! tip "reminder"
+    You can add multiple conditions statement like:
+    ```python
+    if a > b and b != 0:
+    ``` 
+    or even more complex:
+    ```python
+    if (check is True and temp = 30) or key == "alohomora":
+    ```
+
 
 ### 3.1 if else
 
