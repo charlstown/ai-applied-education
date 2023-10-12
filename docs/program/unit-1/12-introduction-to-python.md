@@ -441,6 +441,29 @@ print(output)
     Suitable: True - [&lt;class 'bool'&gt;]  
     </div>
 
+### 1.7 Interact with files in Python
+
+#### Read a text file
+
+```python
+text_file = open('/Users/pankaj/filename.txt','r', encoding='utf-8')
+# some file operations here
+text_file.read()
+
+text_file.close()
+```
+When you open a file in Python, it’s extremely important to close the file after you make the changes. This saves any changes that you’ve previously made, removes the file from the memory, and prevents any further reads or writes within the program.
+
+#### Read a CSV file
+
+```python
+import csv
+with open('chocolate.csv') as f:
+    reader = csv.reader(f, delimiter=',')
+    for row in reader:
+        print(row)
+```
+
 
 ## 2 Operators
 
