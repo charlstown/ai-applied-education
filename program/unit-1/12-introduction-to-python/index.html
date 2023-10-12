@@ -1,0 +1,3859 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A program to teach practical programming and data science skills, preparing you for tech and job challenges in any career.">
+      
+      
+        <meta name="author" content="charlstown">
+      
+      
+        <link rel="canonical" href="https://charlstown.github.io/ai-applied-education/program/unit-1/12-introduction-to-python/">
+      
+      
+        <link rel="prev" href="../11-introduction-to-git-and-github/">
+      
+      
+        <link rel="next" href="../13-introduction-to-pandas/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>1.2 Introduction to Python - AI Applied education</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI Applied education" class="md-header__button md-logo" aria-label="AI Applied education" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Applied education
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.2 Introduction to Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal]"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/charlstown/ai-applied-education" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../overview/" class="md-tabs__link">
+          
+  
+  Overview
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../11-introduction-to-git-and-github/" class="md-tabs__link">
+          
+  
+  Unit 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../unit-2/21-current-context-and-application-of-mathematical-models-in-ai/" class="md-tabs__link">
+          
+  
+  Unit 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contact/" class="md-tabs__link">
+          
+  
+  Directory
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI Applied education" class="md-nav__button md-logo" aria-label="AI Applied education" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    AI Applied education
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/charlstown/ai-applied-education" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-introduction-to-git-and-github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Introduction to Git & Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.2 Introduction to Python
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Introduction to Python
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-basic-python" class="md-nav__link">
+    1. Basic Python
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Basic Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-variable-types" class="md-nav__link">
+    1.1 Variable types
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Variable types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer" class="md-nav__link">
+    Integer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    Float
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean" class="md-nav__link">
+    Boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-data-structures" class="md-nav__link">
+    1.2 Data structures
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Data structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    Dictionary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuple" class="md-nav__link">
+    Tuple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    Set
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-comments" class="md-nav__link">
+    1.3 Comments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-declare-variables" class="md-nav__link">
+    1.4 Declare variables
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Declare variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-convention" class="md-nav__link">
+    Naming convention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignment-methods" class="md-nav__link">
+    Assignment methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-print" class="md-nav__link">
+    1.5 Print
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 Print">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-print" class="md-nav__link">
+    Basic print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-print" class="md-nav__link">
+    Variable print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-line-print" class="md-nav__link">
+    In-line print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concat-print" class="md-nav__link">
+    Concat print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatted-string-literals-f-string" class="md-nav__link">
+    Formatted string literals (f-string)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-type" class="md-nav__link">
+    1.6 Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-interact-with-files-in-python" class="md-nav__link">
+    1.7 Interact with files in Python
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7 Interact with files in Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-a-text-file" class="md-nav__link">
+    Read a text file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-a-csv-file" class="md-nav__link">
+    Read a CSV file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-operators" class="md-nav__link">
+    2 Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-numeric-operators" class="md-nav__link">
+    2.1 Numeric operators
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Numeric operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-math-operations" class="md-nav__link">
+    Basic math operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exponent-operations" class="md-nav__link">
+    Exponent operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-to-integerfloat" class="md-nav__link">
+    String to integer/float
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reminder" class="md-nav__link">
+    Reminder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-min-sum-value" class="md-nav__link">
+    Max, min &amp; sum value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#absolute-value" class="md-nav__link">
+    Absolute value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round-value" class="md-nav__link">
+    Round value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floor-division" class="md-nav__link">
+    Floor Division
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-string-operators" class="md-nav__link">
+    2.2 String operators
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 String operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integerfloat-to-string" class="md-nav__link">
+    Integer/float to string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#length-of-a-string" class="md-nav__link">
+    Length of a string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concatenate-strings" class="md-nav__link">
+    Concatenate strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape-characters" class="md-nav__link">
+    Escape characters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upper-lower-title-cases" class="md-nav__link">
+    Upper, Lower, Title cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-to-list" class="md-nav__link">
+    String to list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-string-by" class="md-nav__link">
+    Split string by
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-to-string" class="md-nav__link">
+    List to string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-line-and-tabulator" class="md-nav__link">
+    New line and tabulator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-substring" class="md-nav__link">
+    Check substring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-only-letters" class="md-nav__link">
+    Check only letters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiply-strings" class="md-nav__link">
+    Multiply strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace-string" class="md-nav__link">
+    Replace string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strip-text" class="md-nav__link">
+    Strip text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-index" class="md-nav__link">
+    Find index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-list-operators" class="md-nav__link">
+    2.3 List operators
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 List operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#element-at-index" class="md-nav__link">
+    Element at index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-last-element" class="md-nav__link">
+    Get last element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-item" class="md-nav__link">
+    Modify item
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-item-at-the-end" class="md-nav__link">
+    Add item at the end
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slicing-a-list" class="md-nav__link">
+    Slicing a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-a-list" class="md-nav__link">
+    Order a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-length" class="md-nav__link">
+    List length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-from-range" class="md-nav__link">
+    List from range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-a-list" class="md-nav__link">
+    Reverse a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-item" class="md-nav__link">
+    Remove item
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count-item" class="md-nav__link">
+    Count item
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entwine-lists" class="md-nav__link">
+    Entwine lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate-list" class="md-nav__link">
+    Enumerate list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-dictionary-operators" class="md-nav__link">
+    2.4 Dictionary operators
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Dictionary operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-key" class="md-nav__link">
+    Add key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-multiple-keys" class="md-nav__link">
+    Add multiple keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overwrite-value" class="md-nav__link">
+    Overwrite value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-value" class="md-nav__link">
+    Extract value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-key-and-value" class="md-nav__link">
+    Delete key and value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-keys-values" class="md-nav__link">
+    Extract keys &amp; values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-key" class="md-nav__link">
+    Check key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pair-lists-to-dict" class="md-nav__link">
+    Pair lists to dict
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-if-elif-else-statements" class="md-nav__link">
+    3. If, elif, else statements
+  </a>
+  
+    <nav class="md-nav" aria-label="3. If, elif, else statements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-if-else" class="md-nav__link">
+    3.1 if else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-if-elif-else" class="md-nav__link">
+    3.2 if, elif, else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-nested-if-else" class="md-nav__link">
+    3.3 Nested if, else
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-loops" class="md-nav__link">
+    4. Loops
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Loops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-for-loop" class="md-nav__link">
+    4.1 For loop
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 For loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterating-a-list" class="md-nav__link">
+    Iterating a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterating-a-string" class="md-nav__link">
+    Iterating a string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterating-a-range" class="md-nav__link">
+    Iterating a range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerating-list" class="md-nav__link">
+    Enumerating list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-while-loop" class="md-nav__link">
+    4.2 While loop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-start-coding" class="md-nav__link">
+     -&gt; Start coding
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-introduction-to-pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Introduction to Pandas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-practice-with-python-and-pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Practice with Python and GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-dialogue-with-a-professional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Dialogue with a Professional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit-2/21-current-context-and-application-of-mathematical-models-in-ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 Current Context and Application of Mathematical Models in AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit-2/22-introduction-to-visualization-and-descriptive-statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Introduction to Visualization and Descriptive Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit-2/23-introduction-to-exploratory-data-analysis-eda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Introduction to Exploratory Data Analysis (EDA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit-2/24-data-cleaning-and-processing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Data Cleaning and Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit-2/25-dialogue-with-a-professional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 Dialogue with a Professional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Directory
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Directory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../students/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Students
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-basic-python" class="md-nav__link">
+    1. Basic Python
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Basic Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-variable-types" class="md-nav__link">
+    1.1 Variable types
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Variable types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer" class="md-nav__link">
+    Integer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    Float
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean" class="md-nav__link">
+    Boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-data-structures" class="md-nav__link">
+    1.2 Data structures
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Data structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    Dictionary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuple" class="md-nav__link">
+    Tuple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    Set
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-comments" class="md-nav__link">
+    1.3 Comments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-declare-variables" class="md-nav__link">
+    1.4 Declare variables
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Declare variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-convention" class="md-nav__link">
+    Naming convention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignment-methods" class="md-nav__link">
+    Assignment methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-print" class="md-nav__link">
+    1.5 Print
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 Print">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-print" class="md-nav__link">
+    Basic print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-print" class="md-nav__link">
+    Variable print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-line-print" class="md-nav__link">
+    In-line print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concat-print" class="md-nav__link">
+    Concat print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatted-string-literals-f-string" class="md-nav__link">
+    Formatted string literals (f-string)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-type" class="md-nav__link">
+    1.6 Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-interact-with-files-in-python" class="md-nav__link">
+    1.7 Interact with files in Python
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7 Interact with files in Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-a-text-file" class="md-nav__link">
+    Read a text file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-a-csv-file" class="md-nav__link">
+    Read a CSV file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-operators" class="md-nav__link">
+    2 Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-numeric-operators" class="md-nav__link">
+    2.1 Numeric operators
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Numeric operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-math-operations" class="md-nav__link">
+    Basic math operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exponent-operations" class="md-nav__link">
+    Exponent operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-to-integerfloat" class="md-nav__link">
+    String to integer/float
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reminder" class="md-nav__link">
+    Reminder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-min-sum-value" class="md-nav__link">
+    Max, min &amp; sum value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#absolute-value" class="md-nav__link">
+    Absolute value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round-value" class="md-nav__link">
+    Round value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floor-division" class="md-nav__link">
+    Floor Division
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-string-operators" class="md-nav__link">
+    2.2 String operators
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 String operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integerfloat-to-string" class="md-nav__link">
+    Integer/float to string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#length-of-a-string" class="md-nav__link">
+    Length of a string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concatenate-strings" class="md-nav__link">
+    Concatenate strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape-characters" class="md-nav__link">
+    Escape characters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upper-lower-title-cases" class="md-nav__link">
+    Upper, Lower, Title cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-to-list" class="md-nav__link">
+    String to list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-string-by" class="md-nav__link">
+    Split string by
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-to-string" class="md-nav__link">
+    List to string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-line-and-tabulator" class="md-nav__link">
+    New line and tabulator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-substring" class="md-nav__link">
+    Check substring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-only-letters" class="md-nav__link">
+    Check only letters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiply-strings" class="md-nav__link">
+    Multiply strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace-string" class="md-nav__link">
+    Replace string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strip-text" class="md-nav__link">
+    Strip text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-index" class="md-nav__link">
+    Find index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-list-operators" class="md-nav__link">
+    2.3 List operators
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 List operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#element-at-index" class="md-nav__link">
+    Element at index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-last-element" class="md-nav__link">
+    Get last element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-item" class="md-nav__link">
+    Modify item
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-item-at-the-end" class="md-nav__link">
+    Add item at the end
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slicing-a-list" class="md-nav__link">
+    Slicing a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-a-list" class="md-nav__link">
+    Order a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-length" class="md-nav__link">
+    List length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-from-range" class="md-nav__link">
+    List from range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-a-list" class="md-nav__link">
+    Reverse a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-item" class="md-nav__link">
+    Remove item
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count-item" class="md-nav__link">
+    Count item
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entwine-lists" class="md-nav__link">
+    Entwine lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate-list" class="md-nav__link">
+    Enumerate list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-dictionary-operators" class="md-nav__link">
+    2.4 Dictionary operators
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Dictionary operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-key" class="md-nav__link">
+    Add key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-multiple-keys" class="md-nav__link">
+    Add multiple keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overwrite-value" class="md-nav__link">
+    Overwrite value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-value" class="md-nav__link">
+    Extract value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-key-and-value" class="md-nav__link">
+    Delete key and value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-keys-values" class="md-nav__link">
+    Extract keys &amp; values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-key" class="md-nav__link">
+    Check key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pair-lists-to-dict" class="md-nav__link">
+    Pair lists to dict
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-if-elif-else-statements" class="md-nav__link">
+    3. If, elif, else statements
+  </a>
+  
+    <nav class="md-nav" aria-label="3. If, elif, else statements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-if-else" class="md-nav__link">
+    3.1 if else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-if-elif-else" class="md-nav__link">
+    3.2 if, elif, else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-nested-if-else" class="md-nav__link">
+    3.3 Nested if, else
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-loops" class="md-nav__link">
+    4. Loops
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Loops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-for-loop" class="md-nav__link">
+    4.1 For loop
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 For loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterating-a-list" class="md-nav__link">
+    Iterating a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterating-a-string" class="md-nav__link">
+    Iterating a string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterating-a-range" class="md-nav__link">
+    Iterating a range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerating-list" class="md-nav__link">
+    Enumerating list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-while-loop" class="md-nav__link">
+    4.2 While loop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-start-coding" class="md-nav__link">
+     -&gt; Start coding
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="introduction-to-python">Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permanent link">&para;</a></h1>
+<h2 id="1-basic-python">1. Basic Python<a class="headerlink" href="#1-basic-python" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+    PY[Python variables] --&gt; PR[1.1 Primitive variables]
+    PY[Python variables] --&gt; DS[1.2 Data structures]
+    PR --&gt; INT{integer}
+    PR --&gt; FLT{float}
+    PR --&gt; STR{string}
+    PR --&gt; BOL{boolean}
+    DS --&gt; LST{list}
+    DS --&gt; DCT{dictionary}
+    DS --&gt; TPL{tuple}
+    DS --&gt; SET{set}</code></pre>
+<h3 id="11-variable-types">1.1 Variable types<a class="headerlink" href="#11-variable-types" title="Permanent link">&para;</a></h3>
+<p>Variable types in Python represent simple, fundamental data types directly supported by the programming language, providing the building blocks for more complex data structures and operations.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Declaration</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integer</td>
+<td><em>int</em></td>
+<td><code>128</code>; <code>1</code></td>
+</tr>
+<tr>
+<td>Float</td>
+<td><em>float</em></td>
+<td><code>1.5</code>; <code>14.</code></td>
+</tr>
+<tr>
+<td>String</td>
+<td><em>str</em></td>
+<td><code>"This is a string."</code>; <code>"126"</code>; <code>",.$"</code></td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td><em>bool</em></td>
+<td><code>True</code>; <code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="integer">Integer<a class="headerlink" href="#integer" title="Permanent link">&para;</a></h4>
+<p>Example of Integer Variables:</p>
+<ul>
+<li>a = 1</li>
+<li>b = -200</li>
+<li>c = 30000</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">200</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">399999</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</code></pre></div>
+    <div class="output" markdown>
+    1<br />
+    -200<br />
+    399999<br />
+    </div></p>
+<h4 id="float">Float<a class="headerlink" href="#float" title="Permanent link">&para;</a></h4>
+<p>Example of Float Variables:</p>
+<ul>
+<li>a = 1.</li>
+<li>b = -3.5</li>
+<li>c = 548.36</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mf">1.</span>
+<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.5</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">548.36</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</code></pre></div>
+    <div class="output" markdown>
+    1.0<br />
+    -3.5<br />
+    548.36 <br />
+    </div></p>
+<h4 id="string">String<a class="headerlink" href="#string" title="Permanent link">&para;</a></h4>
+<p>Example of String Variables:</p>
+<ul>
+<li>a = "The Witcher."</li>
+<li>b = "12/09/2023"</li>
+<li>c = "56.1"</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;The Witcher.&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;12/09/2023&quot;</span>
+<span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;56.1&quot;</span>
+<span class="n">d</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>The Witcher.<br />
+12/09/2023<br />
+56.1  </p>
+</div>
+<h4 id="boolean">Boolean<a class="headerlink" href="#boolean" title="Permanent link">&para;</a></h4>
+<p>Example of Boolean Variables:</p>
+<ul>
+<li>a = True</li>
+<li>b = False</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>True<br />
+False   </p>
+</div>
+<h3 id="12-data-structures">1.2 Data structures<a class="headerlink" href="#12-data-structures" title="Permanent link">&para;</a></h3>
+<p>Python data structures are essentially containers for different kinds of data.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Declaration</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List</td>
+<td><em>list</em></td>
+<td><code>[1, "Hi", "23", True]</code></td>
+</tr>
+<tr>
+<td>Dictionary</td>
+<td><em>dict</em></td>
+<td><code>{"element_a": 3, "other": False}</code></td>
+</tr>
+<tr>
+<td>Tuple</td>
+<td><em>tuple</em></td>
+<td><code>(1, "hi", True)</code></td>
+</tr>
+<tr>
+<td>Set</td>
+<td><em>set</em></td>
+<td><code>{"a", 4, True, 9}</code></td>
+</tr>
+</tbody>
+</table>
+<details class="example">
+<summary>Example of a combined data structure in real life</summary>
+<div class="highlight"><pre><span></span><code><span class="n">song</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Bohemian Rhapsody&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Queen&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;album&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;A Night at the Opera&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;release_year&quot;</span><span class="p">:</span> <span class="mi">1975</span><span class="p">,</span>
+            <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="mi">12</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;6:07&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Rock&quot;</span><span class="p">,</span> <span class="s2">&quot;Progressive Rock&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;ratings&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;five_stars&quot;</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span>
+            <span class="s2">&quot;four_stars&quot;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+            <span class="s2">&quot;three_stars&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+            <span class="s2">&quot;two_stars&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">&quot;one_star&quot;</span><span class="p">:</span> <span class="mi">50</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;is_explicit&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;featured_artists&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Freddie Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Brian May&quot;</span><span class="p">,</span> <span class="s2">&quot;Roger Taylor&quot;</span><span class="p">,</span> <span class="s2">&quot;John Deacon&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h4 id="list">List<a class="headerlink" href="#list" title="Permanent link">&para;</a></h4>
+<p>A <strong>list</strong> in Python is a collection of <strong>ordered elements</strong> that can contain different data types and be modified, 
+allowing you to store and manage multiple values in a single variable.</p>
+<details class="info">
+<summary>More about lists</summary>
+<p>Lists are mutable, allowing you to modify, add, or remove elements after their creation. Lists are ordered, meaning the elements are stored in a specific sequence, and you can access elements using their index.</p>
+</details>
+<p>Example of List Variables:</p>
+<ul>
+<li>a = [1, 5.2, 3.]</li>
+<li>b = ["Sara", "Jorge", ""]</li>
+<li>c = ["Paseo de la Castellana", 136, True, "5º D"]</li>
+<li>z = []</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">5.2</span><span class="p">,</span> <span class="mf">3.</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Sara&quot;</span><span class="p">,</span> <span class="s2">&quot;Jorge&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Paseo de la Castellana&quot;</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;5º D&quot;</span><span class="p">]</span>
+<span class="n">z</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>[1, 5.2, 3.0]<br />
+['Sara', 'Jorge', '']<br />
+['Paseo de la Castellana', 136, True, '5º D']<br />
+[] </p>
+</div>
+<h4 id="dictionary">Dictionary<a class="headerlink" href="#dictionary" title="Permanent link">&para;</a></h4>
+<p>A <strong>dictionary</strong> in Python is a collection of <strong>key-value pairs</strong> that allows you to store and retrieve data using unique keys, 
+providing a way to organize and access data based on custom labels or identifiers.</p>
+<details class="info">
+<summary>More about dictionaries</summary>
+<p>Dictionaries are mutable, meaning <strong>you can modify, add, or remove key-value pairs after their creation</strong>. However, <strong>dictionaries are unordered</strong>, so the order of items may not be preserved when iterating over the dictionary.</p>
+</details>
+<p>Example of Dictionary Variables:</p>
+<ul>
+<li>a = {"a": 1, "b": 3.2, "c": }</li>
+<li>b = {5648: "@rachel", "test": True, "user": [2, 5, 63]}</li>
+<li>c = {"title": "The Matrix", "year": 1999, "genre": ["Action", "Sci-Fi], "rating": 8.7}</li>
+<li>z = {}</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mf">3.2</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">5648</span><span class="p">:</span> <span class="s2">&quot;@rachel&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">63</span><span class="p">]}</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Matrix&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">1999</span><span class="p">,</span> <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Action&quot;</span><span class="p">,</span> <span class="s2">&quot;Sci-Fi&quot;</span><span class="p">],</span> <span class="s2">&quot;rating&quot;</span><span class="p">:</span> <span class="mf">8.7</span><span class="p">}</span>
+<span class="n">z</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>{'a': 1, 'b': 3.2, 'c': False}<br />
+{5648: '@rachel', 'test': True, 'user': [2, 5, 63]}<br />
+{'title': 'The Matrix', 'year': 1999, 'genre': ['Action', 'Sci-Fi'], 'rating': 8.7}<br />
+{}</p>
+</div>
+<h4 id="tuple">Tuple<a class="headerlink" href="#tuple" title="Permanent link">&para;</a></h4>
+<p>A <strong>tuple</strong> in Python is an <strong>immutable ordered collection of elements</strong> that can contain different data types, separated by commas and enclosed in parentheses, providing a way to group related data together.</p>
+<details class="info">
+<summary>Tuples Vs. Lists</summary>
+<p>Tuples are immutable, meaning <strong>their elements cannot be changed or modified after creation</strong>, making them suitable for situations where data should not be altered. Tuples are <strong>faster than lists</strong>, allowing for optimized memory allocation and faster access.</p>
+</details>
+<p>Example of Tuple Variables:</p>
+<ul>
+<li>a = (1, 2, 3)</li>
+<li>b = ("apple", 10, True)</li>
+<li>c = (3.14, "pie", [1, 2, 3], {"name": "John", "age": 30})</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="s2">&quot;pie&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">})</span>
+<span class="n">z</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>(1, 2, 3)<br />
+('apple', 10, True)<br />
+(3.14, 'pie', [1, 2, 3], {'name': 'John', 'age': 30})<br />
+()</p>
+</div>
+<h4 id="set">Set<a class="headerlink" href="#set" title="Permanent link">&para;</a></h4>
+<p>A <strong>set</strong> in Python is a collection of <strong>unique and unordered elements</strong> that allows you to perform various set operations, such as union, intersection, and difference.</p>
+<details class="info">
+<summary>More about sets</summary>
+<p>Sets are defined using curly braces <code>{}</code> or the built-in <code>set()</code> function. <strong>Duplicate elements are automatically removed</strong>, and the order of elements is not guaranteed in a set.</p>
+</details>
+<p>Example of Set Variables:</p>
+<ul>
+<li>a = {1, 2, 3}</li>
+<li>b = {4, 5, 6}</li>
+<li>c = {True, "hello", 3.14, (1, 2)}</li>
+<li>z = set()</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">{</span><span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)}</span>
+<span class="n">z</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>{1, 2, 3}
+{4, 5, 6}
+{3.14, True, (1, 2), 'hello'}
+set()</p>
+</div>
+<h3 id="13-comments">1.3 Comments<a class="headerlink" href="#13-comments" title="Permanent link">&para;</a></h3>
+<p>Comments in Python are lines of text that are ignored by the interpreter and are used to provide explanations, clarifications, or notes within the code.</p>
+<details class="tip">
+<summary>Tip about comments</summary>
+<p>In Python, it is possible to write comments using the Spanish language, including special characters. However, it is generally recommended to <strong>avoid using accents in comments</strong> to ensure compatibility and readability across different platforms and text editors. </p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1"># This is a comment</span>
+
+<span class="c1"># Picture attributes</span>
+<span class="n">pic</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;picture_name&quot;</span><span class="p">:</span> <span class="s2">&quot;My doggy&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;12/02/2023&quot;</span><span class="p">,</span> <span class="s2">&quot;likes&quot;</span><span class="p">:</span> <span class="mi">1658</span><span class="p">}</span>
+</code></pre></div>
+<h3 id="14-declare-variables">1.4 Declare variables<a class="headerlink" href="#14-declare-variables" title="Permanent link">&para;</a></h3>
+<h4 id="naming-convention">Naming convention<a class="headerlink" href="#naming-convention" title="Permanent link">&para;</a></h4>
+<p>The Python naming convention for variables and files is <strong>camel case</strong>, where punctuation is removed, spaces are replaced by single underscores, and the letters are in lower case.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># variable</span>
+<span class="n">this_is_a_variable</span> <span class="o">=</span> <span class="s2">&quot;camel case&quot;</span>
+
+<span class="c1"># examples</span>
+<span class="n">user_name</span> <span class="o">=</span> <span class="s2">&quot;Paula&quot;</span>
+<span class="n">video_game</span> <span class="o">=</span> <span class="s2">&quot;What Remains of Edith Finch&quot;</span>
+<span class="n">has_views</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div>
+<h4 id="assignment-methods">Assignment methods<a class="headerlink" href="#assignment-methods" title="Permanent link">&para;</a></h4>
+<p>Is the process of assigning or storing data to a variable, enabling the programmer to give a meaningful name to the data and easily access and manipulate it throughout the program.</p>
+<p><img alt="python-variables" src="/ai-applied-education/assets/images/11-python-varaibles.jpg" /></p>
+<ul>
+<li><strong>Direct assignment:</strong> content.
+    <div class="highlight"><pre><span></span><code><span class="n">song</span> <span class="o">=</span> <span class="s2">&quot;Give it all&quot;</span>
+<span class="n">duration</span> <span class="o">=</span> <span class="mf">3.16</span>
+</code></pre></div></li>
+<li><strong>Multiple assignment:</strong>
+    <div class="highlight"><pre><span></span><code><span class="n">song</span><span class="p">,</span> <span class="n">duration</span> <span class="o">=</span> <span class="s2">&quot;Give it all&quot;</span><span class="p">,</span> <span class="mf">3.16</span>
+</code></pre></div></li>
+<li>
+<p><strong>Multiple variables assignment:</strong>
+    <div class="highlight"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Jorge&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>User input assignment:</strong>
+    <div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name: &quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your age: &quot;</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+</ul>
+<h3 id="15-print">1.5 Print<a class="headerlink" href="#15-print" title="Permanent link">&para;</a></h3>
+<p>To display output messages or values to the user on the console or terminal.</p>
+<details class="tip">
+<summary>Tip about print</summary>
+<p>Remember that <code>print()</code> is an essential tool for beginners and experienced developers alike, making it easier to interact with your programs and <strong>see what's happening at each step</strong>.</p>
+</details>
+<h4 id="basic-print">Basic print<a class="headerlink" href="#basic-print" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="err">!</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Hello, World!</p>
+</div>
+<h4 id="variable-print">Variable print<a class="headerlink" href="#variable-print" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Declaring variables</span>
+<span class="n">movie</span> <span class="o">=</span> <span class="s2">&quot;Barbie&quot;</span>
+<span class="n">rating</span> <span class="o">=</span> <span class="mf">9.</span>
+
+<span class="c1"># Printing variables</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">movie</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rating</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Barbie<br />
+9.0</p>
+</div>
+<h4 id="in-line-print">In-line print<a class="headerlink" href="#in-line-print" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Declaring variables</span>
+<span class="n">movie</span> <span class="o">=</span> <span class="s2">&quot;Barbie&quot;</span>
+<span class="n">rating</span> <span class="o">=</span> <span class="mf">9.</span>
+
+<span class="c1"># Printing variables</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">movie</span><span class="p">,</span> <span class="n">rating</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Barbie<br />
+9.0</p>
+</div>
+<h4 id="concat-print">Concat print<a class="headerlink" href="#concat-print" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Declaring variables</span>
+<span class="n">movie</span> <span class="o">=</span> <span class="s2">&quot;Barbie&quot;</span>
+<span class="n">rating</span> <span class="o">=</span> <span class="mf">9.</span>
+
+<span class="c1"># Printing variables</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The movie &quot;</span> <span class="o">+</span> <span class="n">movie</span> <span class="o">+</span> <span class="s2">&quot; has a rating of: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rating</span><span class="p">))</span>
+</code></pre></div>
+<div class="output">
+<p>The movie Barbie has a rating of: 9.0</p>
+</div>
+<h4 id="formatted-string-literals-f-string">Formatted string literals (f-string)<a class="headerlink" href="#formatted-string-literals-f-string" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Declaring variables</span>
+<span class="n">movie</span> <span class="o">=</span> <span class="s2">&quot;Barbie&quot;</span>
+<span class="n">rating</span> <span class="o">=</span> <span class="mf">9.</span>
+
+<span class="c1"># Printing variables</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The movie </span><span class="si">{</span><span class="n">movie</span><span class="si">}</span><span class="s2"> has a rating of </span><span class="si">{</span><span class="n">rating</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>The movie Barbie has a rating of: 9.0</p>
+</div>
+<h3 id="16-type">1.6 Type<a class="headerlink" href="#16-type" title="Permanent link">&para;</a></h3>
+<p>Is used to determine the data type of a value or variable, such as whether it is an integer, string, boolean, etc.
+<div class="highlight"><pre><span></span><code><span class="c1"># Declaring variables</span>
+<span class="n">song</span> <span class="o">=</span> <span class="s2">&quot;Yeah Yeah Yeah&quot;</span>
+<span class="n">duration</span> <span class="o">=</span> <span class="mf">3.25</span>
+<span class="n">is_suitable</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Get the types</span>
+<span class="n">song_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">song</span><span class="p">)</span>
+<span class="n">duration_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span>
+<span class="n">is_suitable_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">is_suitable</span><span class="p">)</span>
+
+<span class="c1"># Ouput</span>
+<span class="n">output</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;Song: </span><span class="si">{</span><span class="n">song</span><span class="si">}</span><span class="s2"> - [</span><span class="si">{</span><span class="n">song_type</span><span class="si">}</span><span class="s2">]</span>
+<span class="s2">Duration: </span><span class="si">{</span><span class="n">duration</span><span class="si">}</span><span class="s2"> - [</span><span class="si">{</span><span class="n">duration_type</span><span class="si">}</span><span class="s2">]</span>
+<span class="s2">Suitable: </span><span class="si">{</span><span class="n">is_suitable</span><span class="si">}</span><span class="s2"> - [</span><span class="si">{</span><span class="n">is_suitable_type</span><span class="si">}</span><span class="s2">]</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</code></pre></div>
+    <div class="output" markdown>
+    Song: Yeah Yeah Yeah - [&lt;class 'str'&gt;]<br />
+    Duration: 3.25 - [&lt;class 'float'&gt;]<br />
+    Suitable: True - [&lt;class 'bool'&gt;]<br />
+    </div></p>
+<h3 id="17-interact-with-files-in-python">1.7 Interact with files in Python<a class="headerlink" href="#17-interact-with-files-in-python" title="Permanent link">&para;</a></h3>
+<h4 id="read-a-text-file">Read a text file<a class="headerlink" href="#read-a-text-file" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">text_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/Users/pankaj/filename.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="c1"># some file operations here</span>
+<span class="n">text_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">text_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+When you open a file in Python, it’s extremely important to close the file after you make the changes. This saves any changes that you’ve previously made, removes the file from the memory, and prevents any further reads or writes within the program.</p>
+<h4 id="read-a-csv-file">Read a CSV file<a class="headerlink" href="#read-a-csv-file" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;chocolate.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="2-operators">2 Operators<a class="headerlink" href="#2-operators" title="Permanent link">&para;</a></h2>
+<h3 id="21-numeric-operators">2.1 Numeric operators<a class="headerlink" href="#21-numeric-operators" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Statement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#basic-math-operations">Math operations</a></td>
+<td><code>1+3</code> , <code>5-2</code> , <code>10/5</code>, <code>2*4</code></td>
+</tr>
+<tr>
+<td><a href="#exponent-operations">Exponent</a></td>
+<td><code>2**3</code></td>
+</tr>
+<tr>
+<td><a href="#string-to-integerfloat">String -&gt; integer/float</a></td>
+<td><code>int("24")</code></td>
+</tr>
+<tr>
+<td><a href="#reminder">Reminder</a></td>
+<td><code>10%3</code></td>
+</tr>
+<tr>
+<td><a href="#max-min--sum-value">Max, min &amp; sum</a></td>
+<td><code>max(lst)</code>, <code>min(lst)</code>, <code>sum(lst)</code></td>
+</tr>
+<tr>
+<td><a href="#absolute-value">Absolute</a></td>
+<td><code>abs(-3)</code></td>
+</tr>
+<tr>
+<td><a href="#round-value">Round</a></td>
+<td><code>round(3.2153, 1)</code></td>
+</tr>
+<tr>
+<td><a href="#floor-division">Floor Division</a></td>
+<td><code>12//6</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="basic-math-operations">Basic math operations<a class="headerlink" href="#basic-math-operations" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">money</span> <span class="o">=</span> <span class="mi">1258</span>
+<span class="n">employees</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">iva</span> <span class="o">=</span> <span class="mf">1.21</span>
+
+<span class="c1"># Add employee</span>
+<span class="n">employees</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Is like employees = employees + 1</span>
+
+<span class="c1"># Get reminder</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">money</span><span class="o">/</span><span class="n">employees</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">money</span><span class="o">*</span><span class="n">iva</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>314.5<br />
+1522.18</p>
+</div>
+<h4 id="exponent-operations">Exponent operations<a class="headerlink" href="#exponent-operations" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">three_power_three</span> <span class="o">=</span> <span class="mi">3</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">three_sqrt_three</span> <span class="o">=</span> <span class="mi">3</span><span class="o">**</span><span class="mf">.5</span>
+
+<span class="c1"># Exponent operation</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">three_power_three</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">three_sqrt_three</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+<div class="output">
+<p>27<br />
+1.73</p>
+</div>
+<h4 id="string-to-integerfloat">String to integer/float<a class="headerlink" href="#string-to-integerfloat" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">age_str</span> <span class="o">=</span> <span class="s2">&quot;25&quot;</span>
+
+<span class="c1"># Get integer</span>
+<span class="n">age_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age_str</span><span class="p">)</span>
+<span class="n">age_float</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">age_str</span><span class="p">)</span>
+
+<span class="c1"># Print types</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">age_str</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">age_int</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">age_float</span><span class="p">))</span>
+</code></pre></div>
+<div class="output">
+<p>&lt;class 'str'&gt;<br />
+&lt;class 'int'&gt;<br />
+&lt;class 'float'&gt;  </p>
+</div>
+<h4 id="reminder">Reminder<a class="headerlink" href="#reminder" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">money</span> <span class="o">=</span> <span class="mi">1258</span>
+<span class="n">employees</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># Get reminder</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">money</span><span class="o">%</span><span class="n">employees</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>2</p>
+</div>
+<h4 id="max-min-sum-value">Max, min &amp; sum value<a class="headerlink" href="#max-min-sum-value" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.2</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">,</span> <span class="mf">9.1</span><span class="p">,</span> <span class="mf">6.</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.1</span><span class="p">,</span> <span class="mf">9.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.6</span><span class="p">]</span>
+
+<span class="c1"># Get max and min</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>
+</code></pre></div>
+<div class="output">
+<p>9.4<br />
+-3.6<br />
+30.4</p>
+</div>
+<h4 id="absolute-value">Absolute value<a class="headerlink" href="#absolute-value" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.5</span>
+
+<span class="c1"># Get max and min</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+</code></pre></div>
+<div class="output">
+<p>3.5</p>
+</div>
+<h4 id="round-value">Round value<a class="headerlink" href="#round-value" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="mf">1.32586</span>
+
+<span class="c1"># Round to 2 decimals</span>
+<span class="n">number_round</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">number_round</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>1.32</p>
+</div>
+<h4 id="floor-division">Floor Division<a class="headerlink" href="#floor-division" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">one</span><span class="p">,</span> <span class="n">two</span> <span class="o">=</span> <span class="mi">10</span><span class="o">//</span><span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="o">/</span><span class="mi">8</span>
+
+<span class="c1"># Output results</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;10/7 -&gt; </span><span class="si">{</span><span class="n">one</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="mi">10</span><span class="o">/</span><span class="mi">7</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;12/8 -&gt; </span><span class="si">{</span><span class="n">two</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="mi">12</span><span class="o">/</span><span class="mi">8</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>10/7 -&gt; 1 (1.4285714285714286)
+12/8 -&gt; 1.5 (1.5)</p>
+</div>
+<h3 id="22-string-operators">2.2 String operators<a class="headerlink" href="#22-string-operators" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Statement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#integerfloat-to-string">Integer/float to string</a></td>
+<td><code>str(31.2)</code></td>
+</tr>
+<tr>
+<td><a href="#length-of-a-string">Length of a string</a></td>
+<td><code>len("Number of characters")</code></td>
+</tr>
+<tr>
+<td><a href="#concatenate-strings">Concatenate strings</a></td>
+<td><code>"This" + " is" + " concatenation."</code></td>
+</tr>
+<tr>
+<td><a href="#escape-characters">Escape characters</a></td>
+<td><code>"\"Hello,\" she said."</code></td>
+</tr>
+<tr>
+<td><a href="#upper-lower-title-cases">Upper, Lower, Title cases</a></td>
+<td><code>"My NaMe iS aLiCIa".lower()</code></td>
+</tr>
+<tr>
+<td><a href="#string-to-list">String to list</a></td>
+<td><code>"Welcome to the dark side".split()</code></td>
+</tr>
+<tr>
+<td><a href="#list-to-string">Split string by</a></td>
+<td><code>"This;is;a;string".split(";")</code></td>
+</tr>
+<tr>
+<td><a href="#list-to-string">List to string</a></td>
+<td><code>" ".join(["Hello", "World"])</code></td>
+</tr>
+<tr>
+<td><a href="#new-line-and-tabulator">New line and tabulator</a></td>
+<td><code>"First line\n Second line"</code></td>
+</tr>
+<tr>
+<td><a href="#check-substring">Check substring</a></td>
+<td><code>"a" in "This is a test"</code></td>
+</tr>
+<tr>
+<td><a href="#check-only-letters">Check only letters</a></td>
+<td><code>"abcdefghijklmn".isalpha()</code></td>
+</tr>
+<tr>
+<td><a href="#multiply-strings">Multiply strings</a></td>
+<td><code>"Three"*3</code></td>
+</tr>
+<tr>
+<td><a href="#replace-string">Replace string</a></td>
+<td><code>"Thiz iz a ztring".replace("z", "s")</code></td>
+</tr>
+<tr>
+<td><a href="#strip-text">Strip text</a></td>
+<td><code>"   Hi   ".strip()</code></td>
+</tr>
+<tr>
+<td><a href="#find-index">Find index</a></td>
+<td><code>"This is a string".find("s")</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="integerfloat-to-string">Integer/float to string<a class="headerlink" href="#integerfloat-to-string" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">time_int</span> <span class="o">=</span> <span class="mi">31</span>
+<span class="n">time_float</span> <span class="o">=</span> <span class="mf">31.25</span>
+
+<span class="c1"># Get integer</span>
+<span class="n">time_int_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">time_int</span><span class="p">)</span>
+<span class="n">time_float_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">time_float</span><span class="p">)</span>
+
+<span class="c1"># Print types</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time_int_str</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">time_int_str</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time_float_str</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">time_float_str</span><span class="p">))</span>
+</code></pre></div>
+<div class="output">
+<p>31 &lt;class 'str'&gt;<br />
+31.25 &lt;class 'str'&gt;  </p>
+</div>
+<h4 id="length-of-a-string">Length of a string<a class="headerlink" href="#length-of-a-string" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">song</span> <span class="o">=</span> <span class="s2">&quot;Back in Black&quot;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;4r236TY5S5F65H6xjt&quot;</span>
+
+<span class="c1"># Get lenghts</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">song</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">))</span>
+</code></pre></div>
+<div class="output">
+<p>13<br />
+18</p>
+</div>
+<h4 id="concatenate-strings">Concatenate strings<a class="headerlink" href="#concatenate-strings" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">song</span> <span class="o">=</span> <span class="s2">&quot;doomsday&quot;</span>
+<span class="n">artist</span> <span class="o">=</span> <span class="s2">&quot;sad face.&quot;</span>
+
+<span class="c1"># Concatenate string</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;The song &quot;</span> <span class="o">+</span> <span class="n">song</span> <span class="o">+</span> <span class="s2">&quot; is made by &quot;</span> <span class="o">+</span> <span class="n">artist</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>The song doomsday is made by sad face.</p>
+</div>
+<h4 id="escape-characters">Escape characters<a class="headerlink" href="#escape-characters" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Escape symbols</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Somtimes he goes by </span><span class="se">\&quot;</span><span class="s2">chuck</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Somtimes he goes by "chuck"</p>
+</div>
+<h4 id="upper-lower-title-cases">Upper, Lower, Title cases<a class="headerlink" href="#upper-lower-title-cases" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hello, world&quot;</span>
+
+<span class="c1"># Upper, Lower, Title cases</span>
+<span class="n">message_low</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">message_up</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="n">message_title</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+
+<span class="c1"># Print messages</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Low -&gt; </span><span class="si">{</span><span class="n">message_low</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Up -&gt; </span><span class="si">{</span><span class="n">message_up</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Title -&gt; </span><span class="si">{</span><span class="n">message_title</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Low -&gt; hello, world<br />
+Up -&gt; HELLO, WORLD<br />
+Title -&gt; Hello, World</p>
+</div>
+<h4 id="string-to-list">String to list<a class="headerlink" href="#string-to-list" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;This is a String&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</code></pre></div>
+<div class="output">
+<p>['This', 'is', 'a', 'String']</p>
+</div>
+<h4 id="split-string-by">Split string by<a class="headerlink" href="#split-string-by" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;This-is-a-long-string&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">))</span>
+</code></pre></div>
+<div class="output">
+<p>['This', 'is', 'a', 'long', 'string']</p>
+</div>
+<h4 id="list-to-string">List to string<a class="headerlink" href="#list-to-string" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;This&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+</code></pre></div>
+<div class="output">
+<p>This is a long string</p>
+</div>
+<h4 id="new-line-and-tabulator">New line and tabulator<a class="headerlink" href="#new-line-and-tabulator" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">new_line</span> <span class="o">=</span> <span class="s2">&quot;First line</span><span class="se">\n</span><span class="s2">New line&quot;</span>
+<span class="n">tabulator</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">Tabulator line&quot;</span>
+
+<span class="c1"># Print</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_line</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tabulator</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>First line<br />
+New line<br />
+&ensp;Tabulator line</p>
+</div>
+<h4 id="check-substring">Check substring<a class="headerlink" href="#check-substring" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">code</span> <span class="o">=</span> <span class="s2">&quot;The code is: 5223565-K&quot;</span>
+
+<span class="c1"># Check K is in code</span>
+<span class="n">check</span> <span class="o">=</span> <span class="s2">&quot;K&quot;</span> <span class="ow">in</span> <span class="n">code</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>True</p>
+</div>
+<h4 id="check-only-letters">Check only letters<a class="headerlink" href="#check-only-letters" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">is_alpha</span> <span class="o">=</span> <span class="s2">&quot;AlphaCode&quot;</span>
+
+<span class="c1"># Check alphanumeric</span>
+<span class="n">check</span> <span class="o">=</span> <span class="n">is_alpha</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>True</p>
+</div>
+<h4 id="multiply-strings">Multiply strings<a class="headerlink" href="#multiply-strings" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+
+<span class="c1"># Print</span>
+<span class="n">multi</span> <span class="o">=</span> <span class="n">pattern</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">multi</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>-----</p>
+</div>
+<h4 id="replace-string">Replace string<a class="headerlink" href="#replace-string" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Thiz iz a ztring&quot;</span>
+
+<span class="c1"># Replace string</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>This is a string</p>
+</div>
+<h4 id="strip-text">Strip text<a class="headerlink" href="#strip-text" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;    Strip message    &quot;</span>
+
+<span class="c1"># Strip message</span>
+<span class="n">message_strip</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="c1"># Comparison</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">message_strip</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">message_strip</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Strip message&nbsp;&nbsp;&nbsp;&nbsp;(21)<br />
+Strip message (13)</p>
+</div>
+<h4 id="find-index">Find index<a class="headerlink" href="#find-index" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;This is a string&quot;</span>
+<span class="n">letter</span> <span class="o">=</span> <span class="s2">&quot;s&quot;</span>
+
+<span class="c1"># Find first letter index</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2"> (First </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">letter</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2"> is in position: </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>This is a string (First "s" is in position: 3)</p>
+</div>
+<h3 id="23-list-operators">2.3 List operators<a class="headerlink" href="#23-list-operators" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Statement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Element at index</td>
+<td><code>lst[2]</code></td>
+</tr>
+<tr>
+<td>Get last element</td>
+<td><code>lst[-1]</code></td>
+</tr>
+<tr>
+<td>Modify item</td>
+<td><code>lst[1] = 'x'</code></td>
+</tr>
+<tr>
+<td>Add item at the end</td>
+<td><code>lst.append('a')</code></td>
+</tr>
+<tr>
+<td>Slicing a list</td>
+<td><code>lst[1:3]</code></td>
+</tr>
+<tr>
+<td>Order a list</td>
+<td><code>sorted(lst)</code></td>
+</tr>
+<tr>
+<td>List length</td>
+<td><code>len(lst)</code></td>
+</tr>
+<tr>
+<td>List from range</td>
+<td><code>list(range(1, 5))</code></td>
+</tr>
+<tr>
+<td>Reverse a list</td>
+<td><code>lst.reverse()</code></td>
+</tr>
+<tr>
+<td>Remove item</td>
+<td><code>lst.remove(5)</code></td>
+</tr>
+<tr>
+<td>Count item</td>
+<td><code>lst.count('#')</code></td>
+</tr>
+<tr>
+<td>Entwine lists</td>
+<td><code>zip(lst_a, lst_b)</code></td>
+</tr>
+<tr>
+<td>Enumerate list</td>
+<td><code>enumerate(lst)</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="element-at-index">Element at index<a class="headerlink" href="#element-at-index" title="Permanent link">&para;</a></h4>
+<div class="admonition warning">
+<p class="admonition-title">Indexing in python</p>
+<p>Remember that indexing in Python starts from 0, so <strong>the first element is at index 0</strong>, the second at index 1, and so on.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># List of planets</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturn&quot;</span><span class="p">,</span> <span class="s2">&quot;Uranus&quot;</span><span class="p">,</span> <span class="s2">&quot;Neptune&quot;</span><span class="p">]</span>
+
+<span class="c1"># Extracting value at index 2 (which is the third element in the list)</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">planets</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Earth</p>
+</div>
+<h4 id="get-last-element">Get last element<a class="headerlink" href="#get-last-element" title="Permanent link">&para;</a></h4>
+<p>To get the last element from a list in Python, you can use negative indexing. Negative indices count elements from the end of the list, where -1 represents the last element, -2 represents the second-to-last element, and so on.</p>
+<div class="highlight"><pre><span></span><code><span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturn&quot;</span><span class="p">,</span> <span class="s2">&quot;Uranus&quot;</span><span class="p">,</span> <span class="s2">&quot;Neptune&quot;</span><span class="p">]</span>
+
+<span class="c1"># Getting the last element using the negative index</span>
+<span class="n">last_planet</span> <span class="o">=</span> <span class="n">planets</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">penultimate_planet</span> <span class="o">=</span> <span class="n">planets</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">last_planet</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">penultimate_planet</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Neptune
+Uranus</p>
+</div>
+<h4 id="modify-item">Modify item<a class="headerlink" href="#modify-item" title="Permanent link">&para;</a></h4>
+<p>Suppose we want to modify the name of a planet, let's say "Mars" to "Red Planet." We can do this by using the index to access the element and then assigning the new name to it.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Original list of planets</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturn&quot;</span><span class="p">,</span> <span class="s2">&quot;Uranus&quot;</span><span class="p">,</span> <span class="s2">&quot;Neptune&quot;</span><span class="p">]</span>
+
+<span class="c1"># Modifying the name of a planet</span>
+<span class="n">index_of_mars</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Index of &quot;Mars&quot; is 3</span>
+<span class="n">new_name</span> <span class="o">=</span> <span class="s2">&quot;Red Planet&quot;</span>
+<span class="n">planets</span><span class="p">[</span><span class="n">index_of_mars</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_name</span>
+
+<span class="c1"># Updated list of planets</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">planets</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>["Mercury", "Venus", "Earth", "Red Planet", "Jupiter", "Saturn", "Uranus", "Neptune"]</p>
+</div>
+<h4 id="add-item-at-the-end">Add item at the end<a class="headerlink" href="#add-item-at-the-end" title="Permanent link">&para;</a></h4>
+<p>If we want to add the planet "Pluto" at the end of the list, we can use the append() method.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Original list of planets</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturn&quot;</span><span class="p">,</span> <span class="s2">&quot;Uranus&quot;</span><span class="p">,</span> <span class="s2">&quot;Neptune&quot;</span><span class="p">]</span>
+
+<span class="c1"># Adding &quot;Pluto&quot; at the end of the list using append()</span>
+<span class="n">planets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Pluto&quot;</span><span class="p">)</span>
+
+<span class="c1"># Updated list of planets</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">planets</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"]</p>
+</div>
+<h4 id="slicing-a-list">Slicing a list<a class="headerlink" href="#slicing-a-list" title="Permanent link">&para;</a></h4>
+<p>Imagine we want to create a new list containing the planets before "Earth," including "Earth," by using slicing.</p>
+<details class="info">
+<summary>More about slicing lists</summary>
+<p>When using slicing in Python lists, the slice includes all elements up to, but not including, the index specified as the end of the slice.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1"># Original list of planets</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturn&quot;</span><span class="p">,</span> <span class="s2">&quot;Uranus&quot;</span><span class="p">,</span> <span class="s2">&quot;Neptune&quot;</span><span class="p">]</span>
+
+<span class="c1"># Slicing to include planets before and including &quot;Earth&quot;</span>
+<span class="n">sliced_planets</span> <span class="o">=</span> <span class="n">planets</span><span class="p">[:</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Sliced list of planets</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sliced_planets</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>["Mercury", "Venus", "Earth"]</p>
+</div>
+<details class="tip">
+<summary>Advanced code</summary>
+<p>If we don't want to insert the index of the planet Earth manually we can use the index method.
+<div class="highlight"><pre><span></span><code><span class="n">sliced_planets</span> <span class="o">=</span> <span class="n">planets</span><span class="p">[:</span><span class="n">planets</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Earth&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div></p>
+</details>
+<h4 id="order-a-list">Order a list<a class="headerlink" href="#order-a-list" title="Permanent link">&para;</a></h4>
+<p>In this example, the <code>sorted()</code> function is used to sort the list of planets alphabetically, and the sorted result is stored in the sorted_planets variable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># List of planets</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturn&quot;</span><span class="p">,</span> <span class="s2">&quot;Uranus&quot;</span><span class="p">,</span> <span class="s2">&quot;Neptune&quot;</span><span class="p">]</span>
+
+<span class="c1"># Sort the planets alphabetically</span>
+<span class="n">sorted_planets</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">planets</span><span class="p">)</span>
+
+<span class="c1"># Print the sorted list of planets</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_planets</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>['Earth', 'Jupiter', 'Mars', 'Mercury', 'Neptune', 'Saturn', 'Uranus', 'Venus']</p>
+</div>
+<h4 id="list-length">List length<a class="headerlink" href="#list-length" title="Permanent link">&para;</a></h4>
+<p>In this example, the <code>len()</code> function is used to count the number of items in a list.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># List of planets</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturn&quot;</span><span class="p">,</span> <span class="s2">&quot;Uranus&quot;</span><span class="p">,</span> <span class="s2">&quot;Neptune&quot;</span><span class="p">]</span>
+
+<span class="c1"># Sort the planets alphabetically</span>
+<span class="n">n_planets</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">planets</span><span class="p">)</span>
+
+<span class="c1"># Print the sorted list of planets</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">n_planets</span><span class="si">}</span><span class="s2"> planets in the solar system.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>There are 9 planets in the solar system.</p>
+</div>
+<h4 id="list-from-range">List from range<a class="headerlink" href="#list-from-range" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using range(2, 3) to create a list with a single element</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># Using range(6) to create a list with numbers from 0 to 5</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Print the lists</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>[2, 3]<br />
+[0, 1, 2, 3, 4, 5]</p>
+</div>
+<h4 id="reverse-a-list">Reverse a list<a class="headerlink" href="#reverse-a-list" title="Permanent link">&para;</a></h4>
+<p>There are two methods to reverse a list, using the <code>lst.reverse()</code> function and slicing <code>lst[::-1]</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title"><code>Reverse()</code> Vs. <code>[::-1]</code></p>
+<p>The reverse() method modifies the original list in place, while slicing [::-1] creates a new reversed list without modifying the original one.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># List of planets in the solar system</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturn&quot;</span><span class="p">,</span> <span class="s2">&quot;Uranus&quot;</span><span class="p">,</span> <span class="s2">&quot;Neptune&quot;</span><span class="p">]</span>
+
+<span class="c1"># Method 1: Using reverse()</span>
+<span class="n">reversed_planets_1</span> <span class="o">=</span> <span class="n">planets</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">reversed_planets_1</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="c1"># Method 2: Using slicing [::-1]</span>
+<span class="n">reversed_planets_2</span> <span class="o">=</span> <span class="n">planets</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Print the reversed lists</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reversed using reverse():&quot;</span><span class="p">,</span> <span class="n">reversed_planets_1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reversed using slicing [::-1]:&quot;</span><span class="p">,</span> <span class="n">reversed_planets_2</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Reversed using reverse(): ['Neptune', 'Uranus', 'Saturn', 'Jupiter', 'Mars', 'Earth', 'Venus', 'Mercury']<br />
+Reversed using slicing [::-1]: ['Neptune', 'Uranus', 'Saturn', 'Jupiter', 'Mars', 'Earth', 'Venus', 'Mercury']</p>
+</div>
+<h4 id="remove-item">Remove item<a class="headerlink" href="#remove-item" title="Permanent link">&para;</a></h4>
+<p>The <code>remove()</code> method is used to remove the specified element ("Pluto" in this case) from the list planets. After calling <code>remove("Pluto")</code>, "Pluto" is no longer present in the list.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># List of planets in the solar system</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturn&quot;</span><span class="p">,</span> <span class="s2">&quot;Uranus&quot;</span><span class="p">,</span> <span class="s2">&quot;Neptune&quot;</span><span class="p">,</span> <span class="s2">&quot;Pluto&quot;</span><span class="p">]</span>
+
+<span class="c1"># Remove &quot;Pluto&quot; from the list</span>
+<span class="n">planets</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Pluto&quot;</span><span class="p">)</span>
+
+<span class="c1"># Print the updated list of planets</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">planets</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']</p>
+</div>
+<h4 id="count-item">Count item<a class="headerlink" href="#count-item" title="Permanent link">&para;</a></h4>
+<p>In this example, the <code>count()</code> function is used to count the occurrences of the element "Earth" in the planets list. The count is then stored in the variable earth_count and printed to the console. As you can see, "Earth" appears twice in the list, so the count is 2.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># List of planets in the solar system</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturn&quot;</span><span class="p">,</span> <span class="s2">&quot;Uranus&quot;</span><span class="p">,</span> <span class="s2">&quot;Neptune&quot;</span><span class="p">,</span> <span class="s2">&quot;Pluto&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">]</span>
+
+<span class="c1"># Count the number of occurrences of &quot;Earth&quot; in the list</span>
+<span class="n">earth_count</span> <span class="o">=</span> <span class="n">planets</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;Earth&quot;</span><span class="p">)</span>
+
+<span class="c1"># Print the count</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of times &#39;Earth&#39; appears in the list:&quot;</span><span class="p">,</span> <span class="n">earth_count</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>The number of times 'Earth' appears in the list: 2</p>
+</div>
+<h4 id="entwine-lists">Entwine lists<a class="headerlink" href="#entwine-lists" title="Permanent link">&para;</a></h4>
+<p>In this example, the <code>zip()</code> function is used to combine the planets list and the distances list into a new list called planet_distances. Each tuple in the planet_distances list contains a planet name and its corresponding distance from the Sun. The list() function is used to convert the zip object into a list for easy printing.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Lists of planets and their distances from the Sun (in millions of kilometers)</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">]</span>
+<span class="n">distances</span> <span class="o">=</span> <span class="p">[</span><span class="mf">57.9</span><span class="p">,</span> <span class="mf">108.2</span><span class="p">,</span> <span class="mf">149.6</span><span class="p">,</span> <span class="mf">227.9</span><span class="p">,</span> <span class="mf">778.3</span><span class="p">]</span>
+
+<span class="c1"># Use zip to combine the two lists into a list of tuples</span>
+<span class="n">planet_distances</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">planets</span><span class="p">,</span> <span class="n">distances</span><span class="p">))</span>
+
+<span class="c1"># Print the combined list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">planet_distances</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>[('Mercury', 57.9), ('Venus', 108.2), ('Earth', 149.6), ('Mars', 227.9), ('Jupiter', 778.3)]</p>
+</div>
+<h4 id="enumerate-list">Enumerate list<a class="headerlink" href="#enumerate-list" title="Permanent link">&para;</a></h4>
+<p>In this example, <code>enumerate(planets)</code> returns an iterator that produces tuples containing the index and planet from the planets list. </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># List of planets</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">]</span>
+
+<span class="c1"># Get an iterator for the planets list along with their indices using enumerate()</span>
+<span class="n">enum_planets</span> <span class="o">=</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">planets</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">enum_planets</span><span class="p">))</span>
+</code></pre></div>
+<div class="output">
+<p>[(0, 'Mercury'), (1, 'Venus'), (2, 'Earth'), (3, 'Mars'), (4, 'Jupiter')]</p>
+</div>
+<h3 id="24-dictionary-operators">2.4 Dictionary operators<a class="headerlink" href="#24-dictionary-operators" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Statement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add key</td>
+<td><code>dct['new_key'] = True</code></td>
+</tr>
+<tr>
+<td>Add multiple keys</td>
+<td><code>dct.update({'key1' = 1, 'key2' = False})</code></td>
+</tr>
+<tr>
+<td>Overwrite value</td>
+<td><code>dct['key'] = False</code></td>
+</tr>
+<tr>
+<td>Extract value</td>
+<td><code>dct['new_key']</code></td>
+</tr>
+<tr>
+<td>Delete key and value</td>
+<td><code>del dct['key_to_delete']</code></td>
+</tr>
+<tr>
+<td>Keys &amp; values list</td>
+<td><code>dct.keys()</code>, <code>dct.values()</code>, <code>dct.items()</code></td>
+</tr>
+<tr>
+<td>Check key</td>
+<td><code>"key" in market_value</code></td>
+</tr>
+<tr>
+<td>Pair lists to dict</td>
+<td><code>dict(zip(dct_1, dct_2))</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="add-key">Add key<a class="headerlink" href="#add-key" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Dictionary representing market value of stock tech companies</span>
+<span class="n">market_value</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Apple&quot;</span><span class="p">:</span> <span class="mf">2345.67</span><span class="p">,</span>
+    <span class="s2">&quot;Microsoft&quot;</span><span class="p">:</span> <span class="mf">1765.89</span><span class="p">,</span>
+    <span class="s2">&quot;Amazon&quot;</span><span class="p">:</span> <span class="mf">3012.45</span><span class="p">,</span>
+    <span class="s2">&quot;Google&quot;</span><span class="p">:</span> <span class="mf">2789.34</span><span class="p">,</span>
+    <span class="s2">&quot;Facebook&quot;</span><span class="p">:</span> <span class="mf">1890.56</span>
+<span class="p">}</span>
+
+<span class="c1"># Add key: Add a new company and its market value</span>
+<span class="n">market_value</span><span class="p">[</span><span class="s2">&quot;Tesla&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1899.32</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">market_value</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>{'Apple': 2345.67, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34, 'Facebook': 1890.56, 'Tesla': 1899.32}</p>
+</div>
+<h4 id="add-multiple-keys">Add multiple keys<a class="headerlink" href="#add-multiple-keys" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Dictionary representing market value of stock tech companies</span>
+<span class="n">market_value</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Apple&quot;</span><span class="p">:</span> <span class="mf">2345.67</span><span class="p">,</span>
+    <span class="s2">&quot;Microsoft&quot;</span><span class="p">:</span> <span class="mf">1765.89</span><span class="p">,</span>
+    <span class="s2">&quot;Amazon&quot;</span><span class="p">:</span> <span class="mf">3012.45</span><span class="p">,</span>
+    <span class="s2">&quot;Google&quot;</span><span class="p">:</span> <span class="mf">2789.34</span><span class="p">,</span>
+    <span class="s2">&quot;Facebook&quot;</span><span class="p">:</span> <span class="mf">1890.56</span>
+<span class="p">}</span>
+
+<span class="c1"># Add multiple keys: Add multiple new companies and their market values</span>
+<span class="n">market_value</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Netflix&quot;</span><span class="p">:</span> <span class="mf">2156.78</span><span class="p">,</span> <span class="s2">&quot;Adobe&quot;</span><span class="p">:</span> <span class="mf">1654.32</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">market_value</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>{'Apple': 2345.67, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34, 'Facebook': 1890.56, 'Netflix': 2156.78, 'Adobe': 1654.32}</p>
+</div>
+<h4 id="overwrite-value">Overwrite value<a class="headerlink" href="#overwrite-value" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Dictionary representing market value of stock tech companies</span>
+<span class="n">market_value</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Apple&quot;</span><span class="p">:</span> <span class="mf">2345.67</span><span class="p">,</span>
+    <span class="s2">&quot;Microsoft&quot;</span><span class="p">:</span> <span class="mf">1765.89</span><span class="p">,</span>
+    <span class="s2">&quot;Amazon&quot;</span><span class="p">:</span> <span class="mf">3012.45</span><span class="p">,</span>
+    <span class="s2">&quot;Google&quot;</span><span class="p">:</span> <span class="mf">2789.34</span><span class="p">,</span>
+    <span class="s2">&quot;Facebook&quot;</span><span class="p">:</span> <span class="mf">1890.56</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Before: </span><span class="si">{</span><span class="n">market_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Overwrite value: Update the market value of a company</span>
+<span class="n">market_value</span><span class="p">[</span><span class="s2">&quot;Apple&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">2367.98</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After: </span><span class="si">{</span><span class="n">market_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Before: {'Apple': 2345.67, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34, 'Facebook': 1890.56}
+After: {'Apple': 2367.98, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34, 'Facebook': 1890.56}</p>
+</div>
+<h4 id="extract-value">Extract value<a class="headerlink" href="#extract-value" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">market_value</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Apple&quot;</span><span class="p">:</span> <span class="mf">2345.67</span><span class="p">,</span>
+    <span class="s2">&quot;Microsoft&quot;</span><span class="p">:</span> <span class="mf">1765.89</span><span class="p">,</span>
+    <span class="s2">&quot;Amazon&quot;</span><span class="p">:</span> <span class="mf">3012.45</span><span class="p">,</span>
+    <span class="s2">&quot;Google&quot;</span><span class="p">:</span> <span class="mf">2789.34</span><span class="p">,</span>
+    <span class="s2">&quot;Facebook&quot;</span><span class="p">:</span> <span class="mf">1890.56</span>
+<span class="p">}</span>
+
+<span class="c1"># Extract value: Get the market value of a specific company</span>
+<span class="n">google_value</span> <span class="o">=</span> <span class="n">market_value</span><span class="p">[</span><span class="s2">&quot;Google&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Market value of Google:&quot;</span><span class="p">,</span> <span class="n">google_value</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Market value of Google: 2789.34</p>
+</div>
+<h4 id="delete-key-and-value">Delete key and value<a class="headerlink" href="#delete-key-and-value" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">market_value</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Apple&quot;</span><span class="p">:</span> <span class="mf">2345.67</span><span class="p">,</span>
+    <span class="s2">&quot;Microsoft&quot;</span><span class="p">:</span> <span class="mf">1765.89</span><span class="p">,</span>
+    <span class="s2">&quot;Amazon&quot;</span><span class="p">:</span> <span class="mf">3012.45</span><span class="p">,</span>
+    <span class="s2">&quot;Google&quot;</span><span class="p">:</span> <span class="mf">2789.34</span><span class="p">,</span>
+    <span class="s2">&quot;Facebook&quot;</span><span class="p">:</span> <span class="mf">1890.56</span>
+<span class="p">}</span>
+
+<span class="c1"># Delete key and value: Remove a company and its market value from the dictionary</span>
+<span class="k">del</span> <span class="n">market_value</span><span class="p">[</span><span class="s2">&quot;Facebook&quot;</span><span class="p">]</span>
+</code></pre></div>
+<div class="output">
+<p>{'Apple': 2345.67, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34}</p>
+</div>
+<h4 id="extract-keys-values">Extract keys &amp; values<a class="headerlink" href="#extract-keys-values" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Dictionary representing market value of stock tech companies</span>
+<span class="n">market_value</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Apple&quot;</span><span class="p">:</span> <span class="mf">2345.67</span><span class="p">,</span>
+    <span class="s2">&quot;Microsoft&quot;</span><span class="p">:</span> <span class="mf">1765.89</span><span class="p">,</span>
+    <span class="s2">&quot;Amazon&quot;</span><span class="p">:</span> <span class="mf">3012.45</span><span class="p">,</span>
+    <span class="s2">&quot;Google&quot;</span><span class="p">:</span> <span class="mf">2789.34</span><span class="p">,</span>
+    <span class="s2">&quot;Tesla&quot;</span><span class="p">:</span> <span class="mf">1899.32</span><span class="p">,</span>
+    <span class="s2">&quot;Netflix&quot;</span><span class="p">:</span> <span class="mf">2156.78</span><span class="p">,</span>
+    <span class="s2">&quot;Adobe&quot;</span><span class="p">:</span> <span class="mf">1654.32</span>
+<span class="p">}</span>
+
+<span class="c1"># Using .keys() to get a view of keys</span>
+<span class="n">keys_view</span> <span class="o">=</span> <span class="n">market_value</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+
+<span class="c1"># Using .values() to get a view of values</span>
+<span class="n">values_view</span> <span class="o">=</span> <span class="n">market_value</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+
+<span class="c1"># Using .items() to get a view of (key, value) pairs</span>
+<span class="n">items_view</span> <span class="o">=</span> <span class="n">market_value</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+
+<span class="c1"># Print the views</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Keys view:&quot;</span><span class="p">,</span> <span class="n">keys_view</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Values view:&quot;</span><span class="p">,</span> <span class="n">values_view</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Items view:&quot;</span><span class="p">,</span> <span class="n">items_view</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Keys view: dict_keys(['Apple', 'Microsoft', 'Amazon', 'Google', 'Tesla', 'Netflix', 'Adobe'])<br />
+Values view: dict_values([2345.67, 1765.89, 3012.45, 2789.34, 1899.32, 2156.78, 1654.32])<br />
+Items view: dict_items([('Apple', 2345.67), ('Microsoft', 1765.89), ('Amazon', 3012.45), ('Google', 2789.34), ('Tesla', 1899.32), ('Netflix', 2156.78), ('Adobe', 1654.32)])</p>
+</div>
+<h4 id="check-key">Check key<a class="headerlink" href="#check-key" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">market_value</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Apple&quot;</span><span class="p">:</span> <span class="mf">2345.67</span><span class="p">,</span>
+    <span class="s2">&quot;Microsoft&quot;</span><span class="p">:</span> <span class="mf">1765.89</span><span class="p">,</span>
+    <span class="s2">&quot;Amazon&quot;</span><span class="p">:</span> <span class="mf">3012.45</span><span class="p">,</span>
+    <span class="s2">&quot;Google&quot;</span><span class="p">:</span> <span class="mf">2789.34</span><span class="p">,</span>
+    <span class="s2">&quot;Facebook&quot;</span><span class="p">:</span> <span class="mf">1890.56</span>
+<span class="p">}</span>
+
+<span class="c1"># Check key: Check if a company is in the dictionary</span>
+<span class="k">if</span> <span class="s2">&quot;Microsoft&quot;</span> <span class="ow">in</span> <span class="n">market_value</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Microsoft is in the dictionary.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Microsoft is not in the dictionary.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Microsoft is in the dictionary.</p>
+</div>
+<h4 id="pair-lists-to-dict">Pair lists to dict<a class="headerlink" href="#pair-lists-to-dict" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Lists of tech companies and their market values</span>
+<span class="n">tech_companies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Apple&quot;</span><span class="p">,</span> <span class="s2">&quot;Microsoft&quot;</span><span class="p">,</span> <span class="s2">&quot;Amazon&quot;</span><span class="p">,</span> <span class="s2">&quot;Google&quot;</span><span class="p">,</span> <span class="s2">&quot;Tesla&quot;</span><span class="p">]</span>
+<span class="n">market_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2345.67</span><span class="p">,</span> <span class="mf">1765.89</span><span class="p">,</span> <span class="mf">3012.45</span><span class="p">,</span> <span class="mf">2789.34</span><span class="p">,</span> <span class="mf">1899.32</span><span class="p">]</span>
+
+<span class="c1"># Create a dictionary by pairing tech_companies with market_values</span>
+<span class="n">market_value_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">tech_companies</span><span class="p">,</span> <span class="n">market_values</span><span class="p">))</span>
+
+<span class="c1"># Print the resulting dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">market_value_dict</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>{'Apple': 2345.67, 'Microsoft': 1765.89, 'Amazon': 3012.45, 'Google': 2789.34, 'Tesla': 1899.32}</p>
+</div>
+<h2 id="3-if-elif-else-statements">3. If, elif, else statements<a class="headerlink" href="#3-if-elif-else-statements" title="Permanent link">&para;</a></h2>
+<p>The if statement in Python is used to make decisions in code by checking whether a condition is true or false, and executing specific blocks of code based on the evaluation of the condition.</p>
+<details class="tip">
+<summary>Indentation tip</summary>
+<p><strong>Indentation in an if statement is crucial in Python</strong> because it defines the block of code that should be executed <strong>if the condition is true</strong>. </p>
+</details>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>True</td>
+<td>always runs</td>
+</tr>
+<tr>
+<td>False</td>
+<td>never runs</td>
+</tr>
+<tr>
+<td>a &gt; b</td>
+<td>a greater than b</td>
+</tr>
+<tr>
+<td>a &gt;= b</td>
+<td>a greater or equal to b</td>
+</tr>
+<tr>
+<td>a &lt; b</td>
+<td>a smaller than b</td>
+</tr>
+<tr>
+<td>a &lt;= b</td>
+<td>a smaller or equal to b</td>
+</tr>
+<tr>
+<td>a == b</td>
+<td>a equal to b</td>
+</tr>
+<tr>
+<td>a != b</td>
+<td>a not equal to b</td>
+</tr>
+<tr>
+<td>a in b</td>
+<td>string in b</td>
+</tr>
+<tr>
+<td>not(a in b)</td>
+<td>string not in b</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">reminder</p>
+<p>You can add multiple conditions statement like:
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+</code></pre></div>
+or even more complex:
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="ow">is</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span> <span class="ow">or</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;alohomora&quot;</span><span class="p">:</span>
+</code></pre></div></p>
+</div>
+<h3 id="31-if-else">3.1 if else<a class="headerlink" href="#31-if-else" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">score</span> <span class="o">=</span> <span class="mi">75</span>
+
+<span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congratulations! You have passed the exam.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unfortunately, you did not pass the exam. Better luck next time.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Congratulations! You have passed the exam.</p>
+</div>
+<h3 id="32-if-elif-else">3.2 if, elif, else<a class="headerlink" href="#32-if-elif-else" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Check the number and provide a corresponding message</span>
+<span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is positive.&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is negative.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is zero.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>The number is zero.</p>
+</div>
+<h3 id="33-nested-if-else">3.3 Nested if, else<a class="headerlink" href="#33-nested-if-else" title="Permanent link">&para;</a></h3>
+<p>Let's consider a scenario where we have a user registration process, and we want to check the age of the user and whether they have provided all the required information.</p>
+<ol>
+<li>Check if the user's age is 18 or above using the outer if statement</li>
+<li>check if the user has provided both their name and email</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">has_name</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">has_email</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">has_name</span> <span class="ow">and</span> <span class="n">has_email</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;User registration successful!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please provide both your name and email to complete the registration.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, you must be at least 18 years old to register.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Please provide both your name and email to complete the registration.</p>
+</div>
+<h2 id="4-loops">4. Loops<a class="headerlink" href="#4-loops" title="Permanent link">&para;</a></h2>
+<h3 id="41-for-loop">4.1 For loop<a class="headerlink" href="#41-for-loop" title="Permanent link">&para;</a></h3>
+<p>A for loop in Python is a way to repeat a set of instructions for each item in a collection (like a list or a string), allowing you to perform the same task on multiple elements one by one.</p>
+<h4 id="iterating-a-list">Iterating a list<a class="headerlink" href="#iterating-a-list" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># List of planet names</span>
+<span class="n">planet_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mercury&#39;</span><span class="p">,</span> <span class="s1">&#39;Venus&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Mars&#39;</span><span class="p">,</span> <span class="s1">&#39;Jupiter&#39;</span><span class="p">,</span> <span class="s1">&#39;Saturn&#39;</span><span class="p">,</span> <span class="s1">&#39;Uranus&#39;</span><span class="p">,</span> <span class="s1">&#39;Neptune&#39;</span><span class="p">]</span>
+
+<span class="c1"># Iterating over the list and printing each planet name in capital letters</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NASA&#39;s Planets:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">planet</span> <span class="ow">in</span> <span class="n">planet_names</span><span class="p">:</span>
+    <span class="n">planet_capital</span> <span class="o">=</span> <span class="n">planet</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">planet</span><span class="p">,</span> <span class="n">planet_capital</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>NASA's Planets:<br />
+Mercury MERCURY<br />
+Venus VENUS<br />
+Earth EARTH<br />
+Mars MARS<br />
+Jupiter JUPITER<br />
+Saturn SATURN<br />
+Uranus URANUS<br />
+Neptune NEPTUNE  </p>
+</div>
+<h4 id="iterating-a-string">Iterating a string<a class="headerlink" href="#iterating-a-string" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tweet text</span>
+<span class="n">tweet</span> <span class="o">=</span> <span class="s2">&quot;Having a great time at the beach with friends. #summerfun #beachlife&quot;</span>
+
+<span class="c1"># Iterate over each letter an count the number of hashtags</span>
+<span class="n">n_hashtags</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">tweet</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;#&quot;</span> <span class="o">==</span> <span class="n">letter</span><span class="p">:</span>
+        <span class="n">n_hashtags</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of Hashtags found: </span><span class="si">{</span><span class="n">n_hashtags</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Number of Hashtags found: 2 </p>
+</div>
+<h4 id="iterating-a-range">Iterating a range<a class="headerlink" href="#iterating-a-range" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># DNA sequence as a list of nucleotides</span>
+<span class="n">dna_sequence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">]</span>
+
+<span class="c1"># Iterate over each position in the DNA sequence using range(10)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dna_sequence</span><span class="p">)):</span>
+    <span class="n">nucleotide</span> <span class="o">=</span> <span class="n">dna_sequence</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Position </span><span class="si">{</span><span class="n">position</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">nucleotide</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Position 1: A<br />
+Position 2: T<br />
+Position 3: G<br />
+Position 4: C<br />
+Position 5: A  </p>
+</div>
+<h4 id="enumerating-list">Enumerating list<a class="headerlink" href="#enumerating-list" title="Permanent link">&para;</a></h4>
+<p>This example is the same from the previous one but using enumerate. Enumerate helps you iterate over a sequence (like a list, tuple, or string) while also keeping track of the index of each element in the sequence.</p>
+<details class="info">
+<summary>Enumerate Vs. range</summary>
+<p>The advantage of using enumerate instead of range in the previous code is that enumerate provides a more concise and expressive way to access both the elements and their corresponding indices in a sequence. It simplifies the code and makes it more readable.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1"># DNA sequence as a list of nucleotides</span>
+<span class="n">dna_sequence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">]</span>
+
+<span class="c1"># Iterate over each position in the DNA sequence using range(10)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">nucleotide</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dna_sequence</span><span class="p">):</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Position </span><span class="si">{</span><span class="n">position</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">nucleotide</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Position 1: A<br />
+Position 2: T<br />
+Position 3: G<br />
+Position 4: C<br />
+Position 5: A  </p>
+</div>
+<details class="tip">
+<summary>Advanced for loop</summary>
+<p><strong>List comprehension</strong> is a concise way to create a new list in Python by performing some operation on each item of an existing list or iterable. It allows you to <strong>combine a for loop and an expression in a single line</strong> to generate a new list efficiently.
+<div class="highlight"><pre><span></span><code><span class="n">planets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturn&quot;</span><span class="p">,</span> <span class="s2">&quot;Uranus&quot;</span><span class="p">,</span> <span class="s2">&quot;Neptune&quot;</span><span class="p">]</span>
+
+<span class="c1"># Example 1: Create a new list with the lengths of each planet name</span>
+<span class="n">planet_name_lengths</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">planet</span><span class="p">)</span> <span class="k">for</span> <span class="n">planet</span> <span class="ow">in</span> <span class="n">planets</span><span class="p">]</span>
+
+<span class="c1"># Example 2: Create a new list with uppercase planet names</span>
+<span class="n">uppercase_planets</span> <span class="o">=</span> <span class="p">[</span><span class="n">planet</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">planet</span> <span class="ow">in</span> <span class="n">planets</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">planet_name_lengths</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">uppercase_planets</span><span class="p">)</span>
+</code></pre></div>
+<div class="output" markdown>
+[7, 5, 5, 4, 7, 6, 6, 7]<br />
+['MERCURY', 'VENUS', 'EARTH', 'MARS', 'JUPITER', 'SATURN', 'URANUS', 'NEPTUNE']</p>
+</div>
+</details>
+<h3 id="42-while-loop">4.2 While loop<a class="headerlink" href="#42-while-loop" title="Permanent link">&para;</a></h3>
+<p>A while loop in Python is a way to repeatedly execute a block of code as long as a certain condition is true. It keeps running the instructions until the condition becomes false, allowing you to perform tasks until a specific condition is met. </p>
+<details class="info">
+<summary>While Vs. for loops</summary>
+<p>A while loop should be used in Python when the number of iterations is not known beforehand, and the loop needs to continue as long as a certain condition remains true. It is ideal for scenarios where the loop's termination depends on real-time or user input conditions.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="n">clothes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;T-shirts&quot;</span><span class="p">,</span> <span class="s2">&quot;Jeans&quot;</span><span class="p">,</span> <span class="s2">&quot;Dresses&quot;</span><span class="p">,</span> <span class="s2">&quot;Jackets&quot;</span><span class="p">,</span> <span class="s2">&quot;Shoes&quot;</span><span class="p">,</span> <span class="s2">&quot;Hats&quot;</span><span class="p">]</span>
+
+<span class="c1"># Using a while loop to print the available clothes</span>
+<span class="n">choice</span> <span class="o">=</span> <span class="s2">&quot;yes&quot;</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Welcome print message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to the Fashion Clothes Store!&quot;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span> <span class="ow">and</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">clothes</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">clothes</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Do you want to see more clothes? (yes/no): &quot;</span><span class="p">)</span>
+    <span class="n">choice</span> <span class="o">=</span> <span class="n">choice</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thank you for visiting our Fashion Clothes Store!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="output">
+<p>Welcome to the Fashion Clothes Store!
+T-shirts
+Do you want to see more clothes? (yes/no): Yes
+T-shirts
+Do you want to see more clothes? (yes/no): No
+Thank you for visiting our Fashion Clothes Store! </p>
+</div>
+<h2 id="-start-coding"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5 3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74Z"/></svg></span> <strong>-&gt; Start coding</strong><a class="headerlink" href="#-start-coding" title="Permanent link">&para;</a></h2>
+<p>You can do the exercises in Google Colab or in Jupyter Lab</p>
+<p><strong>Google Colab</strong></p>
+<p>Open the <a href="https://colab.research.google.com/github/charlstown/ai-applied-practice/blob/main/unit-1/11_introduction_to_python.ipynb">11_introduction_to_python.ipynb</a> notebook to start doing the exercises.</p>
+<div class="admonition tip">
+<p class="admonition-title">reminder</p>
+<p>Remember to <a href="https://github.com/charlstown/ai-applied-practice/fork">fork the exercise repository</a> and save your solved notebooks in your forked repo.</p>
+</div>
+<p><strong>Jupyter Lab</strong></p>
+<p>WIP</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; AI Applied Education - 2023
+                </div>
+                
+            </div>
+            
+            <div class="md-social">
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.footer", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

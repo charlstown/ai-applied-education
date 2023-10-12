@@ -1,0 +1,1753 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A program to teach practical programming and data science skills, preparing you for tech and job challenges in any career.">
+      
+      
+        <meta name="author" content="charlstown">
+      
+      
+        <link rel="canonical" href="https://charlstown.github.io/ai-applied-education/program/unit-1/11-introduction-to-git-and-github/">
+      
+      
+        <link rel="prev" href="../../requirements/">
+      
+      
+        <link rel="next" href="../12-introduction-to-python/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>1.1 Introduction to Git & Github - AI Applied education</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-github" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI Applied education" class="md-header__button md-logo" aria-label="AI Applied education" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Applied education
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.1 Introduction to Git & Github
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal]"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/charlstown/ai-applied-education" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../overview/" class="md-tabs__link">
+          
+  
+  Overview
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Unit 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../unit-2/21-current-context-and-application-of-mathematical-models-in-ai/" class="md-tabs__link">
+          
+  
+  Unit 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contact/" class="md-tabs__link">
+          
+  
+  Directory
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI Applied education" class="md-nav__button md-logo" aria-label="AI Applied education" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    AI Applied education
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/charlstown/ai-applied-education" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.1 Introduction to Git & Github
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Introduction to Git & Github
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-consoles" class="md-nav__link">
+    1. Consoles
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Consoles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12-console-commands" class="md-nav__link">
+    1.2 Console commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-git-github" class="md-nav__link">
+    2. Git &amp; Github
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Git & Github">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-git-commands" class="md-nav__link">
+    2.1 Git commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-what-is-git" class="md-nav__link">
+    2.2 What is Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-what-is-github" class="md-nav__link">
+    2.3 What is Github
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-what-is-a-repository" class="md-nav__link">
+    2.4 What is a repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-what-is-a-branch" class="md-nav__link">
+    2.5 What is a branch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-test-your-skills" class="md-nav__link">
+    3. Test your skills
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Test your skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-create-a-profile-repository" class="md-nav__link">
+    3.1 Create a profile repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-apply-to-the-program-as-new-student" class="md-nav__link">
+    3.2 Apply to the program as new student
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Apply to the program as new student">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fork-the-course-repository" class="md-nav__link">
+    Fork the course repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone-the-repository-in-your-local-computer" class="md-nav__link">
+    Clone the repository in your local computer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-yourself-to-the-students-list" class="md-nav__link">
+    Add yourself to the students list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-push-to-remote-repository" class="md-nav__link">
+    Commit &amp; Push to remote repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-request-to-the-official-repository" class="md-nav__link">
+    Pull request to the official repository
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-introduction-to-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Introduction to Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-introduction-to-pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Introduction to Pandas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-practice-with-python-and-pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Practice with Python and GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-dialogue-with-a-professional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Dialogue with a Professional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unit 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Unit 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit-2/21-current-context-and-application-of-mathematical-models-in-ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 Current Context and Application of Mathematical Models in AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit-2/22-introduction-to-visualization-and-descriptive-statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Introduction to Visualization and Descriptive Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit-2/23-introduction-to-exploratory-data-analysis-eda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Introduction to Exploratory Data Analysis (EDA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit-2/24-data-cleaning-and-processing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Data Cleaning and Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit-2/25-dialogue-with-a-professional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 Dialogue with a Professional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Directory
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Directory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../students/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Students
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-consoles" class="md-nav__link">
+    1. Consoles
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Consoles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12-console-commands" class="md-nav__link">
+    1.2 Console commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-git-github" class="md-nav__link">
+    2. Git &amp; Github
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Git & Github">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-git-commands" class="md-nav__link">
+    2.1 Git commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-what-is-git" class="md-nav__link">
+    2.2 What is Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-what-is-github" class="md-nav__link">
+    2.3 What is Github
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-what-is-a-repository" class="md-nav__link">
+    2.4 What is a repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-what-is-a-branch" class="md-nav__link">
+    2.5 What is a branch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-test-your-skills" class="md-nav__link">
+    3. Test your skills
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Test your skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-create-a-profile-repository" class="md-nav__link">
+    3.1 Create a profile repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-apply-to-the-program-as-new-student" class="md-nav__link">
+    3.2 Apply to the program as new student
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Apply to the program as new student">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fork-the-course-repository" class="md-nav__link">
+    Fork the course repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone-the-repository-in-your-local-computer" class="md-nav__link">
+    Clone the repository in your local computer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-yourself-to-the-students-list" class="md-nav__link">
+    Add yourself to the students list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-push-to-remote-repository" class="md-nav__link">
+    Commit &amp; Push to remote repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-request-to-the-official-repository" class="md-nav__link">
+    Pull request to the official repository
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="git-github">Git &amp; Github<a class="headerlink" href="#git-github" title="Permanent link">&para;</a></h1>
+<p>Visit <a href="../../overview/#the-software-ecosystem">the software ecosystem</a> to have an overview of the software you are going to use in this course.</p>
+<h2 id="1-consoles">1. Consoles<a class="headerlink" href="#1-consoles" title="Permanent link">&para;</a></h2>
+<div class="highlighted">
+A console is similar to a file explorer, but instead of a visual interface, it's a text-based interface on a computer. It allows you to enter commands for tasks like navigating, copying, and moving files.
+</div>
+
+<p>A file explorer offers a graphical interface for navigating files and folders using buttons and icons, while a console provides a text-based interface where commands are typed to interact with the file system. They serve distinct purposes, with a file explorer being visual and user-friendly, and a console offering command-driven control and automation.</p>
+<h3 id="12-console-commands">1.2 Console commands<a class="headerlink" href="#12-console-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Example</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ls</td>
+<td><code>ls</code>  {<code>-a</code>, <code>-l</code>}</td>
+<td>List the current directory files</td>
+</tr>
+<tr>
+<td>cd DIR</td>
+<td><code>cd "My documents"</code></td>
+<td>Change directory</td>
+</tr>
+<tr>
+<td>cd ..</td>
+<td><code>cd ..</code></td>
+<td>Back to the upper directory one level</td>
+</tr>
+<tr>
+<td>clear</td>
+<td><code>clear</code></td>
+<td>Clean console</td>
+</tr>
+<tr>
+<td>history</td>
+<td><code>history</code></td>
+<td>Shows latest commands</td>
+</tr>
+<tr>
+<td>tab</td>
+<td>-</td>
+<td>Show available options, autocomplete</td>
+</tr>
+<tr>
+<td>Up Arrow</td>
+<td>-</td>
+<td>Extract last command</td>
+</tr>
+<tr>
+<td>ctrl + l</td>
+<td>-</td>
+<td>Scroll to active line</td>
+</tr>
+<tr>
+<td>ctrl + r</td>
+<td>-</td>
+<td>Search in the command history</td>
+</tr>
+<tr>
+<td>ctrl + c</td>
+<td>-</td>
+<td>Stop &amp; kill running command</td>
+</tr>
+</tbody>
+</table>
+<details class="tip">
+<summary>Advanced commands</summary>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Example</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pwd</td>
+<td><code>pwd</code></td>
+<td>Print working directory path</td>
+</tr>
+<tr>
+<td>cat FILE</td>
+<td><code>cat README.md</code></td>
+<td>Shows the contents of the file</td>
+</tr>
+<tr>
+<td>touch FILE</td>
+<td><code>touch README.md</code></td>
+<td>Creates an empty file</td>
+</tr>
+<tr>
+<td>mkdir FOLDER</td>
+<td><code>mkdir "My documents"</code></td>
+<td>Create a new folder on actual directory</td>
+</tr>
+<tr>
+<td>mv FILE DIR</td>
+<td><code>mv notebook.ipynb "My documents"</code></td>
+<td>Move file to a new directory</td>
+</tr>
+<tr>
+<td>cp FILE DIR</td>
+<td><code>cp notebook.ipynb "My documents"</code></td>
+<td>Move file to a new directory</td>
+</tr>
+<tr>
+<td>rm FILE</td>
+<td><code>rm notebook.ipynb</code></td>
+<td>Remove selected file</td>
+</tr>
+<tr>
+<td>rm -r FOLDER</td>
+<td><code>rm -r "My documents"</code></td>
+<td>Remove a folder and all the files inside</td>
+</tr>
+<tr>
+<td>find --name FILE</td>
+<td><code>find --name README.md"</code></td>
+<td>Search for a file in the directory and sublevels</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="2-git-github">2. Git &amp; Github<a class="headerlink" href="#2-git-github" title="Permanent link">&para;</a></h2>
+<p>Think of <strong>Git</strong> like a notebook that <strong>tracks all the changes you make to your writing</strong>, letting you go back and see every draft. <strong>GitHub</strong> is like <strong>a library where you can keep your notebooks</strong>, and others can borrow them, read your writing, make suggestions, and even work on their own versions of the same story.</p>
+<h3 id="21-git-commands">2.1 Git commands<a class="headerlink" href="#21-git-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Example</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>git clone REPO-NAME</strong></td>
+<td><code>git clone https://github.com/user/repo.git</code></td>
+<td>Clone a repository in the local computer</td>
+</tr>
+<tr>
+<td><strong>git pull</strong></td>
+<td><code>git pull</code></td>
+<td>Description</td>
+</tr>
+<tr>
+<td>git status</td>
+<td><code>git status</code></td>
+<td>Description</td>
+</tr>
+<tr>
+<td>git fetch</td>
+<td><code>git fetch</code></td>
+<td>Description</td>
+</tr>
+<tr>
+<td><strong>git add</strong></td>
+<td><code>git add .</code> ; <code>git add *</code></td>
+<td>Description</td>
+</tr>
+<tr>
+<td><strong>git commit -m "MESSAGE"</strong></td>
+<td><code>git commit -m "update: new section readme"</code></td>
+<td>Description</td>
+</tr>
+<tr>
+<td><strong>git push</strong></td>
+<td><code>git push</code>; <code>git push origin main</code></td>
+<td>Description</td>
+</tr>
+<tr>
+<td>git reset --soft</td>
+<td><code>git reset --soft</code></td>
+<td>Keep files but destroy the commits staged</td>
+</tr>
+<tr>
+<td>git reset --hard</td>
+<td><code>git reset --hard</code></td>
+<td>Destroy changes and go to the remote state</td>
+</tr>
+</tbody>
+</table>
+<details class="tip">
+<summary>Git branching commands</summary>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Example</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git switch BRANCH</td>
+<td><code>git switch dev-carlos</code></td>
+<td>Switch to the selected branch</td>
+</tr>
+<tr>
+<td>git switch -c BRANCH</td>
+<td><code>git switch -c dev-carlos</code></td>
+<td>Create new branch and switch to that branch</td>
+</tr>
+<tr>
+<td>git branch</td>
+<td><code>git branch</code> (-a- ; -r)</td>
+<td>Shows local and remote branches</td>
+</tr>
+<tr>
+<td>git remote prune origin</td>
+<td><code>git remote prune origin</code></td>
+<td>Update remote branchs in local memory</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="22-what-is-git">2.2 What is Git<a class="headerlink" href="#22-what-is-git" title="Permanent link">&para;</a></h3>
+<div class="highlighted">
+Imagine Git as a time-traveling tool for your computer files. It keeps a record of every change you make, so if you accidentally mess something up, you can go back in time to fix it. It's like having an "undo" button for all your coding adventures.
+</div>
+
+<p><img alt="git" src="https://www.nobledesktop.com/image/blog/git-branches-merge.png" /></p>
+<details class="example">
+<summary>Example: Clonning, committing, and pushing changes</summary>
+<p>In this example, you'll learn how to clone a repository, create a README.md file, commit changes, and push them to GitHub.</p>
+<ol>
+<li>Clone the Repository:</li>
+<li>Open your console (Git Bash, Command Prompt, etc.), and navigate to the directory where you want to clone the repository.</li>
+<li>Run the following command to clone the repository:
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>&lt;repository_url&gt;
+</code></pre></div></li>
+<li>
+<p>Change into the cloned repository's directory:
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>&lt;repository_name&gt;
+</code></pre></div></p>
+</li>
+<li>
+<p>Create a README.md File by running this command.
+    <div class="highlight"><pre><span></span><code>touch<span class="w"> </span>README.md
+</code></pre></div></p>
+</li>
+<li>Commit the Changes by adding the <code>README.md</code> file to the staging area:
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>README.md
+</code></pre></div></li>
+<li>Commit the changes with a meaningful commit message:
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add README.md&quot;</span>
+</code></pre></div></li>
+<li>Push Changes to Remote Repository:
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div></li>
+</ol>
+<p>That's it! You have successfully cloned a repository, created a <code>README.md</code> file, committed your changes, and pushed them to the remote repository.</p>
+</details>
+<h3 id="23-what-is-github">2.3 What is Github<a class="headerlink" href="#23-what-is-github" title="Permanent link">&para;</a></h3>
+<div class="highlighted">
+GitHub is like a library for your computer code. It lets you store your code online, so you can access it from anywhere. You can also invite friends to help you work on your code and keep track of all the changes you make.
+</div>
+
+<p>GitHub is a platform where people store and colaborate on code for software projects. It's like a digital space where programmers can work together on coding projects.</p>
+<p>A repository in GitHub is like a digital folder where you can store and manage your projects, including code, files, and resources. It's a space to colaborate, keep track of changes, and showcase your work. To create a repository you can follow <a href="https://docs.github.com/es/get-started/quickstart/create-a-repo">the official documentation</a>.</p>
+<pre class="mermaid"><code>graph TD
+    G[Github] --&gt; PP["📷\nDeveloper\nprofile"];
+    G --&gt; RP[("⌸ Your\nrepositories")];
+    G --&gt; PR[("⌸ Public\nrepositories")];</code></pre>
+<h3 id="24-what-is-a-repository">2.4 What is a repository<a class="headerlink" href="#24-what-is-a-repository" title="Permanent link">&para;</a></h3>
+<div class="highlighted">
+A repository is like a folder where you store files for a project. It holds your work, tracks changes, and allows others to colaborate on the project. It's like a digital toolbox.
+</div>
+
+<p>A repository can be either <strong>local, stored on your computer</strong>, or <strong>remote, stored on a server</strong> like Github. They are linked by using version control systems like Git. Local repositories store your work offline, while remote repositories, often hosted on platforms like GitHub, enable colaboration and backup by syncing changes between local and remote versions.</p>
+<pre class="mermaid"><code>graph TD
+    G["🅶\nGithub"] --&gt; UR["👩‍💻User profile"];
+    UR --&gt; RR[("⧠ Remote\nrepository")];
+    RR --&gt;|pull| LG1["⧠\nLocal GIT"];
+    LG1 --&gt;|push| RR;
+    LG1 --&gt;|pull| WS1["👩‍💻\nLocal computer 1"];
+    WS1 --&gt;|commit| LG1;
+    WS1 --&gt; LR1[("🖿\nLocal\nrepository")];
+    RR --&gt;|pull| LG2["⧠\nLocal GIT"];
+    LG2 --&gt;|push| RR;
+    LG2 --&gt;|pull| WS2["👨‍💻\nLocal computer 2"];
+    WS2 --&gt;|commit| LG2;
+    WS2 --&gt; LR2[("🖿\nLocal\nrepository")];
+    RR --&gt;|pull| LG3["⧠\nLocal GIT"];
+    LG3 --&gt;|push| RR;
+    LG3 --&gt;|pull| WS3["👩‍💻\nLocal computer 3"];
+    WS3 --&gt;|commit| LG3;
+    WS3 --&gt; LR3[("🖿\nLocal\nrepository")]</code></pre>
+<details class="example">
+<summary>Example: creating a new repository in Github</summary>
+<p>This example shows how to create a new repository on GitHub.</p>
+<ol>
+<li>
+<p>In the upper-right corner of any page, use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m2-8H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> drop-down menu, and select New repository.</p>
+<p><img alt="github-repo-create" src="https://docs.github.com/assets/cb-31554/mw-1440/images/help/repository/repo-create.webp" /></p>
+</li>
+<li>
+<p>Choose a name for your repository. This name will be part of the repository's URL and should be descriptive.</p>
+<p><img alt="github-new-repo" src="../../../assets/images/11-github-new-repo.jpg" /></p>
+</li>
+<li>
+<p>Add an optional description to provide more information about the repository. You can always add it later. Example:</p>
+<blockquote>
+<p>A repository exploring Reinforcement Learning methods in Python.</p>
+</blockquote>
+</li>
+<li>
+<p>Select the repository's visibility: Public or private.</p>
+</li>
+<li>Choose whether to initialize the repository with a README file. This is recommended, as it provides a place to describe your project.</li>
+<li>If needed, you can choose to add a .gitignore file (specifies files/folders that should not be tracked by Git) and a license to your repository.</li>
+<li>Click Create repository.</li>
+</ol>
+<p>Congratulations you have created your new repository.</p>
+</details>
+<h3 id="25-what-is-a-branch">2.5 What is a branch<a class="headerlink" href="#25-what-is-a-branch" title="Permanent link">&para;</a></h3>
+<div class="highlighted">
+A branch is like a separate copy of your repository where you can make changes without affecting the main version. It's like having a playground to experiment and work on new features before adding them to the main project.
+</div>
+
+<pre class="mermaid"><code>graph LR
+    subgraph "Branch main"
+    direction LR
+    A(("#A")) --&gt;|commit| B(("#B"));
+    B --&gt;|commit| C(("#C"));
+    C --&gt;|commit| D(("#D"));
+    D --&gt;|commit| E(("#E"));
+    E --&gt;|commit| F(("#F"));
+    end
+    C --&gt;|"switch -c"| B2C;
+    B2E --&gt;|Pull request| E;
+    subgraph "Branch dev-jorge"
+    B1B(("#B")) --&gt;|commit| B1C(("#C'"));
+    end
+    subgraph "Branch dev-marta"
+    B2C(("#C")) --&gt;|commit| B2D(("#D'"));
+    B2D --&gt;|commit| B2E(("#E'"));
+    end
+    B --&gt;|"switch -c"| B1B;
+    B1C --&gt;|Pull request| D;</code></pre>
+<details class="example">
+<summary>Example: creating and switching branches</summary>
+<p>This example shows a common workflow to create a new branch <code>dev-new-branch</code> from the original files of <code>main</code> branch.</p>
+<ol>
+<li><strong>Clone repository.</strong> 
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/charlstown/ai-applied-education.git
+</code></pre></div></li>
+<li><strong>Check branch.</strong> By default it shows local branches, you can add the flag <code>-r</code> to show only remote branches or <code>-a</code> to show all.
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-a
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code><span class="go">remotes/origin/dev-marta</span>
+<span class="go">remotes/origin/dev-juan</span>
+<span class="go">* main</span>
+</code></pre></div></li>
+<li><strong>Check dev-marta branch.</strong>
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>switch<span class="w"> </span>dev-marta
+git<span class="w"> </span>pull
+</code></pre></div>
+    <div class="highlight"><span class="filename">output</span><pre><span></span><code><span class="go">Switched to branch &#39;dev-marta&#39;</span>
+<span class="go">Your branch is behind &#39;origin/main&#39; by 23 commits, and can be fast-forwarded.</span>
+<span class="go">(use &quot;git pull&quot; to update your local branch)</span>
+
+<span class="go">Already up to date.</span>
+</code></pre></div></li>
+<li><strong>New branch from main.</strong> Change to main branch, then create a new branch with the files from main.
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>switch<span class="w"> </span>main
+git<span class="w"> </span>pull
+git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>dev-new-branch
+</code></pre></div></li>
+<li><strong>Push new branch.</strong> Push the new branch from local repository to remote repository.
+    <div class="highlight"><pre><span></span><code>git push –set-upstream origin dev-new-branch
+</code></pre></div></li>
+</ol>
+<p>Now you can start working on your branch without iterfering the <code>main</code> branch.</p>
+</details>
+<h2 id="3-test-your-skills">3. Test your skills<a class="headerlink" href="#3-test-your-skills" title="Permanent link">&para;</a></h2>
+<h3 id="31-create-a-profile-repository">3.1 Create a profile repository<a class="headerlink" href="#31-create-a-profile-repository" title="Permanent link">&para;</a></h3>
+<p>The profile README is a repository where you can share information about yourself with the community on GitHub.com by creating a profile README. GitHub shows your profile README at the top of your profile page. Check the oficial documentation of <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme">Github profile README</a>.</p>
+<div class="steps">
+<ul>
+<li>
+<p>In the upper-right corner of any page, use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m2-8H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> drop-down menu, and select New repository.</p>
+<p><img alt="github-repo-create" src="https://docs.github.com/assets/cb-31554/mw-1440/images/help/repository/repo-create.webp" /></p>
+</li>
+<li>
+<p>Under "Repository name", type a repository name that matches your GitHub username. For example, if your username is "octocat", the repository name must be "octocat".</p>
+</li>
+<li>Optionally, in the "Description" field, type a description of your repository. For example, "My personal repository."</li>
+<li>Select Public.</li>
+<li>Select Initialize this repository with a README.</li>
+<li>Click Create repository.</li>
+<li>Above the right sidebar, click Edit README.</li>
+</ul>
+</div>
+<details class="tip">
+<summary>Add your repo stats to your README</summary>
+<p>You can add this line of markdown in your README file, to add stats about your work in Github.
+<div class="highlight"><pre><span></span><code>[<span class="nt">![Anurag&#39;s GitHub stats</span>](<span class="na">https://github-readme-stats.vercel.app/api?username=charlstown&amp;show_icons=true&amp;theme=nightowl</span>)](https://github.com/anuraghazra/github-readme-stats)
+</code></pre></div></p>
+</details>
+<p>You can copy this structure to create your README easily.
+<div class="highlight"><pre><span></span><code><span class="gu">## Hello 👋</span>
+
+Welcome to my Github account! I&#39;m YOUR NAME a ... enthusiast.
+In this account, you&#39;ll find projects, and resources about ...
+I hope you enjoy my content and find it useful.
+
+&lt;/br&gt;
+
+<span class="gu">### About me</span>
+
+<span class="k">-</span><span class="w"> </span>:computer: I’m currently studying ...
+<span class="k">-</span><span class="w"> </span>:microscope: I’m currently learning <span class="sb">`AI applied`</span>.
+<span class="k">-</span><span class="w"> </span>:v: I’m looking to colaborate on coding for ...
+
+
+<span class="gu">### My favorite repos</span>
+
+<span class="k">-</span><span class="w"> </span>:desktop_computer: <span class="gs">**[My repo](#):**</span>.
+<span class="k">-</span><span class="w"> </span>:desktop_computer: <span class="gs">**[My repo](#):**</span>.
+<span class="k">-</span><span class="w"> </span>:desktop_computer: <span class="gs">**[My repo](#):**</span>.
+
+
+<span class="gu">### Thank you!</span>
+
+If you have any questions, or comments, please get in touch.
+
+Happy coding! :vulcan_salute:
+
+-- <span class="ni">@username</span>
+</code></pre></div></p>
+<p>Congratulations! You've successfully created your profile README. </p>
+<h3 id="32-apply-to-the-program-as-new-student">3.2 Apply to the program as new student<a class="headerlink" href="#32-apply-to-the-program-as-new-student" title="Permanent link">&para;</a></h3>
+<p>To request the application for this program you need to know how to fork (copy) the official course repository, modify the files by adding your name and email, and making a pull request to the original repository to add your student data.</p>
+<h4 id="fork-the-course-repository">Fork the course repository<a class="headerlink" href="#fork-the-course-repository" title="Permanent link">&para;</a></h4>
+<div class="steps">
+<ul>
+<li>Go to the <a href="https://github.com/charlstown/ai-applied-education">ai-applied-repository</a>, that contains the files of this course.</li>
+<li>Fork the repository by pressing the fork button on the top right corner.
+    <img alt="github-fork-button" src="/ai-applied-education/assets/images/11-github-fork-button.jpg" /></li>
+<li>Add you user as owner of the new copy of the repository, and make sure you only copy the main branch.
+    <img alt="github-fork-repo" src="/ai-applied-education/assets/images/11-github-fork-repository.jpg" /></li>
+</ul>
+</div>
+<h4 id="clone-the-repository-in-your-local-computer">Clone the repository in your local computer<a class="headerlink" href="#clone-the-repository-in-your-local-computer" title="Permanent link">&para;</a></h4>
+<div class="steps">
+<ul>
+<li>Open your prefered console, git bash or anaconda and go to the directory where you want to clone the project.
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;E:\My PC\00_WIP&quot;</span>
+</code></pre></div></li>
+<li>Make sure you are in the correct directory by running the <code>pwd</code> command and check if the folder is empty <code>ls</code>.
+    <div class="highlight"><pre><span></span><code><span class="nb">pwd</span>
+ls
+</code></pre></div></li>
+<li>Copy the link of the repository by clicking the code button and the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg></span> <code>copy</code> icon
+    <img alt="github-clone-repo" src="/ai-applied-education/assets/images/11-github-clone-repo.jpg" /></li>
+<li>Now clone the repository locally by running the following.
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>THE-COPIED-REPOSITORY-LINK
+</code></pre></div></li>
+</ul>
+</div>
+<h4 id="add-yourself-to-the-students-list">Add yourself to the students list<a class="headerlink" href="#add-yourself-to-the-students-list" title="Permanent link">&para;</a></h4>
+<p>To add your yourself to the student list you need to locate the file <code>ai-applied-education/docs/program/students.md</code>, and add your name to the markdown table.</p>
+<div class="steps">
+<ul>
+<li>Open Anacoda Promt console, and Navigate to the file <code>students.md</code>, you can do this by running the following command.
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>&lt;route-to-your-repository&gt;
+</code></pre></div></li>
+<li>Start Jupyter Lab in this path.
+    <div class="highlight"><pre><span></span><code>jupyter lab
+</code></pre></div></li>
+<li>Navigate on the left File Browser to the path <code>ai-applied-education/docs/program</code> and open the file <code>students.md</code>.</li>
+<li>Add your name to the markdown table <strong>under the example</strong>. (Make sure you copy the same structure)
+    <div class="highlight"><pre><span></span><code>| Name | Email | Github |
+| --- | --- | --- |
+| name | email | github-link |
+| María Jimeno | mjimeno@email.com | https://github.com/mjimeno |
+</code></pre></div></li>
+<li>Save and close the file.</li>
+</ul>
+</div>
+<h4 id="commit-push-to-remote-repository">Commit &amp; Push to remote repository<a class="headerlink" href="#commit-push-to-remote-repository" title="Permanent link">&para;</a></h4>
+<div class="steps">
+<ul>
+<li>
+<p>Open the git bash console again and navigate to the root path of the repository.
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;E:\My PC\00_WIP\AiAppliedEducation&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Add the changes by <code>git add</code> command.
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div></p>
+</li>
+<li>Commit the changes to local git by <code>git commit</code> command. Make sure you add your name to the command.
+    <div class="highlight"><pre><span></span><code>git commit -m &quot;update: María student added&quot;
+</code></pre></div></li>
+<li>Push changes to remote repository.
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>push
+</code></pre></div></li>
+<li>Make sure you pushed your files successfully by visiting your forked github repository in the browser</li>
+</ul>
+</div>
+<h4 id="pull-request-to-the-official-repository">Pull request to the official repository<a class="headerlink" href="#pull-request-to-the-official-repository" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Go to commits ahead message and click the link.
+    <img alt="github-pr-commits" src="/ai-applied-education/assets/images/11-github-pr-commits.jpg" /></li>
+<li>Click the <code>Create pull request</code> button to make the pull request to the original repository.
+    <img alt="github-pr-request" src="/ai-applied-education/assets/images/11-github-pr-request.jpg" /></li>
+<li>Add a descriptive comment explaining your provided feature somthing like
+    <div class="highlight"><pre><span></span><code>Application of the student &quot;María Jimeno&quot; to the <span class="sb">`students.md`</span> file.
+</code></pre></div></li>
+<li>Send the pull request by clicking the <code>Merge pull request</code> button.
+    <img alt="github-pr-request" src="/ai-applied-education/assets/images/11-github-pr-merge.jpg" /></li>
+</ul>
+<p>Congratulations you have applied to the program. You will see your name and email at the <a href="https://charlstown.github.io/ai-applied-education/program/students/">Students site</a> when the owner of the repository to accept your pull request.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; AI Applied Education - 2023
+                </div>
+                
+            </div>
+            
+            <div class="md-social">
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.footer", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
